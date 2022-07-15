@@ -867,3 +867,38 @@ form .mail {
     margin-bottom: 30px;
     border-radius: 5px;
 }
+
+.header_nav {
+    background: #000;
+    line-height: 35px;
+    margin-top: 30px;
+    border-radius: 7px;
+}
+
+.header_nav ul li a {
+    color: #B1B1B1;
+}
+
+.addProducts__title {
+    background-color: #DDEDD5;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.addProducts__title h5 {
+    color: #59804e;
+    font-weight: 400;
+}
+
+.addProducts_form label {
+    font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+    .contain {
+        max-width: 1275px;
+        margin: 0 auto;
+    }
+}
