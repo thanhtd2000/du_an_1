@@ -102,6 +102,11 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item" href="index.php?act=thongtin&&iduser=<?= $iduser ?>">Thông tin tài khoản</a>
+                                                <?php  if ($vaitro = 1) :?>
+                                                    <a class="dropdown-item" href="index.php?act=admin">Quản lý trang web</a>
+                                                    <?php  else :?>
+                                                        <a style="display: none;"  class="dropdown-item" href="index.php?act=admin">Quản lý trang web</a>
+                                                        <?php endif?>
                                                 <a class="dropdown-item" href="#">Đặc quyền thẻ</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="#">
