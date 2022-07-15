@@ -109,6 +109,11 @@ if((isset($_GET['act']))&&($_GET['act']!="")){
         include "views/home.php";
             break;
     }
+
+
+
+
+    
 }else{
     include "views/home.php";
 }   
