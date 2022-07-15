@@ -20,7 +20,7 @@
                   <div class="header_nav">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a style="font-size: 20px;" class="nav-link active" href="">Trang chủ</a>
+                                <a style="font-size: 20px;" class="nav-link active" href="../index.php">Trang chủ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">Khách hàng</a>

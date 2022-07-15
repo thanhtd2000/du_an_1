@@ -100,11 +100,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/taikhoan/user.php";
 
             break;
-        case 'admin':
-            
-            include "../du_an_1/admin/index.php";
-
-            break;
         default:
             include "views/home.php";
             break;
