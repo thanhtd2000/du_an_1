@@ -44,7 +44,7 @@
                 </p>
                 <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
                 <button type="reset" class="btn btn-danger">Nhập lại</button>
-                <a href=""><button type="button" class="btn btn-info">Danh sách</button></a>
+                <a href="index.php?act=khachsan"><button type="button" class="btn btn-info">Danh sách</button></a>
             </form>
         </div>
     </div>

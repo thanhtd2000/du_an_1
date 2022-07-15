@@ -11,7 +11,6 @@ function loadall_khachsan(){
 }
 function delete_khachsan($maks){
     $sql="DELETE FROM khachsan WHERE maks=$maks";
-    $listkhachsan=pdo_query($sql);
-    return $listkhachsan;
+    pdo_execute($sql);
 }
 ?>
