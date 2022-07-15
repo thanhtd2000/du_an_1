@@ -9,4 +9,8 @@ function insert_khuvuc($tenkv,$anh){
     pdo_execute($sql);
 
 }
+function delete_khuvuc($makv){
+    $sql="DELETE FROM khuvuc WHERE makv=$makv";
+    pdo_execute($sql);
+}
 ?>

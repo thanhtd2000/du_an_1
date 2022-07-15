@@ -49,6 +49,11 @@ if (isset($_GET['act'])) {
             }
             include "khuvuc/add.php";
             break;
+            case 'xoakv':
+                $makv=$_GET['makv'];
+                $delete_khuvuc = delete_khuvuc($makv);
+                echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Xoá thành công'</script>";
+                break;
         case 'listtour':
 
 
