@@ -1,33 +1,35 @@
 <div class="addProducts contain">
             <div class="addProducts__Content">
                   <div class="addProducts__title">
-                        <h5>QUẢN LÝ HÀNG HOÁ</h5>
+                        <h5>QUẢN LÝ KHÁCH SẠN</h5>
                   </div>
                   <div class="addProducts_form">
                         <table class="table">
                               <thead class="thead-dark">
                                     <tr>
                                           <th scope="col">#</th>
+                                          <th scope="col">Mã khách sạn</th>
+                                          <th scope="col">Tên khách sạn</th>
                                           <th scope="col">Mã khu vực</th>
-                                          <th scope="col">Tên Khu vực</th>
                                           <th scope="col">Ảnh</th>
+                                          <th scope="col">Mô tả</th>
                                           <th scope="col"></th>
                                     </tr>
                               </thead>
                               <tbody>
                                   <?php
-                                    foreach ($listkhuvuc as $khuvuc) {
-                                        extract($khuvuc);
-
-
+                                    foreach ($listkhachsan as $ks) {
+                                        extract($ks);
                                         echo '<tr>
                                         <th scope="row"><input id="check" type="checkbox"></th>
+                                        <td>'.$maks.'</td>
+                                        <td>'.$tenks.'</td>
                                         <td>'.$makv.'</td>
-                                        <td>'.$tenkv.'</td>
-                                        <td><img src="../img/'.$anh.'" width="100" alt=""></td>
+                                        <td><img src="../img/khachsan/'.$anh.'" width="100" alt=""></td>
+                                        <td>'.$mota.'</td>
                                         <td>
                                               <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="">Sửa</a>
-                                              <a  style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
+                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="index.php?act=xoaks&&maks='.$maks.'" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
                                         </td>
                                         
                                   </tr>';
@@ -40,7 +42,7 @@
                         <button type="button" id="checkAll" class="btn btn-secondary">Chọn tất cả</button>
                         <button type="button" id="uncheckAll" class="btn btn-success">Bỏ chọn tất cả</button>
                         <button type="button" class="btn btn-danger">Xoá các mục đã chọn</button>
-                        <a href="index.php?act=addkhuvuc"><button type="button" class="btn btn-info">Nhập thêm</button></a>
+                        <a href="index.php?act=addkhachsan"><button type="button" class="btn btn-info">Nhập thêm</button></a>
 
                   </div>
             </div>

@@ -5,7 +5,7 @@ include "../models/khachsan.php";
 include "../models/khuvuc.php";
 include "header.php";
 if (isset($_GET['act'])) {
-    $act=$_GET['act'];
+    $act = $_GET['act'];
     switch ($act) {
         case 'listkhuvuc':
             $listkhuvuc=loadall_khuvuc();

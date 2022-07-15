@@ -9,5 +9,9 @@ function loadall_khachsan(){
     $listkhachsan=pdo_query($sql);
     return $listkhachsan;
 }
-
+function delete_khachsan($maks){
+    $sql="DELETE FROM khachsan WHERE maks=$maks";
+    $listkhachsan=pdo_query($sql);
+    return $listkhachsan;
+}
 ?>
