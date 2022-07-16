@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <LINK REL="SHORTCUT ICON" HREF="./img/logo.png">
+    <LINK REL="SHORTCUT ICON" HREF="./img/logo/logo cochu.png">
     <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +22,7 @@
                 <div class="col-3">
                     <div class="header__left">
                         <div class="header__logo">
-                            <a href="index.php"><img src="./img/logo.png" alt=""></a>
+                            <a href="index.php"><img src="./img/logo/logo cochu.png" alt=""></a>
                         </div>
                     </div>
                 </div>

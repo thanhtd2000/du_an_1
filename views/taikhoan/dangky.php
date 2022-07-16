@@ -7,7 +7,7 @@
                         </div>
                         <div class="col-4">
                               <div class="register__img d-flex">
-                              <img src="./img/logo.png" alt="">
+                              <img src="./img/logo/logo chu.png" alt="">
                               </div>
                               <div class="register__title d-flex">
                                     <!-- <span class="item active" data-this="dm-1">Đăng nhập/Login</span> -->
