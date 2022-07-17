@@ -42,7 +42,7 @@ if (isset($_GET['act'])) {
                 if (!array_filter($error)) {
                     insert_khuvuc($tenkv, $anh);
 
-                    move_uploaded_file($file['tmp_name'], '../img/khuvuc/'.$anh);
+                    move_uploaded_file($file['tmp_name'], '../img/khuvuc/' . $anh);
                     echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Thêm thành công'</script>";
                 }
             }
@@ -70,17 +70,8 @@ if (isset($_GET['act'])) {
                 if ($tenkv == '') {
                     $error['ten'] = "Bạn chưa nhập tên khu vực";
                 }
-                if ($file == '') {
-                    $error['anh'] = "Bạn chưa chọn ảnh";
-                }
-                $img = ['jpg', 'png', 'gif', 'jpeg'];
-                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-                if (!in_array($ext, $img)) {
-                    $error['anh'] = "Ảnh không đúng định dạng";
-                }
                 if (!array_filter($error)) {
                     edit_khuvuc($makv, $tenkv, $anh);
-
                     move_uploaded_file($file['tmp_name'], './img/khuvuc/' . $anh);
                     echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Sửa thành công'</script>";
                 }
@@ -151,7 +142,43 @@ if (isset($_GET['act'])) {
             $delete_khachsan = delete_khachsan($maks);
             echo "<script> window.location.href='index.php?act=khachsan&&message=Xoá thành công'</script>";
             break;
+        case 'suaks':
+            $listkhuvuc = loadall_khuvuc();
+            
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'tenks' => '',
+                'makv' => '',
+                'mota' => '',
+                'anh' => ''
+            ];
 
+            $maks = $_GET['maks'];
+            $oneks = loadone_khachsan($maks);
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $maks = $_POST['maks'];
+                $tenks = $_POST['tenks'];
+                $makv = $_POST['makv'];
+                $mota = $_POST['mota'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($tenks == '') {
+                    $error['tenks'] = "Bạn chưa nhập tên khách sạn";
+                }
+                if ($makv == '') {
+                    $error['makv'] = "Bạn chưa chọn tên khu vực";
+                }
+                if ($mota == '') {
+                    $error['mota'] = "Bạn chưa nhập mô tả";
+                }
+                if (!array_filter($error)) {
+                    edit_khachsan($maks,$tenks, $makv, $anh, $mota);
+                    move_uploaded_file($file['tmp_name'], '../img/khachsan/' . $anh);
+                    echo "<script> window.location.href='index.php?act=khachsan&&message=Sửa thành công'</script>";
+                }
+            }
+            include "khachsan/edit.php";
+            break;
         default:
             include "home.php";
             break;

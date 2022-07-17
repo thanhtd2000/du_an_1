@@ -15,9 +15,12 @@ function insert_khuvuc($tenkv,$anh){
 
 }
 function edit_khuvuc($makv,$tenkv,$anh){
-    $sql="UPDATE khuvuc SET tenkv='$tenkv',anh='$anh' WHERE makv = $makv";
-    pdo_execute($sql);
-
+   if($anh!="")
+   $sql="UPDATE khuvuc SET tenkv='$tenkv',anh='$anh' WHERE makv = $makv";
+   else
+   $sql="UPDATE khuvuc SET tenkv='$tenkv' WHERE makv = $makv";
+   pdo_execute($sql);
+   
 }
 function delete_khuvuc($makv){
     $sql="DELETE FROM khuvuc WHERE makv=$makv";
