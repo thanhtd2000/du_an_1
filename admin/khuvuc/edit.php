@@ -20,11 +20,11 @@
                     <input type="file" class="form-control" id="exampleInputEmail1" name="anh" aria-describedby="emailHelp" placeholder="">
                     <span style="color:red"><?= $error['anh'] ?></span>
                 </div>
-                <img src="../img/<?= $onekv['anh'] ?>" width="100" alt="">
+                <img src="../img/khuvuc/<?= $onekv['anh'] ?>" width="100" alt="">
                 <p style="color:red;">
                     <?= isset($errors['anh']) ? $errors['anh'] : '' ?>
                 </p>
-                <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
+                <input type="submit" name="themmoi" value="Cập nhật" class="btn btn-success">
                 <button type="reset" class="btn btn-danger">Nhập lại</button>
                 <a href="index.php?act=listkhuvuc"><button type="button" class="btn btn-info">Danh sách</button></a>
             </form>

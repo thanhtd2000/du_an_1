@@ -42,7 +42,7 @@ if (isset($_GET['act'])) {
                 if (!array_filter($error)) {
                     insert_khuvuc($tenkv, $anh);
 
-                    move_uploaded_file($file['tmp_name'], './img/khuvuc/' . $anh);
+                    move_uploaded_file($file['tmp_name'], '../img/khuvuc/'.$anh);
                     echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Thêm thành công'</script>";
                 }
             }

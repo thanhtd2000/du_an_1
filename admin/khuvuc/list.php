@@ -27,7 +27,7 @@
                                         <th scope="row"><input id="check" type="checkbox"></th>
                                         <td>' . $makv . '</td>
                                         <td>' . $tenkv . '</td>
-                                        <td><img src="../img/' . $anh . '" width="100" alt=""></td>
+                                        <td><img src="../img/khuvuc/' . $anh . '" width="100" alt=""></td>
                                         <td>
                                               <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suakv&&makv=' . $makv . '">Sửa</a>
                                               <a  style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"   href="index.php?act=xoakv&&makv=' . $makv . '" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
