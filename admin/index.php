@@ -15,12 +15,11 @@ if (isset($_GET['act'])) {
 
             include "khuvuc/list.php";
             break;
+            //khu vực
         case 'addkhuvuc':
             //kiểm tra người dùng có click vào thêm hay không
             $error = [
                 'ten' => '',
-
-
                 'anh' => '',
             ];
 
@@ -44,28 +43,64 @@ if (isset($_GET['act'])) {
                     insert_khuvuc($tenkv, $anh);
 
                     move_uploaded_file($file['tmp_name'], './img/khuvuc/' . $anh);
-                    echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Them thành công'</script>";
+                    echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Thêm thành công'</script>";
                 }
             }
             include "khuvuc/add.php";
             break;
-            case 'xoakv':
-                $makv=$_GET['makv'];
-                $delete_khuvuc = delete_khuvuc($makv);
-                echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Xoá thành công'</script>";
-                break;
-        case 'listtour':
+        case 'xoakv':
+            $makv = $_GET['makv'];
+            $delete_khuvuc = delete_khuvuc($makv);
+            echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Xoá thành công'</script>";
+            break;
+        case 'suakv':
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'ten' => '',
+                'anh' => '',
+            ];
+            $makv = $_GET['makv'];
+            $onekv = loadone_khuvuc($makv);
 
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $makv = $_POST['makv'];
+                $tenkv = $_POST['tenkv'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($tenkv == '') {
+                    $error['ten'] = "Bạn chưa nhập tên khu vực";
+                }
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    edit_khuvuc($makv, $tenkv, $anh);
+
+                    move_uploaded_file($file['tmp_name'], './img/khuvuc/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listkhuvuc&&message=Sửa thành công'</script>";
+                }
+            }
+            include "khuvuc/edit.php";
+            break;
+
+            //tour
+        case 'listtour':
 
             $listtour = loadall_tour();
 
             include "tour/list.php";
             break;
+            //tour
         case 'addtour';
 
             include "tour/add.php";
             break;
-
+            //khách sạn
         case 'khachsan':
             $listkhachsan = loadall_khachsan();
             include "khachsan/list.php";
@@ -111,11 +146,11 @@ if (isset($_GET['act'])) {
             include "khachsan/add.php";
             break;
 
-            case 'xoaks':
-                $maks=$_GET['maks'];
-                $delete_khachsan = delete_khachsan($maks);
-                echo "<script> window.location.href='index.php?act=khachsan&&message=Xoá thành công'</script>";
-                break;
+        case 'xoaks':
+            $maks = $_GET['maks'];
+            $delete_khachsan = delete_khachsan($maks);
+            echo "<script> window.location.href='index.php?act=khachsan&&message=Xoá thành công'</script>";
+            break;
 
         default:
             include "home.php";

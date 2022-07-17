@@ -23,7 +23,7 @@
                         <p style="color:red;">
                             <?= isset($errors['anh']) ? $errors['anh'] : '' ?>
                         </p>
-                        <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
+                        <input type="submit" name="themmoi" value="Cập nhật" class="btn btn-success">
                         <button type="reset" class="btn btn-danger">Nhập lại</button>
                         <a href="index.php?act=listkhuvuc"><button type="button" class="btn btn-info">Danh sách</button></a>
                     </form>

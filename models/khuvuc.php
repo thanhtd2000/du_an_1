@@ -4,8 +4,18 @@ function loadall_khuvuc(){
     $listkhuvuc=pdo_query($sql);
     return $listkhuvuc;
 }
+function loadone_khuvuc($makv){
+    $sql="SELECT*FROM khuvuc where makv = $makv";
+    $onekv=pdo_query_one($sql);
+    return $onekv;
+}
 function insert_khuvuc($tenkv,$anh){
     $sql="INSERT INTO khuvuc( tenkv, anh) VALUES ('$tenkv','$anh')";
+    pdo_execute($sql);
+
+}
+function edit_khuvuc($makv,$tenkv,$anh){
+    $sql="UPDATE khuvuc SET tenkv='$tenkv',anh='$anh' WHERE makv = $makv";
     pdo_execute($sql);
 
 }
