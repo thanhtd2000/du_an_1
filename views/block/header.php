@@ -40,14 +40,11 @@
                                                 ĐẶT DỊCH VỤ
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Action</a>
                                                 <a class="dropdown-item" href="#">
-                                                    Another
-                                                    action
+                                                    Tìm khách sạn
                                                 </a>
                                                 <a class="dropdown-item" href="#">
-                                                    Something else
-                                                    here
+                                                    Tìm tour & trải nghiệm
                                                 </a>
                                             </div>
                                         </li>
@@ -56,14 +53,12 @@
                                                 TRẢI NGHIỆM VINPEARL
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Quần thể</a>
                                                 <a class="dropdown-item" href="#">
-                                                    Another
-                                                    action
+                                                    Khách sạn
                                                 </a>
                                                 <a class="dropdown-item" href="#">
-                                                    Something else
-                                                    here
+                                                    Dịch vụ
                                                 </a>
                                             </div>
                                         </li>
@@ -75,14 +70,9 @@
                                                 PEARL CLUB
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Tổng quan</a>
                                                 <a class="dropdown-item" href="#">
-                                                    Another
-                                                    action
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else
-                                                    here
+                                                    Quyền lợi
                                                 </a>
                                             </div>
                                         </li>
