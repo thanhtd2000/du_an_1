@@ -29,9 +29,9 @@
                                         <td>' . $tenks . '</td>
                                         <td>' . $makv . '</td>
                                         <td><img src="../img/khachsan/' . $anh . '" width="100" alt=""></td>
-                                        <td>' . $mota . '</td>
+                                        <td><!--' . $mota . '--></td>
                                         <td>
-                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="">Sửa</a>
+                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suaks&&maks=' . $maks . '">Sửa</a>
                                               <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="index.php?act=xoaks&&maks=' . $maks . '" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
                                         </td>
                                         
