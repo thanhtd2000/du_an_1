@@ -47,7 +47,7 @@
                     <a class="nav-link" href="index.php?act=khachsan">Khách sạn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?act=khudl">Khu du lịch</a>
+                    <a class="nav-link" href="index.php?act=listkhudulich">Khu du lịch</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?act=listkhuvuc">Khu vực</a>

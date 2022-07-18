@@ -2,7 +2,9 @@
 include "../models/pdo.php";
 include "../models/tour.php";
 include "../models/khachsan.php";
+
 include "../models/khuvuc.php";
+include "../models/khudulich.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -116,7 +118,51 @@ if (isset($_GET['act'])) {
                 $delete_khachsan = delete_khachsan($maks);
                 echo "<script> window.location.href='index.php?act=khachsan&&message=Xoá thành công'</script>";
                 break;
+            case 'listkhudulich':
+                $listkhudulich = loadall_khudulich();
+    
+    
+    
+    
+                include "khudulich/list.php";
+                break;    
+            case 'addkdl':
+                $error=[
+                   'tenkdl'=>'',
+                   'makv'=>'',
+                   'anh'=>'',
 
+                ];
+                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                    $tenks = $_POST['tenkdl'];
+                    $makv = $_POST['makv'];
+                    
+                    $file = $_FILES['anh'];
+                    $anh = $file['name'];
+                    if ($tenks == '') {
+                        $error['tenkdl'] = "Bạn chưa nhập tên khu du lịch";
+                    }
+                    if ($makv == '') {
+                        $error['makv'] = "Bạn chưa chọn tên khu vực";
+                    }
+                    
+                    if ($file == '') {
+                        $error['anh'] = "Bạn chưa chọn ảnh";
+                    }
+                    $img = ['jpg', 'png', 'gif', 'jpeg'];
+                    $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                    if (!in_array($ext, $img)) {
+                        $error['anh'] = "Ảnh không đúng định dạng";
+                    }
+                    if (!array_filter($error)) {
+                        insert_khudulich($tenks, $makv, $anh);
+                        move_uploaded_file($file['tmp_name'], '../img/khudulich/' . $anh);
+                        echo "<script> window.location.href='index.php?act=listkhudulich&&message=Thêm thành công'</script>";
+                    }
+                }
+                $listkhuvuc = loadall_khuvuc();
+                include "khudulich/add.php";
+                break;
         default:
             include "home.php";
             break;
