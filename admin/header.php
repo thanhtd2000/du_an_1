@@ -35,9 +35,6 @@
                     <a class="nav-link" href="index.php?act=phong">Phòng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?act=loaiphong">Loại Phòng</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="index.php?act=binhluan">Bình luận</a>
                 </li>
                 <li class="nav-item">

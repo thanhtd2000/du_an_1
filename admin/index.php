@@ -9,6 +9,10 @@ if (isset($_GET['act'])) {
     switch ($act) {
         case 'listkhuvuc':
             $listkhuvuc = loadall_khuvuc();
+
+
+
+
             include "khuvuc/list.php";
             break;
             //khu vực
@@ -139,9 +143,8 @@ if (isset($_GET['act'])) {
             echo "<script> window.location.href='index.php?act=khachsan&&message=Xoá thành công'</script>";
             break;
         case 'suaks':
-
             $listkhuvuc = loadall_khuvuc();
-
+            
             //kiểm tra người dùng có click vào thêm hay không
             $error = [
                 'tenks' => '',
@@ -169,22 +172,12 @@ if (isset($_GET['act'])) {
                     $error['mota'] = "Bạn chưa nhập mô tả";
                 }
                 if (!array_filter($error)) {
-                    edit_khachsan($maks, $tenks, $makv, $anh, $mota);
+                    edit_khachsan($maks,$tenks, $makv, $anh, $mota);
                     move_uploaded_file($file['tmp_name'], '../img/khachsan/' . $anh);
                     echo "<script> window.location.href='index.php?act=khachsan&&message=Sửa thành công'</script>";
                 }
             }
             include "khachsan/edit.php";
-            break;
-            //loaiphong
-
-            //loaiphong
-        case 'addloaiphong':
-            include "loaiphong/add.php";
-            break;
-        case 'loaiphong':
-            $listloaiphong = loadall_loaiphong();
-            include "loaiphong/list.php";
             break;
         default:
             include "home.php";
