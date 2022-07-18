@@ -12,7 +12,7 @@ function loadone_loaiphong($maloai)
 }
 function insert_loaiphong($tenloai, $giaphong, $mota)
 {
-    $sql = "INSERT INTO loaiphong(tenloai, giaphong, mota) VALUES ('$tenloai','$giaphong','$mota'";
+    $sql = "INSERT INTO loaiphong(tenloai, giaphong, mota) VALUES ('$tenloai','$giaphong','$mota')";
     pdo_execute($sql);
 }
 function edit_loaiphong($maloai, $tenloai, $giaphong, $mota)
@@ -22,6 +22,6 @@ function edit_loaiphong($maloai, $tenloai, $giaphong, $mota)
 }
 function delete_loaiphong($maloai)
 {
-    $sql = "DELETE FROM loaiphong WHERE makv=$maloai";
+    $sql = "DELETE FROM loaiphong WHERE maloai=$maloai";
     pdo_execute($sql);
 }

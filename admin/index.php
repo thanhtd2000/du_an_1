@@ -3,6 +3,8 @@ include "../models/pdo.php";
 include "../models/tour.php";
 include "../models/khachsan.php";
 include "../models/khuvuc.php";
+include "../models/loaiphong.php";
+
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -180,11 +182,71 @@ if (isset($_GET['act'])) {
 
             //loaiphong
         case 'addloaiphong':
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'tenloai' => '',
+                'giaphong' => '',
+                'mota' => '',
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tenloai = $_POST['tenloai'];
+                $giaphong = $_POST['giaphong'];
+                $mota = $_POST['mota'];
+                if ($tenloai == '') {
+                    $error['tenloai'] = "Bạn chưa nhập tên loại";
+                }
+                if ($giaphong == '') {
+                    $error['giaphong'] = "Bạn chưa nhập giá";
+                }
+                if ($mota == '') {
+                    $error['mota'] = "Bạn chưa nhập mô tả";
+                }
+                if (!array_filter($error)) {
+                    insert_loaiphong($tenloai, $giaphong, $mota);
+                    echo "<script> window.location.href='index.php?act=loaiphong&&message=Thêm thành công'</script>";
+                }
+            }
             include "loaiphong/add.php";
             break;
         case 'loaiphong':
+
             $listloaiphong = loadall_loaiphong();
             include "loaiphong/list.php";
+            break;
+        case 'xoaloai':
+            $maloai = $_GET['maloai'];
+            $delete_loaiphong = delete_loaiphong($maloai);
+            echo "<script> window.location.href='index.php?act=loaiphong&&message=Xoá thành công'</script>";
+            break;
+        case 'sualoai':
+            $error = [
+                'tenloai' => '',
+                'giaphong' => '',
+                'mota' => '',
+            ];
+            $maloai = $_GET['maloai'];
+            $onelp = loadone_loaiphong($maloai);
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $maloai = $_POST['maloai'];
+                $tenloai = $_POST['tenloai'];
+                $giaphong = $_POST['giaphong'];
+                $mota = $_POST['mota'];
+                if ($tenloai == '') {
+                    $error['tenloai'] = "Bạn chưa nhập tên loại";
+                }
+                if ($giaphong == '') {
+                    $error['giaphong'] = "Bạn chưa nhập giá";
+                }
+                if ($mota == '') {
+                    $error['mota'] = "Bạn chưa nhập mô tả";
+                }
+                if (!array_filter($error)) {
+                    edit_loaiphong($maloai,$tenloai, $giaphong, $mota);
+                    echo "<script> window.location.href='index.php?act=loaiphong&&message=Sửa thành công'</script>";
+                }
+            }
+            include "loaiphong/edit.php";
             break;
         default:
             include "home.php";

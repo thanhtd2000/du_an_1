@@ -7,11 +7,11 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mã Loại Phòng</label>
-                    <input type="number" class="form-control" disabled id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Auto number">
+                    <input type="number" readonly name="maloai" value="<?=$onelp['maloai']?>" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Auto number">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tên Loại Phòng</label>
-                    <input type="text" class="form-control" placeholder="Nhập tên loại phòng" name="tenloai">
+                    <input type="text" class="form-control" value="<?=$onelp['tenloai']?>" placeholder="Nhập tên loại phòng" name="tenloai">
                     <span style="color:red"><?= $error['tenloai'] ?></span>
                 </div>
                 <p style="color:red;">
@@ -19,7 +19,7 @@
                 </p>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Giá Loại Phòng</label>
-                    <input type="text" class="form-control" placeholder="Nhập giá" name="giaphong">
+                    <input type="text" value="<?=$onelp['giaphong']?>" class="form-control" placeholder="Nhập giá" name="giaphong">
                     <span style="color:red"><?= $error['giaphong'] ?></span>
                 </div>
                 <p style="color:red;">
@@ -27,9 +27,9 @@
                 </p>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mô tả</label>
-                    <textarea name="mota" id="" cols="30" rows="10"></textarea>
+                    <textarea name="mota" id="" cols="30" rows="10"><?=$onelp['mota']?></textarea>
                 </div>
-                <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
+                <input type="submit" name="themmoi" value="Cập nhật" class="btn btn-success">
                 <button type="reset" class="btn btn-danger">Nhập lại</button>
                 <a href="index.php?act=loaiphong"><button type="button" class="btn btn-info">Danh sách</button></a>
             </form>
