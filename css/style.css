@@ -904,7 +904,13 @@ form .mail {
     margin: 0 auto;
   }
 }
-.dropdown__right{
-      width: 100%;
-      background-color: #999;
+.tour__right_detail ul li a img{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+
+}
+.tour__right_detail ul{
+      display: flex;
 }

@@ -66,10 +66,13 @@
                   <div class="body">
                         <div class="slide__input active" id="dm-1">
                               <div class="d-flex">
+                              <div class="slide__location">
+                                          <input type="text" placeholder="Nhập khu vực">
+                                    </div>
                                     <div class="slide__location">
                                           <input type="text" placeholder="Nhập khách sạn">
                                     </div>
-                                    <div class="slide__room">
+                                    <!-- <div class="slide__room">
                                           <div class="dropdown">
                                                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                       Số phòng
@@ -90,8 +93,19 @@
                                                       </div>
                                                 </div>
                                           </div>
+                                    </div> -->
+                                    <button><a href="">TÌM KIẾM</a></button>
+                              </div>
+                        </div>
+                        <div class="slide__input2" id="dm-2">
+                              <div class="d-flex">
+                                    <div class="slide__location">
+                                          <input type="text" placeholder="Nhập hoạt động">
                                     </div>
-                                    <div class="slide__member">
+                                    <div class="slide__time">
+                                          <input type="text" placeholder="Nhập địa điểm">
+                                    </div>
+                                    <!-- <div class="slide__member">
                                           <div class="dropdown">
                                                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                       Số người
@@ -143,18 +157,7 @@
                                                       </div>
                                                 </div>
                                           </div>
-                                    </div>
-                                    <button><a href="">TÌM KIẾM</a></button>
-                              </div>
-                        </div>
-                        <div class="slide__input2" id="dm-2">
-                              <div class="d-flex">
-                                    <div class="slide__location">
-                                          <input type="text" placeholder="Nhập hoạt động">
-                                    </div>
-                                    <div class="slide__time">
-                                          <input type="text" placeholder="Nhập địa điểm">
-                                    </div>
+                                    </div> -->
                                     <button><a href="">TÌM KIẾM</a></button>
                               </div>
                         </div>
@@ -629,7 +632,5 @@
 .dropdown__item{
       margin: 0 10px;
 }
-.nap__content .col-3{
-      
-}
+
 </style>
