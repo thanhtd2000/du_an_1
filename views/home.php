@@ -781,7 +781,5 @@
 .dropdown__item{
       margin: 0 10px;
 }
-.nap__content .col-3{
-      
-}
+
 </style>
