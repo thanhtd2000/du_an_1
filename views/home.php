@@ -237,7 +237,159 @@
       </div>
 </div>
 <div class="products container">
-      <h2>Sản phẩm dành cho bạn</h2>
+      <h2>Combo Du Lịch</h2>
+      <div class="products__content">
+            <div class="owl-carousel owl-theme">
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/a1acf82403f843389d7d955048d7fc72_af4a1d084a3442beaad93bb1868207ad_image.jpeg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/2baf25da78044afc9b153d6c4fa122ff_DNB07168.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/a7fdffd9640140c599e57ee74b5aebbe_DJI_0073.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/64cced44b4014aeeb075f204a2ca7129__MG_9433.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/e988d25ace594b5396a1bb15150fc3d1_101-2.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/9baddef5fcaa4f1b8c723940e195cde2_K96_7713_summer2.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/a50e7ea0b1434e4695d34832f948debf_VOSPQ-overview_HCM-PQ-Meta-combo.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="item">
+                        <div class="card" style="width: 22rem;">
+                              <img src="./img/4716b601b3634d6a993648a1cb208203__D8H6905 (1).jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                    <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                    <div class="products__detail">
+                                          <div class="products__left">
+                                                <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                          </div>
+                                          <div class="products__right">
+                                                <div>750.000 đ</div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+<div class="products container">
+      <h2>Khách sạn</h2>
       <div class="products__content">
             <div class="owl-carousel owl-theme">
                   <div class="item">
