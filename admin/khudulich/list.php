@@ -29,10 +29,10 @@
                                         <td>' . $makdl . '</td>
                                         <td>' . $tenkdl . '</td>
                                         <td>' . $tenkv . '</td>
-                                        <td><img src="../img/' . $anh . '" width="100" alt=""></td>
+                                        <td><img src="../img/khudulich/' . $anh . '" width="100" alt=""></td>
                                         <td>
-                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="">Sửa</a>
-                                              <a  style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"   href="index.php?act=xoakv&&makv=' . $makv . '" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
+                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suakdl&&makdl=' . $makdl . '">Sửa</a>
+                                              <a  style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"   href="index.php?act=xoakdl&&makdl=' . $makdl . '" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
                                         </td>
                                         
                                   </tr>';

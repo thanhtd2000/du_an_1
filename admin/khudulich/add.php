@@ -12,12 +12,12 @@
                                
                         </div>
                         <p style="color:red;">
-                    <?= isset($errors['tenkdl']) ? $errors['tenkdl'] : '' ?>
+                    <?= isset($error['tenkdl']) ? $error['tenkdl'] : '' ?>
                 </p>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên khu vực</label>
                             <select multiple class="form-control" id="exampleFormControlSelect2" name="makv">
-                            <option value="0" selected></option>
+                            <option value="" selected></option>
                                 <?php foreach($listkhuvuc as $khuvuc){
                                     extract($khuvuc);
                                     echo '<option value="'.$makv.'">'.$tenkv.'</option>';
@@ -25,7 +25,7 @@
                                 ?>
                             </select>
                             <p style="color:red;">
-                    <?= isset($errors['makv']) ? $errors['makv'] : '' ?>
+                    <?= isset($error['makv']) ? $error['makv'] : '' ?>
                 </p>
                         </div>
                         <div class="form-group">
@@ -34,7 +34,10 @@
                                 aria-describedby="emailHelp" placeholder="">
                                 
                         </div>
-                        <?= isset($errors['anh']) ? $errors['anh'] : '' ?>
+                        <p style="color:red;">
+                    <?= isset($error['anh']) ? $error['anh'] : '' ?>
+                </p>
+                <br>
                         <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
                         <button type="reset" class="btn btn-danger">Nhập lại</button>
                         <a href="index.php?act=listkhudulich"><button type="button" class="btn btn-info">Danh sách</button></a>
