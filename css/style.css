@@ -904,6 +904,9 @@ form .mail {
     margin: 0 auto;
   }
 }
+.tour__rightIMG .carousel-item img{
+      height: 218px;
+}
 .tour__right_detail ul li a img{
       display: inline-block;
       width: 20px;
@@ -913,4 +916,97 @@ form .mail {
 }
 .tour__right_detail ul{
       display: flex;
+}
+
+.tour__left{
+      border: 1px solid #f9f4f4;
+
+}
+.tour__left_top h4{
+      font-size: 18px;
+      font-weight: 400;
+}
+.tour__left_top{
+      justify-content: space-between;
+      background-color:#F5F5F5;
+      padding: 20px;
+}
+.tour__left_top button{
+      color: #e29a38;
+      background-color: #F5F5F5;
+      outline: none;
+}
+.tour__brand,.tour__service,.tour__room{
+      padding: 10px;
+}
+.tour__brand h5,.tour__service h5,.tour__room h5{
+      font-size: 17px;
+      font-weight: 700;
+}
+.tour__brand ul li a,.tour__service ul li a,.tour__room ul li a{
+      color: #000;
+}
+.tour__brand ul li a input,.tour__service ul li a input,.tour__room ul li a input{
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+      background-color: #e29a38;
+}
+.tour__brand ul li,.tour__service ul li,.tour__room ul li{
+      padding: 5px 0;
+}
+.tour__right_detail h3{
+      font-size: 25px;
+      font-weight: 400;
+}
+.tour__right_detail p:first-of-type{
+      font-size: 15px;
+      font-weight: 400;
+}
+.tour__right_detail p i{
+      margin-right: 5px;
+}
+.tour__right_detail .star li{
+      padding: 0 5px;
+      
+}
+.tour__right_detail .star li a{
+      padding: 0 5px;
+      color: #ca811d;
+}
+.tour__right_detail>span{
+      border: 1px solid #e29a38;
+      color: #e29a38;
+      border-radius: 5px;
+      font-weight: 500;
+      padding: 1px 3px;
+      font-size: 14px;
+      margin: 0 5px;
+}
+.tour__right_detail__price p:first-of-type,.tour__right_detail__price p:last-of-type{
+      color: #000;
+      margin: 0;
+      font-size: 14px;
+}
+.tour__right_detail__price p:first-of-type span{
+      font-size: 26px;
+      font-weight: 500;
+      color: #ca811d;
+      padding-left: 5px;
+}
+.tour__right_detail div{
+      text-align: right;
+      padding-top: 10px;
+}
+.tour__right_detail div button{
+      width: 180px;
+  height: 50px;
+  background-color: #e8952f;
+  transition: all 0.5s;
+  border-radius: 5px;
+  color: #fff;
+}
+.tour__right__item{
+  margin-bottom: 30px;
+   
 }
