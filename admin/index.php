@@ -2,7 +2,9 @@
 include "../models/pdo.php";
 include "../models/tour.php";
 include "../models/khachsan.php";
+
 include "../models/khuvuc.php";
+include "../models/khudulich.php";
 include "../models/loaiphong.php";
 
 include "header.php";
@@ -135,6 +137,84 @@ if (isset($_GET['act'])) {
             include "khachsan/add.php";
             break;
 
+            
+            case 'listkhudulich':
+                $listkhudulich = loadall_khudulich();
+    
+    
+    
+    
+                include "khudulich/list.php";
+                break;    
+            case 'addkdl':
+                $error=[
+                   'tenkdl'=>'',
+                   'makv'=>'',
+                   'anh'=>'',
+
+                ];
+                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                    $tenkdl = $_POST['tenkdl'];
+                    $makv = $_POST['makv'];
+                    
+                    $file = $_FILES['anh'];
+                    $anh = $file['name'];
+                    if ($tenkdl == '') {
+                        $error['tenkdl'] = "Bạn chưa nhập tên khu du lịch";
+                    }
+                    if ($makv == '') {
+                        $error['makv'] = "Bạn chưa chọn tên khu vực";
+                    }
+                    
+                    if ($file == '') {
+                        $error['anh'] = "Bạn chưa chọn ảnh";
+                    }
+                    $img = ['jpg', 'png', 'gif', 'jpeg'];
+                    $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                    if (!in_array($ext, $img)) {
+                        $error['anh'] = "Ảnh không đúng định dạng";
+                    }
+                    if (!array_filter($error)) {
+                        insert_khudulich($tenkdl, $makv, $anh);
+                        move_uploaded_file($file['tmp_name'], '../img/khudulich/' . $anh);
+                        echo "<script> window.location.href='index.php?act=listkhudulich&&message=Thêm thành công'</script>";
+                    }
+                }
+                $listkhuvuc = loadall_khuvuc();
+                include "khudulich/add.php";
+                break;
+        case 'xoakdl':
+            $makdl = $_GET['makdl'];
+            $delete_khudulich = delete_khudulich($makdl);
+            echo "<script> window.location.href='index.php?act=listkhudulich&&message=Xoá thành công'</script>";
+            break;
+        case 'suakdl':
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'ten' => '',
+                'anh' => '',
+            ];
+            $makdl = $_GET['makdl'];
+            $onekdl = loadone_khudulich($makdl);
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $makdl = $_POST['makdl'];
+                $tenkdl = $_POST['tenkdl'];
+                $makv = $_POST['makv'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($tenkdl == '') {
+                    $error['ten'] = "Bạn chưa nhập tên khu vực";
+                }
+                if (!array_filter($error)) {
+                    edit_khudulich($makdl,$tenkdl,$anh,$makv);
+                    move_uploaded_file($file['tmp_name'], './img/khudulich/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listkhudulich&&message=Sửa thành công'</script>";
+                }
+            }
+            $listkhuvuc = loadall_khuvuc();
+            include "khudulich/edit.php";
+            break;
         case 'xoaks':
             $maks = $_GET['maks'];
             $delete_khachsan = delete_khachsan($maks);
@@ -144,7 +224,7 @@ if (isset($_GET['act'])) {
 
             $listkhuvuc = loadall_khuvuc();
 
-            //kiểm tra người dùng có click vào thêm hay không
+          
             $error = [
                 'tenks' => '',
                 'makv' => '',
