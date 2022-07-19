@@ -1,3 +1,8 @@
+<?php
+if(is_array($onekdl)){
+    extract($onekdl);
+}
+?>
 <div class="addProducts contain">
     <div class="addProducts__Content">
         <div class="addProducts__title">
@@ -17,14 +22,16 @@
                 <div class="form-group">
                             <label for="exampleInputEmail1">Tên khu vực</label>
                             <select multiple class="form-control" id="exampleFormControlSelect2" name="makv">
-                            <?php foreach ($listkhuvuc as $lkv) : ?>
-                                <?php if ($onekdl['makv'] == $lkv['makv']) : ?>
-                                    <option selected value="<?= $lkv['makv'] ?>"><?= $lkv['tenkv'] ?></option>
-                                <?php else : ?>
-                                    <option value="<?= $lkv['makv'] ?>"><?= $lkv['tenkv'] ?></option>
-                                <?php endif ?>
-
-                        <?php endforeach ?>
+                            
+                        
+                     <!-- <option value="0" selected>Tất cả</option> -->
+                  <?php foreach($listkhuvuc as $lkv){
+                         extract($lkv);
+                         if($lkv['makv']==$onekdl['makv']) echo '<option value="'.$makv.'" selected>'.$tenkv.'</option>';
+                         else echo '<option value="'.$makv.'" >'.$tenkv.'</option>';
+                        }
+                  ?>
+    </select>
                             </select>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Ảnh</label>

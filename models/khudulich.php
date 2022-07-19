@@ -18,11 +18,11 @@ function loadone_khudulich($makdl){
     $onekdl=pdo_query_one($sql);
     return $onekdl;
 }
-function edit_khudulich($makdl,$tenkdl,$anh){
+function edit_khudulich($makdl,$tenkdl,$anh,$makv){
     if($anh!="")
-    $sql="UPDATE khudulich SET tenkdl='$tenkdl',anh='$anh' WHERE makdl = $makdl";
+    $sql="UPDATE khudulich SET tenkdl='$tenkdl',anh='$anh',makv='$makv' WHERE makdl = $makdl";
     else
-    $sql="UPDATE khudulich SET tenkdl='$tenkdl' WHERE makdl = $makdl";
+    $sql="UPDATE khudulich SET tenkdl='$tenkdl',makv='$makv' WHERE makdl = $makdl";
     pdo_execute($sql);
     
  }

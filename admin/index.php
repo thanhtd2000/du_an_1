@@ -207,7 +207,7 @@ if (isset($_GET['act'])) {
                     $error['ten'] = "Bạn chưa nhập tên khu vực";
                 }
                 if (!array_filter($error)) {
-                    edit_khudulich($makdl,$tenkdl,$anh);
+                    edit_khudulich($makdl,$tenkdl,$anh,$makv);
                     move_uploaded_file($file['tmp_name'], './img/khudulich/' . $anh);
                     echo "<script> window.location.href='index.php?act=listkhudulich&&message=Sửa thành công'</script>";
                 }
