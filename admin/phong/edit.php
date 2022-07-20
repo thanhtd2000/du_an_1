@@ -7,11 +7,11 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mã phòng</label>
-                    <input type="number" class="form-control" value="<?=$onephong['maphong']?>" disabled id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Auto number">
+                    <input type="number" class="form-control" name="maphong" readonly id="exampleInputEmail1"  aria-describedby="emailHelp" value="<?= $onephong['maphong'] ?>" placeholder="Auto number">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tên Phòng</label>
-                    <input type="text" value="<?=$onephong['tenphong']?>" class="form-control" id="exampleInputEmail1" name="tenphong" aria-describedby="emailHelp" placeholder="Tên Phòng">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="tenphong" aria-describedby="emailHelp" value="<?= $onephong['tenphong'] ?>" placeholder="Tên Phòng">
                 </div>
                 <p style="color:red;">
                     <?= isset($errors['tenphong']) ? $errors['tenphong'] : '' ?>
@@ -20,7 +20,11 @@
                     <label for="">Chọn khách sạn</label>
                     <select name="maks" class="form-control" id="exampleFormControlSelect2">
                         <?php foreach ($listkhachsan as $lks) : ?>
-                            <option value="<?= $lks['maks'] ?>"><?= $lks['tenks'] ?></option>
+                            <?php if ($onephong['maks'] == $lks['maks']) : ?>
+                                    <option selected value="<?= $lks['maks'] ?>"><?= $lks['tenks'] ?></option>
+                                <?php else : ?>
+                                    <option value="<?= $lks['maks'] ?>"><?= $lks['tenks'] ?></option>
+                                <?php endif ?>
                         <?php endforeach ?>
                     </select>
                 </div>
@@ -31,7 +35,11 @@
                     <label for="">Loại Phòng</label>
                     <select name="maloai" class="form-control" id="exampleFormControlSelect2">
                         <?php foreach ($listloaiphong as $llp) : ?>
-                            <option value="<?= $llp['maloai'] ?>"><?= $llp['tenloai'] ?></option>
+                            <?php if ($onephong['maloai'] == $llp['maloai']) : ?>
+                                    <option selected value="<?= $llp['maloai'] ?>"><?= $llp['tenloai'] ?></option>
+                                <?php else : ?>
+                                    <option value="<?= $llp['maloai'] ?>"><?= $llp['tenloai'] ?></option>
+                                <?php endif ?>
                         <?php endforeach ?>
                     </select>
 
@@ -43,10 +51,11 @@
                     <label for="exampleInputEmail1">Ảnh</label>
                     <input type="file" class="form-control" id="exampleInputEmail1" name="anh" aria-describedby="emailHelp" placeholder="">
                 </div>
+                <img src="../img/phong/<?= $onephong['anh'] ?>" width="100" alt="">
                 <p style="color:red;">
                     <?= isset($errors['anh']) ? $errors['anh'] : '' ?>
                 </p>
-                <input type="submit" name="themmoi" value="Thêm mới" class="btn btn-success">
+                <input type="submit" name="themmoi" value="Cập nhật" class="btn btn-success">
                 <button type="reset" class="btn btn-danger">Nhập lại</button>
                 <a href="index.php?act=phong"><button type="button" class="btn btn-info">Danh sách</button></a>
             </form>

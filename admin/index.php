@@ -2,7 +2,7 @@
 include "../models/pdo.php";
 include "../models/tour.php";
 include "../models/khachsan.php";
-
+include "../models/phong.php";
 include "../models/khuvuc.php";
 include "../models/khudulich.php";
 include "../models/loaiphong.php";
@@ -137,52 +137,52 @@ if (isset($_GET['act'])) {
             include "khachsan/add.php";
             break;
 
-            
-            case 'listkhudulich':
-                $listkhudulich = loadall_khudulich();
-    
-    
-    
-    
-                include "khudulich/list.php";
-                break;    
-            case 'addkdl':
-                $error=[
-                   'tenkdl'=>'',
-                   'makv'=>'',
-                   'anh'=>'',
 
-                ];
-                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                    $tenkdl = $_POST['tenkdl'];
-                    $makv = $_POST['makv'];
-                    
-                    $file = $_FILES['anh'];
-                    $anh = $file['name'];
-                    if ($tenkdl == '') {
-                        $error['tenkdl'] = "Bạn chưa nhập tên khu du lịch";
-                    }
-                    if ($makv == '') {
-                        $error['makv'] = "Bạn chưa chọn tên khu vực";
-                    }
-                    
-                    if ($file == '') {
-                        $error['anh'] = "Bạn chưa chọn ảnh";
-                    }
-                    $img = ['jpg', 'png', 'gif', 'jpeg'];
-                    $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-                    if (!in_array($ext, $img)) {
-                        $error['anh'] = "Ảnh không đúng định dạng";
-                    }
-                    if (!array_filter($error)) {
-                        insert_khudulich($tenkdl, $makv, $anh);
-                        move_uploaded_file($file['tmp_name'], '../img/khudulich/' . $anh);
-                        echo "<script> window.location.href='index.php?act=listkhudulich&&message=Thêm thành công'</script>";
-                    }
+        case 'listkhudulich':
+            $listkhudulich = loadall_khudulich();
+
+
+
+
+            include "khudulich/list.php";
+            break;
+        case 'addkdl':
+            $error = [
+                'tenkdl' => '',
+                'makv' => '',
+                'anh' => '',
+
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tenkdl = $_POST['tenkdl'];
+                $makv = $_POST['makv'];
+
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($tenkdl == '') {
+                    $error['tenkdl'] = "Bạn chưa nhập tên khu du lịch";
                 }
-                $listkhuvuc = loadall_khuvuc();
-                include "khudulich/add.php";
-                break;
+                if ($makv == '') {
+                    $error['makv'] = "Bạn chưa chọn tên khu vực";
+                }
+
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    insert_khudulich($tenkdl, $makv, $anh);
+                    move_uploaded_file($file['tmp_name'], '../img/khudulich/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listkhudulich&&message=Thêm thành công'</script>";
+                }
+            }
+            $listkhuvuc = loadall_khuvuc();
+            include "khudulich/add.php";
+            break;
         case 'xoakdl':
             $makdl = $_GET['makdl'];
             $delete_khudulich = delete_khudulich($makdl);
@@ -207,7 +207,7 @@ if (isset($_GET['act'])) {
                     $error['ten'] = "Bạn chưa nhập tên khu vực";
                 }
                 if (!array_filter($error)) {
-                    edit_khudulich($makdl,$tenkdl,$anh,$makv);
+                    edit_khudulich($makdl, $tenkdl, $anh, $makv);
                     move_uploaded_file($file['tmp_name'], './img/khudulich/' . $anh);
                     echo "<script> window.location.href='index.php?act=listkhudulich&&message=Sửa thành công'</script>";
                 }
@@ -224,7 +224,7 @@ if (isset($_GET['act'])) {
 
             $listkhuvuc = loadall_khuvuc();
 
-          
+
             $error = [
                 'tenks' => '',
                 'makv' => '',
@@ -322,11 +322,111 @@ if (isset($_GET['act'])) {
                     $error['mota'] = "Bạn chưa nhập mô tả";
                 }
                 if (!array_filter($error)) {
-                    edit_loaiphong($maloai,$tenloai, $giaphong, $mota);
+                    edit_loaiphong($maloai, $tenloai, $giaphong, $mota);
                     echo "<script> window.location.href='index.php?act=loaiphong&&message=Sửa thành công'</script>";
                 }
             }
             include "loaiphong/edit.php";
+            break;
+
+        case 'addphong':
+            $listloaiphong = loadall_loaiphong();
+            $listkhachsan = loadall_khachsan();
+            $error = [
+                'maks' => '',
+                'tenphong' => '',
+                'maloai' => '',
+                'anh' => '',
+            ];
+
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $maks = $_POST['maks'];
+                $tenphong = $_POST['tenphong'];
+                $maloai = $_POST['maloai'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($maks == '') {
+                    $error['maks'] = "Bạn chưa chọn khách sạn";
+                }
+                if ($tenphong == '') {
+                    $error['tenphong'] = "Bạn chưa nhập tên phòng";
+                }
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                if ($maloai == '') {
+                    $error['maloai'] = "Bạn chưa chọn loại phòng";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    insert_phong($tenphong, $maks, $maloai, $anh);
+
+                    move_uploaded_file($file['tmp_name'], '../img/phong/' . $anh);
+                    echo "<script> window.location.href='index.php?act=phong&&message=Thêm thành công'</script>";
+                }
+            }
+
+            include "phong/add.php";
+            break;
+        case 'phong':
+            $listphong = loadall_phong();
+            include "phong/list.php";
+            break;
+        case 'xoaphong':
+            $maphong = $_GET['maphong'];
+            $delete_phong = delete_phong($maphong);
+            echo "<script> window.location.href='index.php?act=phong&&message=Xoá thành công'</script>";
+            break;
+        case 'suaphong':
+
+            $listloaiphong = loadall_loaiphong();
+            $listkhachsan = loadall_khachsan();
+            $maphong = $_GET['maphong'];
+            $onephong = loadone_phong($maphong);
+            $error = [
+                'maks' => '',
+                'tenphong' => '',
+                'maloai' => '',
+                'anh' => '',
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $maphong = $_POST['maphong'];
+                $maks = $_POST['maks'];
+                $tenphong = $_POST['tenphong'];
+                $maloai = $_POST['maloai'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($maks == '') {
+                    $error['maks'] = "Bạn chưa chọn khách sạn";
+                }
+                if ($tenphong == '') {
+                    $error['tenphong'] = "Bạn chưa nhập tên phòng";
+                }
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                if ($maloai == '') {
+                    $error['maloai'] = "Bạn chưa chọn loại phòng";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    edit_phong($maphong, $tenphong, $maks, $maloai, $anh);
+
+                    move_uploaded_file($file['tmp_name'], '../img/phong/' . $anh);
+                    echo "<script> window.location.href='index.php?act=phong&&message=Thêm thành công'</script>";
+                }
+            }
+
+            include "phong/edit.php";
             break;
         default:
             include "home.php";
