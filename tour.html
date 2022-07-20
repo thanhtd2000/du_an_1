@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>Title</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="./css/owl-carousel/owl.carousel.min.css" />
+      <link rel="stylesheet" href="./css/owl-carousel/owl.theme.default.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+      <div class="header container">
+            <div class="header__content">
+                  <div class="row">
+                        <div class="col-3">
+                              <div class="header__left">
+                                    <div class="header__logo">
+                                          <a href="index.php"><img src="./img/logo/logo cochu.png" alt=""></a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-9">
+                              <div class="header__right">
+                                    <div class="header__nav d-flex">
+                                          <nav class="navbar navbar-expand-lg navbar-light">
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                      <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                      <ul class="navbar-nav mr-auto">
+                                                            <li class="nav-item dropdown">
+                                                                  <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        ĐẶT DỊCH VỤ
+                                                                  </a>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Tìm khách sạn
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Tìm tour & trải nghiệm
+                                                                        </a>
+                                                                  </div>
+                                                            </li>
+                                                            <li class="nav-item dropdown">
+                                                                  <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        TRẢI NGHIỆM VINPEARL
+                                                                  </a>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="#">Quần thể</a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Khách sạn
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Dịch vụ
+                                                                        </a>
+                                                                  </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                  <a class="nav-link" href="#">ƯU ĐÃI KHUYẾN MÃI</a>
+                                                            </li>
+                                                            <li class="nav-item dropdown">
+                                                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        PEARL CLUB
+                                                                  </a>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="#">Tổng quan</a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Quyền lợi
+                                                                        </a>
+                                                                  </div>
+                                                            </li>
+                                                      </ul>
+                                                </div>
+                                          </nav>
+                                          <span>
+                                                <div style="padding-top: 6px;">
+                                                      <?php
+                                                      if (isset($_SESSION['email']) && (is_array($_SESSION['email']))) {
+                                                            extract($_SESSION['email']);
+                                                      ?>
+                                                            <span>
+                                                                  <a class="nav-link dropdown-toggle" style="color: #000;display: block;max-width: 80px;overflow: hidden;white-space: nowrap;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <i class="fa-solid fa-user"></i>
+                                                                        <b>
+                                                                              <?= $hoten ?>
+                                                                        </b>
+                                                                  </a>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="index.php?act=thongtin&&iduser=<?= $iduser ?>">Thông
+                                                                              tin tài khoản</a>
+                                                                        <?php if ($vaitro == 1) : ?>
+                                                                              <a class="dropdown-item" href="./admin/index.php">Quản
+                                                                                    lý trang web</a>
+                                                                        <?php endif ?>
+                                                                        <a class="dropdown-item" href="#">Đặc quyền thẻ</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Lịch sử giao dịch
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="index.php?act=dangxuat">
+                                                                              Đăng xuất
+                                                                        </a>
+                                                                  </div>
+                                                            </span>
+
+
+
+
+
+
+                                                      <?php
+                                                      } else {
+                                                      ?>
+                                                            <a style="color: #000; padding-top: 20px;" href="index.php?act=dangnhap">Đăng nhập<i style="padding-left:10px;" class="fa-solid fa-angle-down"></i></a>
+                                                      <?php } ?>
+
+                                                </div>
+                                                <!-- <a class="nav-link dropdown-toggle" style="color: #000;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-user"></i>
+                                        Name User
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                                        <a class="dropdown-item" href="#">Quản Lý Trang</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            Lịch sử giao dịch
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            Đăng xuất
+                                        </a> -->
+                                    </div>
+                                    </span>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="slide__bot d-flex justify-content-between" style="margin-top: 50px;">
+                  <div class="body">
+                        <div class="slide__input2 d-block" id="dm-2">
+                              <div class="d-flex">
+                                    <div class="slide__location" style="margin: 20px 10px;
+                                    border: 1px solid #999;
+                                    padding: 6px 0;
+                                    border-radius: 5px;
+                                    width: 225px;
+                                    height: 40px;
+                                    padding-left: 17px;">
+                                          <input type="text" placeholder="Nhập khu vực">
+                                    </div>
+                                    <div class="slide__time" style="margin: 20px 10px;
+                                    border: 1px solid #999;
+                                    padding: 6px 0;
+                                    border-radius: 5px;
+                                    width: 225px;
+                                    height: 40px;
+                                    padding-left: 17px;">
+                                          <input type="text" placeholder="Nhập địa điểm">
+                                    </div>
+                                    <!-- <div class="slide__member">
+                                          <div class="dropdown">
+                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      Số người
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
+                                                            <div class="dropdown__item">
+                                                                  <div class="dropdown__left">
+                                                                        <h5>Người lớn</h5>
+                                                                  </div>
+                                                                  <div class="dropdown__right">
+                                                                        <div class="buttons_added">
+                                                                              <input class="minus is-form" type="button" value="-">
+                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
+                                                                              <input class="plus is-form" type="button" value="+">
+                                                                        </div>
+      
+                                                                  </div>
+
+                                                            </div>
+                                                            <div class="dropdown__item">
+                                                                  <div class="dropdown__left">
+                                                                        <h5>Trẻ em</h5>
+                                                                  </div>
+                                                                  <div class="dropdown__right">
+                                                                        <div class="buttons_added">
+                                                                              <input class="minus is-form" type="button" value="-">
+                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
+                                                                              <input class="plus is-form" type="button" value="+">
+                                                                        </div>
+      
+                                                                  </div>
+
+                                                            </div>
+                                                            <div class="dropdown__item">
+                                                                  <div class="dropdown__left">
+                                                                        <h5>Em bé</h5>
+                                                                  </div>
+                                                                  <div class="dropdown__right">
+                                                                        <div class="buttons_added">
+                                                                              <input class="minus is-form" type="button" value="-">
+                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
+                                                                              <input class="plus is-form" type="button" value="+">
+                                                                        </div>
+      
+                                                                  </div>
+
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div> -->
+                                    <button style="    width: 150px;
+                                    height: 39px;"><a href="">TÌM KIẾM</a></button>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="cart__shopping d-block">
+                        <!-- Button trigger modal -->
+                        <button type="button" style="outline: none; line-height: 70px;" data-toggle="modal" data-target="#exampleModal">
+                              <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                          <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">All of bill</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                </button>
+                                          </div>
+                                          <div class="modal-body">
+                                                <div class="tour__detail">
+                                                      <div class="tour__item">
+                                                            <div class="row">
+                                                                  <div class="col-4">
+                                                                        <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp" alt="">
+                                                                  </div>
+                                                                  <div class="col-8">
+                                                                        <div class="tour__item__infor">
+                                                                              <h3>[HN – PHÚ QUỐC] THU VIVU COMBO | VMB Vietnam Airlines + 3N2Đ phòng gồm ăn sáng/</h3>
+                                                                              <p>Người lớn - Phòng tiêu chuẩn x 2</p>
+                                                                              <span>Price : 15.000.000 đ</span>
+                                                                        </div>
+
+                                                                  </div>
+
+                                                            </div>
+                                                      </div>
+                                                      <div class="tour__detail__price d-flex justify-content-between" style="margin-top: 50px;">
+                                                            <div>
+                                                                  <h6>Tổng tiền (2 items)</h6>
+                                                                  <span>15000000 VNĐ</span>
+                                                            </div>
+                                                            <button type="button" class="btn btn-danger">Xem giỏ hàng</button>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="tour container">
+            <div class="tour__content">
+                  <div class="row">
+                        <div class="col-3">
+                              <div class="tour__left">
+                                    <div class="tour__left_top d-flex">
+                                          <h4 style="margin-bottom: 0; font-weight: 700;">Lọc kết quả</h4>
+                                          <button>Đặt lại</button>
+                                    </div>
+                                    <div class="tour__brand">
+                                          <h5>Loại sản phẩm</h5>
+                                          <ul>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Tất cả</a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Gói nghỉ dưỡng</a>
+                                                </li>
+                                                <li>
+                                                      <a href="">
+                                                            <input type="checkbox" />VinWonders
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Vận chuyển </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Vinpearl Golf </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Ẩm thực</a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Tour</a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Vé tham quan </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Spa</a>
+                                                </li>
+                                          </ul>
+                                    </div>
+                                    <div class="tour__service">
+                                          <h5>Dịch vụ</h5>
+                                          <ul>
+                                                <li>
+                                                      <button type="button" class="btn btn-warning">Hồ chí minh</button>
+                                                </li>
+                                                <li>
+                                                      <button type="button" class="btn btn-warning">Hà nội</button>
+                                                </li>
+                                                <li>
+                                                      <button type="button" class="btn btn-warning">Đà nẵng</button>
+                                                </li>
+                                                <li>
+                                                      <button type="button" class="btn btn-warning">Nha Trang</button>
+                                                </li>
+                                                <li>
+                                                      <button type="button" class="btn btn-warning">Quản ninh</button>
+                                                </li>
+                                          </ul>
+                                    </div>
+                                    <div class="tour__room">
+                                          <h5>Độ dài kì nghỉ</h5>
+                                          <ul>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />Tất cả </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />1 ngày </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />2 ngày 1 đêm </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />3 ngày 2 đêm </a>
+                                                </li>
+                                                <li>
+                                                      <a href=""> <input type="checkbox" />4 ngày 3 đêm </a>
+                                                </li> 
+                                          </ul>
+                                    </div>
+
+                              </div>
+                        </div>
+                        <div class="col-9">
+                              <div class="tour__right">
+                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <div class="tour__rightIMG">
+                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                  <div class="carousel-inner">
+                                                                        <div class="carousel-item active" style="height: 218px;">
+                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+
+                                                                  </div>
+                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                  </a>
+                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                  </a>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div class="col-7">
+                                                      <div class="tour__right_detail">
+                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
+                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
+                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
+                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
+                                                            <div class="tour__right_detail__price d-flex justify-content-between">
+                                                                  <div class="tour__bought">
+                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
+                                                                  </div>
+                                                                  <div class="tour__price__more d-flex">
+                                                                        <div style="padding-right: 10px; padding-top: 0;">
+                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
+                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
+                                                                        </div>
+                                                                        <button type="button" class="btn">Mua ngay</button>
+                                                                  </div>
+                                                            </div>      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <div class="tour__rightIMG">
+                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                  <div class="carousel-inner">
+                                                                        <div class="carousel-item active" style="height: 218px;">
+                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+
+                                                                  </div>
+                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                  </a>
+                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                  </a>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div class="col-7">
+                                                      <div class="tour__right_detail">
+                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
+                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
+                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
+                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
+                                                            <div class="tour__right_detail__price d-flex justify-content-between">
+                                                                  <div class="tour__bought">
+                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
+                                                                  </div>
+                                                                  <div class="tour__price__more d-flex">
+                                                                        <div style="padding-right: 10px; padding-top: 0;">
+                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
+                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
+                                                                        </div>
+                                                                        <button type="button" class="btn">Mua ngay</button>
+                                                                  </div>
+                                                            </div>      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <div class="tour__rightIMG">
+                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                  <div class="carousel-inner">
+                                                                        <div class="carousel-item active" style="height: 218px;">
+                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+
+                                                                  </div>
+                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                  </a>
+                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                  </a>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div class="col-7">
+                                                      <div class="tour__right_detail">
+                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
+                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
+                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
+                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
+                                                            <div class="tour__right_detail__price d-flex justify-content-between">
+                                                                  <div class="tour__bought">
+                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
+                                                                  </div>
+                                                                  <div class="tour__price__more d-flex">
+                                                                        <div style="padding-right: 10px; padding-top: 0;">
+                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
+                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
+                                                                        </div>
+                                                                        <button type="button" class="btn">Mua ngay</button>
+                                                                  </div>
+                                                            </div>      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <div class="tour__rightIMG">
+                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                  <div class="carousel-inner">
+                                                                        <div class="carousel-item active" style="height: 218px;">
+                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+
+                                                                  </div>
+                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                  </a>
+                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                  </a>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div class="col-7">
+                                                      <div class="tour__right_detail">
+                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
+                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
+                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
+                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
+                                                            <div class="tour__right_detail__price d-flex justify-content-between">
+                                                                  <div class="tour__bought">
+                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
+                                                                  </div>
+                                                                  <div class="tour__price__more d-flex">
+                                                                        <div style="padding-right: 10px; padding-top: 0;">
+                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
+                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
+                                                                        </div>
+                                                                        <button type="button" class="btn">Mua ngay</button>
+                                                                  </div>
+                                                            </div>      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
+                                          <div class="row">
+                                                <div class="col-5">
+                                                      <div class="tour__rightIMG">
+                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                  <div class="carousel-inner">
+                                                                        <div class="carousel-item active" style="height: 218px;">
+                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+                                                                        <div class="carousel-item" style="height: 218px;">
+                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
+                                                                        </div>
+
+                                                                  </div>
+                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                  </a>
+                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                  </a>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <div class="col-7">
+                                                      <div class="tour__right_detail">
+                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
+                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
+                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
+                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
+                                                            <div class="tour__right_detail__price d-flex justify-content-between">
+                                                                  <div class="tour__bought">
+                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
+                                                                  </div>
+                                                                  <div class="tour__price__more d-flex">
+                                                                        <div style="padding-right: 10px; padding-top: 0;">
+                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
+                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
+                                                                        </div>
+                                                                        <button type="button" class="btn">Mua ngay</button>
+                                                                  </div>
+                                                            </div>      
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="products container">
+            <h2>Sản phẩm tương tự</h2>
+            <div class="products__content">
+                  <div class="owl-carousel owl-theme">
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/a1acf82403f843389d7d955048d7fc72_af4a1d084a3442beaad93bb1868207ad_image.jpeg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+      
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/2baf25da78044afc9b153d6c4fa122ff_DNB07168.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/a7fdffd9640140c599e57ee74b5aebbe_DJI_0073.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/64cced44b4014aeeb075f204a2ca7129__MG_9433.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/e988d25ace594b5396a1bb15150fc3d1_101-2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/9baddef5fcaa4f1b8c723940e195cde2_K96_7713_summer2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/a50e7ea0b1434e4695d34832f948debf_VOSPQ-overview_HCM-PQ-Meta-combo.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="item">
+                              <div class="card" style="width: 22rem;">
+                                    <img src="./img/4716b601b3634d6a993648a1cb208203__D8H6905 (1).jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                          <h5 class="card-title">[VinWonders Nha Trang] Vé vào cửa trực tiếp</h5>
+                                          <div class="products__detail">
+                                                <div class="products__left">
+                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                </div>
+                                                <div class="products__right">
+                                                      <div>750.000 đ</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="partner container">
+            <div class="partner__content">
+                  <div class="partner__item d-flex">
+                        <div class="partner__left">
+                              <h5>KHÁCH SẠN & NGHỈ DƯỠNG</h5>
+                        </div>
+                        <div class="partner__right">
+                              <div class="row">
+                                    <div class="col-2">
+                                          <img src="./img/vp_hotel_resort_1647925026.webp" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/vinoasis_1647925040.webp" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/vp_luxury_1647925062.webp" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/condotel_1647925071.webp" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/discovery_1647925078.webp" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/holidays_1647925088.webp" alt="" />
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="partner__item d-flex">
+                        <div class="partner__left" style="padding-right: 65px;">
+                              <h5>HỘI HỌP & SỰ KIỆN</h5>
+                        </div>
+                        <div class="partner__right">
+                              <div class="row">
+                                    <div class="col-4">
+                                          <img src="./img/convention_1647925137.webp" alt="" />
+                                    </div>
+                                    <div class="col-4">
+                                          <img src="./img/almaz_1647925645.webp" alt="" />
+                                    </div>
+                                    <div class="col-4">
+                                          <img src="./img/imperia_1647925662.webp" alt="" />
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="partner__item d-flex">
+                        <div class="partner__left" style="padding-top: 20px; padding-right: 60px;">
+                              <h5>VUI CHƠI & GIẢI TRÍ</h5>
+                        </div>
+                        <div class="partner__right">
+                              <div class="row">
+                                    <div class="col-2">
+                                          <img src="./img/vw_1647925754.svg" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/vp_golf_1647925676.svg" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/safari_1647925690.svg" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/grand_world_1647925701.svg" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/pquc_1647925710.svg" alt="" />
+                                    </div>
+                                    <div class="col-2">
+                                          <img src="./img/holidays_1647925088.webp" alt="" />
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="footer">
+            <div class="footer__content container">
+                  <div class="footer__top">
+                        <div class="row">
+                              <div class="col-3">
+                                    <img src="./img/logo_vp_footer.svg" alt="" />
+                                    <ul>
+                                          <li>
+                                                <a href="">
+                                                      <i class="fa-solid fa-location-dot"></i>
+                                                      Đảo Hòn Tre, Phường Vĩnh Nguyên, Thành phố Nha Trang, Tỉnh
+                                                      Khánh Hòa, Việt Nam
+                                                </a>
+                                          </li>
+                                          <li>
+                                                <a href="" style="color: #f39f2d;">
+                                                      <i class="fa-solid fa-envelope"></i>callcenter@vinpearl.com
+                                                </a>
+                                          </li>
+                                          <li>
+                                                <a href="" style="color: #f39f2d; font-weight: 700;">
+                                                      <i class="fa-solid fa-phone"></i>1900 23 23 89 (Nhánh số 3)
+                                                </a>
+                                          </li>
+                                    </ul>
+                                    <img class="img-fluid" src="./img/logo-da-thong-bao-website-voi-bo-cong-thuong.webp" alt="" />
+                              </div>
+                              <div class="col-3">
+                                    <h5>GIỚI THIỆU</h5>
+                                    <ul>
+                                          <li>
+                                                <a href="">Về chúng tôi</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Thành tựu</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Liên hệ</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Tuyển dụng</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Câu hỏi thường gặp</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Bản đồ trang</a>
+                                          </li>
+                                    </ul>
+                              </div>
+                              <div class="col-3">
+                                    <h5>TIN TỨC & SỰ KIỆN</h5>
+                                    <ul>
+                                          <li>
+                                                <a href="">Tin công ty</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Cẩm nang du lịch</a>
+                                          </li>
+                                    </ul>
+                                    <h5>THƯ VIỆN ẢNH</h5>
+                              </div>
+                              <div class="col-3">
+                                    <h5>ĐIỀU KHOẢN & QUY ĐỊNH</h5>
+                                    <ul>
+                                          <li>
+                                                <a href="">Điều khoản chung</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Quy định chung</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Quy định thanh toán</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Quy định về xác nhận thông tin đặt phòng</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Chính sách giỏi quyết tranh chấp</a>
+                                          </li>
+                                          <li>
+                                                <a href="">Chính sách quyền riêng tư</a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="footer__mid">
+                        <ul>
+                              <li>
+                                    <a href="">
+                                          <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a href="">
+                                          <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                              </li>
+                              <li>
+                                    <a href="">
+                                          <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                              </li>
+                        </ul>
+                        <div class="divsion"></div>
+                  </div>
+                  <div class="footer__bottom">
+                        <div class="row">
+                              <div class="col-3">
+                                    <h6>Số ĐKKD:</h6>
+                                    <p style="width: 80%;">4200456848. ĐK lần đầu 26/7/2006.</p>
+                                    <p>ĐK thay đổi lần thứ 50: 3/3/2020</p>
+                              </div>
+                              <div class="col-6">
+                                    <h6>Nơi cấp:</h6>
+                                    <p>Sở kế hoạch và đầu tư tỉnh Khánh Hòa</p>
+                                    <h6>Lĩnh vực kinh doanh:</h6>
+                                    <p>
+                                          Khách sạn, biệt thự hoặc căn hộ kinh doanh dịch vụ lưu trú ngắn
+                                          ngày; khu du lịch sinh thái
+                                    </p>
+                              </div>
+                              <div class="col-3">
+                                    <h6>Chủ tài khoản:</h6>
+                                    <p>
+                                          Công ty cổ phần Vinpearl Tài khoản ngân hàng số: 9124412488166
+                                          (VND) Ngân hàng thương mại cổ phần Kỹ Thương Việt Nam
+                                          (Techcombank) – Hội sở
+                                    </p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- back to top -->
+      <a href="" class="backToTop cd-top text-replace js-cd-top">
+            <i class="fas fa-angle-up"></i>
+      </a>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="./js/owl-carousel/owl.carousel.min.js"></script>
+      <script src="./js/mainbacktotop.js"></script>
+      <script src="./js/util.js"></script>
+      <script>
+            $('.owl-carousel').owlCarousel({
+                  loop: true,
+                  margin: 10,
+                  nav: false,
+                  dots: false,
+                  responsive: {
+                        0: {
+                              items: 1
+                        },
+                        600: {
+                              items: 3
+                        }
+                  }
+            })
+      </script>
+      <script src="./js/main.js"></script>
+</body>
+
+</html>
