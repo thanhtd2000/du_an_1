@@ -88,8 +88,115 @@ if (isset($_GET['act'])) {
             break;
             //tour
         case 'addtour';
-
+            $error = [
+                'tourname' => '',
+                'gia_nl' => '',
+                'giatre_em' => '',
+                'start' => '',
+                'finish' => '',
+                'maks' => '',
+                'makv' => '',
+                'makdl' => '',
+                'mota' => '',
+                'anh' => ''
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tourname = $_POST['tourname'];
+                $gia_nl = $_POST['gia_nl'];
+                $giatre_em = $_POST['giatre_em'];
+                $start = $_POST['start'];
+                $finish = $_POST['finish'];
+                $maks = $_POST['maks'];
+                $makdl = $_POST['makdl'];
+                $makv = $_POST['makv'];
+                $mota = $_POST['mota'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($tourname == '') {
+                    $error['tourname'] = "Bạn chưa nhập tên khách sạn";
+                }
+                if (($gia_nl == '') || (!is_numeric($gia_nl))) {
+                    $error['gia_nl'] = "Bạn chưa nhập giá";
+                }
+                if (($giatre_em == '') || (!is_numeric($giatre_em))) {
+                    $error['giatre_em'] = "Bạn chưa nhập giá";
+                }
+                if ($finish == '') {
+                    $error['finish'] = "Bạn chưa chọn ngày kết thúc";
+                }
+                if ($start == '') {
+                    $error['start'] = "Bạn chưa chọn ngày bắt đầu";
+                }
+                if ($maks == '') {
+                    $error['maks'] = "Bạn chưa chọn tên khách sạn";
+                }
+                if ($makdl == '') {
+                    $error['makdl'] = "Bạn chưa chọn tên khu du lịch";
+                }
+                if ($makv == '') {
+                    $error['makv'] = "Bạn chưa chọn tên khu vực";
+                }
+                if ($mota == '') {
+                    $error['mota'] = "Bạn chưa nhập mô tả";
+                }
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    insert_tour($tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em);
+                    move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listtour&&message=Thêm thành công'</script>";
+                }
+            }
+            $listkhudulich = loadall_khudulich();
+            $listkhuvuc = loadall_khuvuc();
+            $listkhachsan = loadall_khachsan();
             include "tour/add.php";
+            break;
+        case 'xoatour':
+            $tourid = $_GET['tourid'];
+            $delete_tour = delete_tour($tourid);
+            echo "<script> window.location.href='index.php?act=listtour&&message=Xoá thành công'</script>";
+            include "tour/list.php";
+            break;
+        case 'suatour';
+        // $error = [
+            
+        //     'anh' => '',
+        // ];
+        $tourid = $_GET['tourid'];
+            $onetour = loadone_tour($tourid);
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tourname = $_POST['tourname'];
+                $gia_nl = $_POST['gia_nl'];
+                $giatre_em = $_POST['giatre_em'];
+                $start = $_POST['start'];
+                $finish = $_POST['finish'];
+                $maks = $_POST['maks'];
+                $makdl = $_POST['makdl'];
+                $makv = $_POST['makv'];
+                $mota = $_POST['mota'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+               
+               
+                
+                
+                    edit_tour($tourid,$tourname,$gia_nl,$mota,$start,$finish,$maks,$makdl,$anh,$makv,$giatre_em);
+                    move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
+                
+            }
+            $listtour = loadall_tour();
+            $listkhudulich = loadall_khudulich();
+            $listkhuvuc = loadall_khuvuc();
+            $listkhachsan = loadall_khachsan();
+            include "tour/edit.php";
             break;
             //khách sạn
         case 'khachsan':
