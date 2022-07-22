@@ -66,7 +66,7 @@
                   <div class="body">
                         <div class="slide__input active" id="dm-1">
                               <div class="d-flex">
-                              <div class="slide__location">
+                                    <div class="slide__location">
                                           <input type="text" placeholder="Nhập khu vực">
                                     </div>
                                     <div class="slide__location">
@@ -702,38 +702,30 @@
 </div>
 <!-- back to top -->
 <a href="" class="backToTop cd-top text-replace js-cd-top">
-<i class="fas fa-angle-up"></i>
-      </a>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+      <i class="fas fa-angle-up"></i>
+</a>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="./js/backtotop/util.js"></script>
 <script src="./js/backtotop/mainbacktotop.js"></script>
 <script>
       $('input.input-qty').each(function() {
-  var $this = $(this),
-    qty = $this.parent().find('.is-form'),
-    min = Number($this.attr('min')),
-    max = Number($this.attr('max'))
-  if (min == 0) {
-    var d = 0
-  } else d = min
-  $(qty).on('click', function() {
-    if ($(this).hasClass('minus')) {
-      if (d > min) d += -1
-    } else if ($(this).hasClass('plus')) {
-      var x = Number($this.val()) + 1
-      if (x <= max) d += 1
-    }
-    $this.attr('value', d).val(d)
-  })
-})
-
+            var $this = $(this),
+                  qty = $this.parent().find('.is-form'),
+                  min = Number($this.attr('min')),
+                  max = Number($this.attr('max'))
+            if (min == 0) {
+                  var d = 0
+            } else d = min
+            $(qty).on('click', function() {
+                  if ($(this).hasClass('minus')) {
+                        if (d > min) d += -1
+                  } else if ($(this).hasClass('plus')) {
+                        var x = Number($this.val()) + 1
+                        if (x <= max) d += 1
+                  }
+                  $this.attr('value', d).val(d)
+            })
+      })
 </script>
 </style>
