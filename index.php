@@ -3,9 +3,10 @@ session_start();
 include "models/pdo.php";
 include "models/taikhoan.php";
 include "views/block/header.php";
-
-
-
+include "models/khachsan.php";
+include "models/tour.php";
+$listkhachsan = loadall_khachsan();
+$listtour = loadall_tour();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
