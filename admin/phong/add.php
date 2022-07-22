@@ -7,11 +7,11 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mã phòng</label>
-                    <input type="number" class="form-control" value="<?=$onephong['maphong']?>" disabled id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Auto number">
+                    <input type="number" class="form-control"  disabled id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Auto number">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tên Phòng</label>
-                    <input type="text" value="<?=$onephong['tenphong']?>" class="form-control" id="exampleInputEmail1" name="tenphong" aria-describedby="emailHelp" placeholder="Tên Phòng">
+                    <input type="text"  class="form-control" id="exampleInputEmail1" name="tenphong" aria-describedby="emailHelp" placeholder="Tên Phòng">
                 </div>
                 <p style="color:red;">
                     <?= isset($errors['tenphong']) ? $errors['tenphong'] : '' ?>
