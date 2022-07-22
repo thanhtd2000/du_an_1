@@ -700,7 +700,21 @@
             </div>
       </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<!-- back to top -->
+<a href="" class="backToTop cd-top text-replace js-cd-top">
+            <i class="fas fa-angle"></i>
+      </a>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+<script src="../js/backtotop/util.js"></script>
+<script src="../js/backtotop/mainbacktotop.js"></script>
 <script>
       $('input.input-qty').each(function() {
   var $this = $(this),
@@ -722,67 +736,4 @@
 })
 
 </script>
-<style>
-      .buttons_added {
-  opacity: 1;
-  display: inline-block;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  white-space: nowrap;
-  vertical-align: top;
-  z-index: 2;
-}
-.is-form {
-  overflow: hidden;
-  position: relative;
-  background-color: #f9f9f9;
-  height: 2.2rem;
-  width: 1.9rem;
-  padding: 0;
-  text-shadow: 1px 1px 1px #fff;
-  border: 1px solid #ddd;
-}
-.is-form:focus,
-.input-text:focus {
-  outline: none;
-}
-.is-form.minus {
-  border-radius: 4px 0 0 4px;
-}
-.is-form.plus {
-  border-radius: 0 4px 4px 0;
-}
-.input-qty {
-  background-color: #fff;
-  height: 2.2rem;
-  text-align: center;
-  font-size: 1rem;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-  border-right: 0;
-  padding: 0;
-}
-.dropdown__content{
-      width: 200px;
-      height: 100px;
-      background-color: #e8952f;
-      border: 2px #999 solid;
-      border-radius: 5px;
-      text-align: center;
-}
-.dropdown__left h5{
-      font-size: 18px;
-      color: #ddd;
-}
-.slide__room .dropdown button,.slide__member .dropdown button{
-      color: #fff;
-}
-.dropdown__item{
-      margin: 0 10px;
-}
-
 </style>

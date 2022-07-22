@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
       margin: 0;
       padding: 0;
@@ -63,6 +64,7 @@
             max-width: 1275px;
             margin: 0 auto;
       }
+
       .containn {
             max-width: 100%;
             margin: 0 auto;
@@ -953,27 +955,37 @@ form .mail {
       outline: none;
 }
 
-.tour__brand, .tour__service, .tour__room {
+.tour__brand,
+.tour__service,
+.tour__room {
       padding: 10px;
 }
 
-.tour__brand h5, .tour__service h5, .tour__room h5 {
+.tour__brand h5,
+.tour__service h5,
+.tour__room h5 {
       font-size: 17px;
       font-weight: 700;
 }
 
-.tour__brand ul li a, .tour__service ul li a, .tour__room ul li a {
+.tour__brand ul li a,
+.tour__service ul li a,
+.tour__room ul li a {
       color: #000;
 }
 
-.tour__brand ul li a input, .tour__service ul li a input, .tour__room ul li a input {
+.tour__brand ul li a input,
+.tour__service ul li a input,
+.tour__room ul li a input {
       margin-right: 5px;
       width: 15px;
       height: 15px;
       background-color: #e29a38;
 }
 
-.tour__brand ul li, .tour__service ul li, .tour__room ul li {
+.tour__brand ul li,
+.tour__service ul li,
+.tour__room ul li {
       padding: 5px 0;
 }
 
@@ -1011,7 +1023,8 @@ form .mail {
       margin: 0 5px;
 }
 
-.tour__right_detail__price p:first-of-type, .tour__right_detail__price p:last-of-type {
+.tour__right_detail__price p:first-of-type,
+.tour__right_detail__price p:last-of-type {
       color: #000;
       margin: 0;
       font-size: 14px;
@@ -1057,7 +1070,8 @@ form .mail {
       font-size: 14px;
 }
 
-.tour__item__infor span, .tour__detail__price span {
+.tour__item__infor span,
+.tour__detail__price span {
       color: #e29a38;
       font-size: 20px;
       font-weight: 700;
@@ -1077,9 +1091,10 @@ form .mail {
       transform: scale(1.1);
 }
 
-.slide__img__content{
+.slide__img__content {
       height: 650px;
 }
+
 .slide__img__content>img {
       position: relative;
       height: 100%;
@@ -1089,93 +1104,110 @@ form .mail {
       content: "";
       position: absolute;
       background-color: rgba(12, 36, 28, 0.2);
-      top:223px;
+      top: 223px;
       left: 0;
       height: 650px;
       width: 100%;
-z-index: 1;
+      z-index: 1;
 }
 
 .slide__img .slide__img__content .slide__bottom {
       bottom: -24%;
 }
-.slide__img__top{
+
+.slide__img__top {
       position: absolute;
-      top:223px;
+      top: 223px;
       left: 0;
       margin: 0 12%;
       border-bottom: 1px solid #fff;
       z-index: 2;
 }
-.slide__img__top ul li a{
+
+.slide__img__top ul li a {
       padding: 0 20px;
       color: #fff;
 }
-.slide__img__top h3{
+
+.slide__img__top h3 {
       color: #fff;
       padding: 10px;
       padding-top: 20px;
 }
-.products__room__detail .products__top span:first-of-type{
+
+.products__room__detail .products__top span:first-of-type {
       font-size: 13px;
- }
-.products__room__detail .products__top span:last-of-type{
-     position: relative;
-     margin-left: 20px;
-     font-size: 13px;
 }
-.products__room__detail .products__top span:last-of-type::after{
-     width: 1px;
-     height: 20px;
-     content: '';
-     position: absolute;
-     background-color: #000;
-     top: 0;
-     left: -5%;
+
+.products__room__detail .products__top span:last-of-type {
+      position: relative;
+      margin-left: 20px;
+      font-size: 13px;
 }
-.products__bottom{
+
+.products__room__detail .products__top span:last-of-type::after {
+      width: 1px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      background-color: #000;
+      top: 0;
+      left: -5%;
+}
+
+.products__bottom {
       padding-top: 20px;
 }
-.products__bottom span{
+
+.products__bottom span {
       font-size: 25px;
       color: #e29a38;
       font-weight: 700;
 }
-.view__service__left img{
+
+.view__service__left img {
       width: 50px;
-      height: 50px;    
+      height: 50px;
 }
-.view__service__item{
+
+.view__service__item {
       display: flex;
       border: 1px solid #bfbfbf;
       padding: 40px;
       border-radius: 5px;
       margin: 20px 0;
 }
-.view__service__right{
+
+.view__service__right {
       padding-left: 30px;
 }
-.view__service__right p{
+
+.view__service__right p {
       margin-bottom: 5px;
 }
-.view__service button{
-      color: #ca811d;  
+
+.view__service button {
+      color: #ca811d;
 }
-.view__content{
+
+.view__content {
       padding-top: 120px;
       margin-bottom: 50px;
 }
+
 .view__content ul {
       display: inline-flex;
       margin-bottom: 50px;
 
 }
-.view__content ul li a.active{
+
+.view__content ul li a.active {
       border-bottom: 1px solid #e29a38;
       color: #ca811d;
       font-weight: 700;
 }
-.view__content ul li a{
+
+.view__content ul li a {
       padding: 10px 30px;
       color: #222;
       font-size: 20px;
@@ -1183,3 +1215,78 @@ z-index: 1;
       line-height: 23px;
       text-decoration: none;
 }
+
+.view__new {
+      display: flex;
+      padding: 50px 0;
+      justify-content: space-between;
+}
+
+.view__new__left p {
+      font-size: 14px;
+      color: #413c3c;
+      padding-top: 30px;
+      letter-spacing: 1px;
+      font-weight: 300;
+}
+.view__new__right a{
+      color: #e29a38;
+      text-decoration: none;
+}
+.view__main__text__left p{
+      font-size: 14px;
+      color: #413c3c;
+      letter-spacing: 1px;
+      font-weight: 300;
+}
+.view__main__text__right{
+      border: 1px solid #ca811d;
+      padding: 20px;
+      border-radius: 5px;
+}
+.view__main__text__right span{
+      color: #e29a38;
+      font-weight: 500;
+
+}
+.view__main__text__right p i{
+      margin-right: 5px;
+      color: #413c3c;
+}
+.view__main__text{
+      padding: 30px 0;
+}
+.backToTop{
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+      visibility: hidden;
+      opacity: 0;
+  }
+  .backToTop i{
+      font-size: 2rem;
+      color: #ca811d;
+      border: 2px solid #ca811d;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 36px;
+  }
+  .cd-top--is-visible { 
+      visibility: visible;
+      opacity: 1;
+    }
+    /* khai báo chuyển động animation nút button header */
+    @keyframes upDown {
+        /* 100s  */
+        0%{
+  
+        }
+        50%{
+            transform: translateY(-20px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
