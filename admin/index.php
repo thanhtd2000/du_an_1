@@ -6,7 +6,7 @@ include "../models/phong.php";
 include "../models/khuvuc.php";
 include "../models/khudulich.php";
 include "../models/loaiphong.php";
-
+include "../models/dichvuphu.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -165,11 +165,11 @@ if (isset($_GET['act'])) {
             include "tour/list.php";
             break;
         case 'suatour';
-        // $error = [
-            
-        //     'anh' => '',
-        // ];
-        $tourid = $_GET['tourid'];
+            // $error = [
+
+            //     'anh' => '',
+            // ];
+            $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tourname = $_POST['tourname'];
@@ -183,14 +183,13 @@ if (isset($_GET['act'])) {
                 $mota = $_POST['mota'];
                 $file = $_FILES['anh'];
                 $anh = $file['name'];
-               
-               
-                
-                
-                    edit_tour($tourid,$tourname,$gia_nl,$mota,$start,$finish,$maks,$makdl,$anh,$makv,$giatre_em);
-                    move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
-                    echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
-                
+
+
+
+
+                edit_tour($tourid, $tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em);
+                move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
+                echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
             }
             $listtour = loadall_tour();
             $listkhudulich = loadall_khudulich();
@@ -534,6 +533,61 @@ if (isset($_GET['act'])) {
             }
 
             include "phong/edit.php";
+            break;
+
+        case 'dichvuphu':
+            $listdichvu = loadall_dichvuphu();
+            include "dichvuphu/list.php";
+            break;
+        case 'adddvp':
+            $error = [
+                'tendv' => '',
+                'gia' => ''
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tendv = $_POST['tendv'];
+                $gia = $_POST['gia'];
+                if ($tendv == '') {
+                    $error['ten'] = "Bạn chưa nhập tên dịch vụ";
+                }
+                if ($gia == '' || !is_numeric($gia)) {
+                    $error['gia'] = "Bạn chưa nhập giá và phải là chữ số";
+                }
+                if (!array_filter($error)) {
+                    insert_dichvuphu($tendv, $gia);
+                    echo "<script> window.location.href='index.php?act=dichvuphu&&message=Thêm thành công'</script>";
+                }
+            }
+            include "dichvuphu/add.php";
+            break;
+        case 'suadv':
+            $error = [
+                'tendv' => '',
+                'gia' => ''
+            ];
+            $madv = $_GET['madv'];
+            $onedvp = loadone_dichvuphu($madv);
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $madv = $_POST['madv'];
+                $tendv = $_POST['tendv'];
+                $gia = $_POST['gia'];
+                if ($tendv == '') {
+                    $error['ten'] = "Bạn chưa nhập tên dịch vụ";
+                }
+                if ($gia == '' || !is_numeric($gia)) {
+                    $error['gia'] = "Bạn chưa nhập giá và phải là chữ số";
+                }
+                if (!array_filter($error)) {
+                    edit_dichvuphu($madv, $tendv, $gia);
+                    echo "<script> window.location.href='index.php?act=dichvuphu&&message=Sửa thành công'</script>";
+                }
+            }
+            include "dichvuphu/edit.php";
+            break;
+        case 'xoadv':
+            $madv = $_GET['madv'];
+            $delete_dichvuphu = delete_dichvuphu($madv);
+            echo "<script> window.location.href='index.php?act=dichvuphu&&message=Xoá thành công'</script>";
             break;
         default:
             include "home.php";
