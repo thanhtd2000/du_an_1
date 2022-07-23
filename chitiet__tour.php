@@ -7,17 +7,11 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="./css/owl-carousel/owl.carousel.min.css" />
       <link rel="stylesheet" href="./css/owl-carousel/owl.theme.default.min.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -36,23 +30,16 @@
                               <div class="header__right">
                                     <div class="header__nav d-flex">
                                           <nav class="navbar navbar-expand-lg navbar-light">
-                                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                                      data-target="#navbarSupportedContent"
-                                                      aria-controls="navbarSupportedContent" aria-expanded="false"
-                                                      aria-label="Toggle navigation">
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                                       <span class="navbar-toggler-icon"></span>
                                                 </button>
                                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                                       <ul class="navbar-nav mr-auto">
                                                             <li class="nav-item dropdown">
-                                                                  <a class="navbar-brand dropdown-toggle" href="#"
-                                                                        id="navbarDropdown" role="button"
-                                                                        data-toggle="dropdown" aria-haspopup="true"
-                                                                        aria-expanded="false">
+                                                                  <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         ĐẶT DỊCH VỤ
                                                                   </a>
-                                                                  <div class="dropdown-menu"
-                                                                        aria-labelledby="navbarDropdown">
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                                         <a class="dropdown-item" href="#">
                                                                               Tìm khách sạn
                                                                         </a>
@@ -62,14 +49,10 @@
                                                                   </div>
                                                             </li>
                                                             <li class="nav-item dropdown">
-                                                                  <a class="navbar-brand dropdown-toggle" href="#"
-                                                                        id="navbarDropdown" role="button"
-                                                                        data-toggle="dropdown" aria-haspopup="true"
-                                                                        aria-expanded="false">
+                                                                  <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         TRẢI NGHIỆM VINPEARL
                                                                   </a>
-                                                                  <div class="dropdown-menu"
-                                                                        aria-labelledby="navbarDropdown">
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                                         <a class="dropdown-item" href="#">Quần thể</a>
                                                                         <a class="dropdown-item" href="#">
                                                                               Khách sạn
@@ -83,14 +66,10 @@
                                                                   <a class="nav-link" href="#">ƯU ĐÃI KHUYẾN MÃI</a>
                                                             </li>
                                                             <li class="nav-item dropdown">
-                                                                  <a class="nav-link dropdown-toggle" href="#"
-                                                                        id="navbarDropdown" role="button"
-                                                                        data-toggle="dropdown" aria-haspopup="true"
-                                                                        aria-expanded="false">
+                                                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         PEARL CLUB
                                                                   </a>
-                                                                  <div class="dropdown-menu"
-                                                                        aria-labelledby="navbarDropdown">
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                                         <a class="dropdown-item" href="#">Tổng quan</a>
                                                                         <a class="dropdown-item" href="#">
                                                                               Quyền lợi
@@ -106,36 +85,30 @@
                                                       if (isset($_SESSION['email']) && (is_array($_SESSION['email']))) {
                                                             extract($_SESSION['email']);
                                                       ?>
-                                                      <span>
-                                                            <a class="nav-link dropdown-toggle"
-                                                                  style="color: #000;display: block;max-width: 80px;overflow: hidden;white-space: nowrap;"
-                                                                  href="#" id="navbarDropdown" role="button"
-                                                                  data-toggle="dropdown" aria-haspopup="true"
-                                                                  aria-expanded="false">
-                                                                  <i class="fa-solid fa-user"></i>
-                                                                  <b>
-                                                                        <?= $hoten ?>
-                                                                  </b>
-                                                            </a>
-                                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                  <a class="dropdown-item"
-                                                                        href="index.php?act=thongtin&&iduser=<?= $iduser ?>">Thông
-                                                                        tin tài khoản</a>
-                                                                  <?php if ($vaitro == 1) : ?>
-                                                                  <a class="dropdown-item" href="./admin/index.php">Quản
-                                                                        lý trang web</a>
-                                                                  <?php endif ?>
-                                                                  <a class="dropdown-item" href="#">Đặc quyền thẻ</a>
-                                                                  <div class="dropdown-divider"></div>
-                                                                  <a class="dropdown-item" href="#">
-                                                                        Lịch sử giao dịch
+                                                            <span>
+                                                                  <a class="nav-link dropdown-toggle" style="color: #000;display: block;max-width: 80px;overflow: hidden;white-space: nowrap;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <i class="fa-solid fa-user"></i>
+                                                                        <b>
+                                                                              <?= $hoten ?>
+                                                                        </b>
                                                                   </a>
-                                                                  <a class="dropdown-item"
-                                                                        href="index.php?act=dangxuat">
-                                                                        Đăng xuất
-                                                                  </a>
-                                                            </div>
-                                                      </span>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="index.php?act=thongtin&&iduser=<?= $iduser ?>">Thông
+                                                                              tin tài khoản</a>
+                                                                        <?php if ($vaitro == 1) : ?>
+                                                                              <a class="dropdown-item" href="./admin/index.php">Quản
+                                                                                    lý trang web</a>
+                                                                        <?php endif ?>
+                                                                        <a class="dropdown-item" href="#">Đặc quyền thẻ</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">
+                                                                              Lịch sử giao dịch
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="index.php?act=dangxuat">
+                                                                              Đăng xuất
+                                                                        </a>
+                                                                  </div>
+                                                            </span>
 
 
 
@@ -145,10 +118,7 @@
                                                       <?php
                                                       } else {
                                                       ?>
-                                                      <a style="color: #000; padding-top: 20px;"
-                                                            href="index.php?act=dangnhap">Đăng nhập<i
-                                                                  style="padding-left:10px;"
-                                                                  class="fa-solid fa-angle-down"></i></a>
+                                                            <a style="color: #000; padding-top: 20px;" href="index.php?act=dangnhap">Đăng nhập<i style="padding-left:10px;" class="fa-solid fa-angle-down"></i></a>
                                                       <?php } ?>
 
                                                 </div>
@@ -185,8 +155,7 @@
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                                          <input type="text" style="background-color: #DCE0EE;"
-                                                placeholder="Nhập khu vực">
+                                          <input type="text" style="background-color: #DCE0EE;" placeholder="Nhập khu vực">
                                     </div>
                                     <div class="slide__time" style="margin: 20px 10px;
                                     border: 1px solid #999;
@@ -195,8 +164,7 @@
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                                          <input type="text" style="background-color: #DCE0EE;"
-                                                placeholder="Nhập địa điểm">
+                                          <input type="text" style="background-color: #DCE0EE;" placeholder="Nhập địa điểm">
                                     </div>
                                     <!-- <div class="slide__member">
                                           <div class="dropdown">
@@ -258,21 +226,17 @@
                   </div>
                   <div class="cart__shopping d-block">
                         <!-- Button trigger modal -->
-                        <button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;"
-                              data-toggle="modal" data-target="#exampleModa">
-                              <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png"
-                                    alt="">
+                        <button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
+                              <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModa" tabindex="-1" role="dialog"
-                              aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                           <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">All of bill</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                      aria-label="Close">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                       <span aria-hidden="true">&times;</span>
                                                 </button>
                                           </div>
@@ -281,8 +245,7 @@
                                                       <div class="tour__item">
                                                             <div class="row">
                                                                   <div class="col-4">
-                                                                        <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp"
-                                                                              alt="">
+                                                                        <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp" alt="">
                                                                   </div>
                                                                   <div class="col-8">
                                                                         <div class="tour__item__infor">
@@ -297,8 +260,7 @@
 
                                                             </div>
                                                       </div>
-                                                      <div class="tour__detail__price d-flex justify-content-between"
-                                                            style="margin-top: 50px;">
+                                                      <div class="tour__detail__price d-flex justify-content-between" style="margin-top: 50px;">
                                                             <div>
                                                                   <h6>Tổng tiền (2 items)</h6>
                                                                   <span>15000000 VNĐ</span>
@@ -309,8 +271,7 @@
                                                 </div>
                                           </div>
                                           <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                      data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                           </div>
                                     </div>
                               </div>
@@ -327,25 +288,20 @@
                               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                           <div class="carousel-item active">
-                                                <img src="./img/chitiettour/c7995cec49af41fdb6e161287ed3f30f_IMG12_summer2.jpg"
-                                                      class="d-block w-100" alt="...">
+                                                <img src="./img/chitiettour/c7995cec49af41fdb6e161287ed3f30f_IMG12_summer2.jpg" class="d-block w-100" alt="...">
                                           </div>
                                           <div class="carousel-item">
-                                                <img src="./img/chitiettour/c2db50c4d05a4018a978fe52311efc9d_DGH_2236_summer2.jpg"
-                                                      class="d-block w-100" alt="...">
+                                                <img src="./img/chitiettour/c2db50c4d05a4018a978fe52311efc9d_DGH_2236_summer2.jpg" class="d-block w-100" alt="...">
                                           </div>
                                           <div class="carousel-item">
-                                                <img src="./img/chitiettour/f6446fe6f65e4e31bb5134f2c774952c__DSC4043 (1)_summer2.jpg"
-                                                      class="d-block w-100" alt="...">
+                                                <img src="./img/chitiettour/f6446fe6f65e4e31bb5134f2c774952c__DSC4043 (1)_summer2.jpg" class="d-block w-100" alt="...">
                                           </div>
                                     </div>
-                                    <button class="carousel-control-prev" style="opacity: 0;" type="button"
-                                          data-target="#carouselExampleControls" data-slide="prev">
+                                    <button class="carousel-control-prev" style="opacity: 0;" type="button" data-target="#carouselExampleControls" data-slide="prev">
                                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                           <span class="sr-only">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" style="opacity: 0;" type="button"
-                                          data-target="#carouselExampleControls" data-slide="next">
+                                    <button class="carousel-control-next" style="opacity: 0;" type="button" data-target="#carouselExampleControls" data-slide="next">
                                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                           <span class="sr-only">Next</span>
                                     </button>
@@ -362,14 +318,11 @@
                                           <h4>Vui lòng chọn khách sạn</h4>
                                           <div class="choice__hotel__content">
                                                 <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                      style=" background-color: #f39f2d; outline: none;"
-                                                      data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" style=" background-color: #f39f2d; outline: none;" data-target="#exampleModal">
                                                       Chọn phòng khách sạn
                                                 </button>
                                                 <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                      aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
@@ -380,94 +333,63 @@
                                                                         <div class="room__nomal">
                                                                               <div class="h5">Phòng thường</div>
                                                                               <form action="">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PN001">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN002">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN003">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN004">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN005">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PN006">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN007">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN008">
-                                                                                    <input type="text"
-                                                                                          placeholder="PN009">
+                                                                                    <input class="check" type="button" value="PN001" placeholder="PN001">
+                                                                                    <input type="button" value="PN002">
+                                                                                    <input type="text" placeholder="PN003">
+                                                                                    <input type="text" placeholder="PN004">
+                                                                                    <input type="text" placeholder="PN005">
+                                                                                    <input class="check" type="text" placeholder="PN006">
+                                                                                    <input type="text" placeholder="PN007">
+                                                                                    <input type="text" placeholder="PN008">
+                                                                                    <input type="text" placeholder="PN009">
                                                                               </form>
                                                                         </div>
                                                                         <div class="room__medium">
                                                                               <div class="h5">Phòng thương gia</div>
                                                                               <form action="">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM001">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PM002">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM003">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM004">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM005">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PM006">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM007">
-                                                                                    <input type="text"
-                                                                                          placeholder="PM008">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PM009">
+                                                                                    <input type="text" placeholder="PM001">
+                                                                                    <input class="check" type="text" placeholder="PM002">
+                                                                                    <input type="text" placeholder="PM003">
+                                                                                    <input type="text" placeholder="PM004">
+                                                                                    <input type="text" placeholder="PM005">
+                                                                                    <input class="check" type="text" placeholder="PM006">
+                                                                                    <input type="text" placeholder="PM007">
+                                                                                    <input type="text" placeholder="PM008">
+                                                                                    <input class="check" type="text" placeholder="PM009">
 
                                                                               </form>
                                                                         </div>
                                                                         <div class="room__king">
                                                                               <div class="h5">Phòng cao cấp</div>
                                                                               <form action="">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK001">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PK002">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK003">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK004">
-                                                                                    <input class="check" type="text"
-                                                                                          placeholder="PK005">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK006">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK007">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK008">
-                                                                                    <input type="text"
-                                                                                          placeholder="PK009">
+                                                                                    <input type="text" placeholder="PK001">
+                                                                                    <input class="check" type="text" placeholder="PK002">
+                                                                                    <input type="text" placeholder="PK003">
+                                                                                    <input type="text" placeholder="PK004">
+                                                                                    <input class="check" type="text" placeholder="PK005">
+                                                                                    <input type="text" placeholder="PK006">
+                                                                                    <input type="text" placeholder="PK007">
+                                                                                    <input type="text" placeholder="PK008">
+                                                                                    <input type="text" placeholder="PK009">
                                                                               </form>
                                                                         </div>
                                                                   </div>
                                                                   <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary"
-                                                                              data-dismiss="modal">Close</button>
-                                                                        <button type="button"
-                                                                              class="btn btn-primary">Save</button>
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Save</button>
                                                                   </div>
                                                             </div>
                                                       </div>
                                                 </div>
                                           </div>
                                     </div>
-                                    <button type="button" class="btn" style="background-color: #f39f2d;"><a href=""
-                                                style="color: #fff;text-decoration: none;">Đặt combo ngay</a></button>
+                                    <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Đặt combo ngay</a></button>
                                     <ul>
                                           <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
                                           <li><i class="fa-solid fa-check"></i>Không phí thanh toán</li>
                                           <li><i class="fa-solid fa-check"></i>Xác nhận đơn hàng tức thì</li>
                                     </ul>
-                                    <p style="font-size: 20px;"><i class="fa-solid fa-phone-volume"></i> Hotline : <span
-                                                style="letter-spacing: 1px;">19000000</span></p>
+                                    <p style="font-size: 20px;"><i class="fa-solid fa-phone-volume"></i> Hotline : <span style="letter-spacing: 1px;">19000000</span></p>
                               </div>
                         </div>
                   </div>
@@ -520,8 +442,7 @@
                         <span>
                               ► Miễn phí phí trả góp lãi suất 0%, vui lòng xem chi tiết tại đây
                         </span>
-                        <img class="img-fluid" src="./img/chitiettour/bd78075f87bd4128bfbaaf288e73ad6e_DGH_2145.jpg"
-                              alt="">
+                        <img class="img-fluid" src="./img/chitiettour/bd78075f87bd4128bfbaaf288e73ad6e_DGH_2145.jpg" alt="">
                         <p>Thư thái tận hưởng chuyến đi với vé máy bay khứ hồi của Vietnam Airlines cùng những quyền
                               lợi ưu tiên</p>
                         <span>Tiết kiệm thời gian và công sức đặt vé máy bay, combo nghỉ dưỡng trọn gói của Vinpearl đã bao
@@ -602,7 +523,7 @@
                   </div>
                   <div class="describe__input" id="dm-6">
                         <p>1. Thời hạn sử dụng voucher</p>
-                        <span>- Thời gian bán: 02/07 – 31/07/2022 (hoặc đến khi hết số lượng voucher khuyến mại)  </span>
+                        <span>- Thời gian bán: 02/07 – 31/07/2022 (hoặc đến khi hết số lượng voucher khuyến mại) </span>
                         <span>- Thời gian lưu trú: Từ 01/08 – 30/09/2022, không áp dụng giai đoạn từ 01/09 - 05/09/2022</span>
                         <span>- Thời gian đặt dịch vụ: Trong vòng 05 ngày kể từ ngày mua thành công đơn hàng và không muộn hơn ngày 10/08/2022</span>
                         <p>2. Điều khoản phụ thu</p>
@@ -669,7 +590,7 @@
                                           </div>
                                     </div>
                               </div>
-      
+
                         </div>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
@@ -903,8 +824,7 @@
                                                 </a>
                                           </li>
                                     </ul>
-                                    <img class="img-fluid" src="./img/logo-da-thong-bao-website-voi-bo-cong-thuong.webp"
-                                          alt="" />
+                                    <img class="img-fluid" src="./img/logo-da-thong-bao-website-voi-bo-cong-thuong.webp" alt="" />
                               </div>
                               <div class="col-3">
                                     <h5>GIỚI THIỆU</h5>
@@ -1025,15 +945,9 @@
       </style>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="./js/owl-carousel/owl.carousel.min.js"></script>
       <script>
             $('.owl-carousel').owlCarousel({
