@@ -247,9 +247,9 @@
                         <?php extract($tour) ?>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
-                                    <a href=""><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
-                                          <a href="">
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>">
                                                 <h5 class="card-title"><?= $tourname ?></h5>
                                           </a>
                                           <div class="products__detail">
@@ -257,7 +257,7 @@
                                                       <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
                                                 </div>
                                                 <div class="products__right">
-                                                      <div><?= $gia_nl ?> VNĐ</div>
+                                                      <div><?= number_format($giatre_em) ?>-<?=number_format( $gia_nl) ?> VNĐ</div>
                                                 </div>
                                           </div>
                                     </div>
@@ -277,7 +277,9 @@
                               <div class="card" style="width: 22rem;">
                                     <a href=""><img src="./img/khachsan/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
-                                          <a href=""><h5 class="card-title"><?= $tenks ?></h5></a>
+                                          <a href="">
+                                                <h5 class="card-title"><?= $tenks ?></h5>
+                                          </a>
                                           <div class="products__detail">
                                                 <div class="products__left">
                                                       <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>

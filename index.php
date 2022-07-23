@@ -99,6 +99,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $sql = "SELECT*FROM user WHERE iduser = '$iduser'";
             $user = pdo_query_one($sql);
             include "views/taikhoan/user.php";
+            break;
+        case 'chitiettour':
+            $tourid = $_GET['tourid'];
+            $onetour= loadone_tour($tourid);
+            include "views/chitiet_tour.php";
 
             break;
         default:

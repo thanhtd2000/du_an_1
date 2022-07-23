@@ -19,7 +19,7 @@
                         <th scope="col">Khu du lịch</th>
                         <th scope="col">Khu vực</th>
                         <th scope="col">Ảnh</th>
-                        <th scope="col"></th>
+                         <th scope="col"></th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@
                         <td>'.$tourname.'</td>
                         <td>'.$gia_nl.'</td>
                         <td>'.$giatre_em.'</td>
-                        <td>'.$mota.'</td>
+                        <td><!--'.$mota.'--></td>
                         <td>'.$start.'</td>
                         <td>'.$finish.'</td>
                         <td>'.$maks.'</td>
