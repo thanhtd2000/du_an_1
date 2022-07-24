@@ -1,8 +1,8 @@
 <?php
 session_start();
+include "views/block/header.php";
 include "models/pdo.php";
 include "models/taikhoan.php";
-include "views/block/header.php";
 include "models/khachsan.php";
 include "models/tour.php";
 $listkhachsan = loadall_khachsan();
@@ -101,10 +101,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/taikhoan/user.php";
             break;
         case 'chitiettour':
+            $mak = $_GET['makv'];
             $tourid = $_GET['tourid'];
             $onetour= loadone_tour($tourid);
+            $listtour = loadall_tour();
             include "views/chitiet_tour.php";
-
             break;
         default:
             include "views/home.php";

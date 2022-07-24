@@ -247,9 +247,9 @@
                         <?php extract($tour) ?>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
-                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
-                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>">
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
                                                 <h5 class="card-title"><?= $tourname ?></h5>
                                           </a>
                                           <div class="products__detail">
@@ -457,7 +457,9 @@
       <i class="fas fa-angle-up"></i>
 </a>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
 <script src="./js/backtotop/util.js"></script>
 <script src="./js/backtotop/mainbacktotop.js"></script>
 <script>
