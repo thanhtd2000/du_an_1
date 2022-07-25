@@ -1486,6 +1486,16 @@ form .mail {
     color: red;
 }
 
+.card-img-top {
+    max-width: 350px;
+    max-height: 233.1px;
+}
+
+.img-ct {
+    max-width: 730px;
+    max-height: 486px;
+}
+
 
 /* khai báo chuyển động animation nút button header */
 

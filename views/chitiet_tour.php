@@ -142,13 +142,13 @@
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                          <img src="./img/chitiettour/c7995cec49af41fdb6e161287ed3f30f_IMG12_summer2.jpg" class="d-block w-100" alt="...">
+                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
-                                    <div class="carousel-item">
-                                          <img src="./img/chitiettour/c2db50c4d05a4018a978fe52311efc9d_DGH_2236_summer2.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-item active">
+                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
-                                    <div class="carousel-item">
-                                          <img src="./img/chitiettour/f6446fe6f65e4e31bb5134f2c774952c__DSC4043 (1)_summer2.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-item active">
+                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
                               </div>
                               <button class="carousel-control-prev" style="opacity: 0;" type="button" data-target="#carouselExampleControls" data-slide="prev">
