@@ -7,6 +7,7 @@ include "../models/khuvuc.php";
 include "../models/khudulich.php";
 include "../models/loaiphong.php";
 include "../models/dichvuphu.php";
+include "../models/taikhoan.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -589,6 +590,119 @@ if (isset($_GET['act'])) {
             $delete_dichvuphu = delete_dichvuphu($madv);
             echo "<script> window.location.href='index.php?act=dichvuphu&&message=Xoá thành công'</script>";
             break;
+        case 'listuser':
+            $listuser = loadall_user();
+            include "user/list.php";
+            break;
+        case 'xoauser':
+            $iduser = $_GET['iduser'];
+            $delete_user = delete_user($iduser);
+            echo "<script> window.location.href='index.php?act=listuser&&message=Xoá thành công'</script>";
+            break;
+        case 'adduser':
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'email' => '',
+                'password' => '',
+                'diachi' => '',
+                'vaitro' => '',
+                'sdt' => '',
+                'anh' => '',
+                'hoten' => ''
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $diachi = $_POST['diachi'];
+                $hoten = $_POST['hoten'];
+                $sdt = $_POST['sdt'];
+                $vaitro = $_POST['vaitro'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($email == '') {
+                    $error['email'] = "Bạn chưa nhập email";
+                }
+                if ($password == '') {
+                    $error['password'] = "Bạn chưa nhập mật khẩu";
+                }
+                if ($diachi == '') {
+                    $error['diachi'] = "Bạn chưa nhập địa chỉ";
+                }
+                if ($hoten == '') {
+                    $error['hoten'] = "Bạn chưa nhập họ tên";
+                }
+                if ($sdt == '') {
+                    $error['sdt'] = "Bạn chưa nhập số điện thoại";
+                }
+                if ($vaitro == '') {
+                    $error['vaitro'] = "Bạn chưa chọn vai trò";
+                }
+                if ($file == '') {
+                    $error['anh'] = "Bạn chưa chọn ảnh";
+                }
+                $img = ['jpg', 'png', 'gif', 'jpeg'];
+                $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+                if (!in_array($ext, $img)) {
+                    $error['anh'] = "Ảnh không đúng định dạng";
+                }
+                if (!array_filter($error)) {
+                    insert_taikhoan2($email, $password, $diachi, $hoten, $sdt, $anh, $vaitro);
+                    move_uploaded_file($file['tmp_name'], '../img/user/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listuser&&message=Thêm thành công'</script>";
+                }
+            }
+            include "user/add.php";
+            break;
+        case 'suauser':
+            $iduser = $_GET['iduser'];
+            $oneuser = loadone_user($iduser);
+            //kiểm tra người dùng có click vào thêm hay không
+            $error = [
+                'email' => '',
+                'password' => '',
+                'diachi' => '',
+                'vaitro' => '',
+                'sdt' => '',
+                'hoten' => ''
+            ];
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $iduser = $_POST['iduser'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $diachi = $_POST['diachi'];
+                $hoten = $_POST['hoten'];
+                $sdt = $_POST['sdt'];
+                $vaitro = $_POST['vaitro'];
+                $file = $_FILES['anh'];
+                $anh = $file['name'];
+                if ($email == '') {
+                    $error['email'] = "Bạn chưa nhập email";
+                }
+                if ($password == '') {
+                    $error['password'] = "Bạn chưa nhập mật khẩu";
+                }
+                if ($diachi == '') {
+                    $error['diachi'] = "Bạn chưa nhập địa chỉ";
+                }
+                if ($hoten == '') {
+                    $error['hoten'] = "Bạn chưa nhập họ tên";
+                }
+                if ($sdt == '') {
+                    $error['sdt'] = "Bạn chưa nhập số điện thoại";
+                }
+                if ($vaitro == '') {
+                    $error['vaitro'] = "Bạn chưa chọn vai trò";
+                }
+                if (!array_filter($error)) {
+                    edit_user($iduser, $email, $password, $diachi, $hoten, $sdt, $anh, $vaitro);
+                    move_uploaded_file($file['tmp_name'], '../img/user/' . $anh);
+                    echo "<script> window.location.href='index.php?act=listuser&&message=Thêm thành công'</script>";
+                }
+            }
+            include "user/edit.php";
+            break;
+
+
         default:
             include "home.php";
             break;

@@ -26,7 +26,7 @@
                     <a style="font-size: 20px;" class="nav-link active" href="../index.php">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Khách hàng</a>
+                    <a class="nav-link" href="index.php?act=listuser">Khách hàng</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?act=listtour">Tour</a>

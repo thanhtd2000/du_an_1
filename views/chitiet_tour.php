@@ -163,7 +163,7 @@
                   </div>
                   <div class="col-4">
                         <div class="infor__tour__detail">
-                              <p>Mã SP: <span>VI0123</span></p>
+                              <p>Mã SP: <span>CB<?=$onetour['tourid']?></span></p>
                               <div class="infor__tour__price">
                                     <div>Trẻ em : <?= number_format($onetour['giatre_em']) ?> VNĐ</div>
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
