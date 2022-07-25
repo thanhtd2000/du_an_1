@@ -181,7 +181,7 @@
                                                       <div class="modal-content">
                                                             <div class="modal-header">
                                                                   <h3 class="modal-title" id="exampleModalLabel">
-                                                                        Khách sạn mường thanh</h3>
+                                                                        Khách sạn <?=$onetour['maks']?></h3>
                                                             </div>
                                                             <div class="modal-body">
                                                                   <div class="room__nomal">

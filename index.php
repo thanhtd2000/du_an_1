@@ -5,6 +5,7 @@ include "models/pdo.php";
 include "models/taikhoan.php";
 include "models/khachsan.php";
 include "models/tour.php";
+include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
@@ -101,12 +102,29 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/taikhoan/user.php";
             break;
         case 'chitiettour':
-            $mak = $_GET['makv'];
+            // $makv = $_GET['makv'];
             $tourid = $_GET['tourid'];
             $onetour= loadone_tour($tourid);
             $listtour = loadall_tour();
             include "views/chitiet_tour.php";
             break;
+        case 'listtour':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw=$_POST['kyw'];
+
+            }else{
+                $kyw="";
+            }
+            if(isset($_GET['makv'])&&($_GET['makv']>0)){
+                $makv=$_GET['makv'];
+                
+            }else{
+                $makv=0;
+            }
+            $tenkv=load_ten_kv($makv);
+            $listtours=loadall_tour_search($kyw,$makv);
+            include "views/listtour.php";
+            break;   
         default:
             include "views/home.php";
             break;

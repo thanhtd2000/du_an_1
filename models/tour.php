@@ -2,10 +2,37 @@
 function loadall_tour(){
     
     $sql="SELECT*FROM tour ORDER BY tourid DESC";
-    
+  
     
     $listtour=pdo_query($sql);
     return $listtour;
+}
+function loadall_tour_search($kyw,$makv){
+    
+    // $sql="SELECT*FROM tour ORDER BY tourid DESC";
+    $sql="SELECT*FROM tour WHERE 1";
+    if($kyw!=''){
+        $sql.=" AND tourname LIKE '%".$kyw."%'";
+    }
+    if($makv>0){
+        $sql.=" AND makv='".$makv."'";
+    }
+    
+    $sql.=" ORDER BY tourid DESC";
+    
+    $listtours=pdo_query($sql);
+    return $listtours;
+}
+function load_ten_kv($makv){
+    if($makv>0){
+        $sql="SELECT*FROM khuvuc WHERE makv=$makv ";
+    $kv=pdo_query_one($sql);
+    extract($kv);
+    return $tenkv;
+    }else{
+        return "";
+    }
+    
 }
 function insert_tour($tourname,$gia_nl,$mota,$start,$finish,$maks,$makdl,$anh,$makv,$giatre_em){
     $sql="INSERT INTO tour(tourname, gia_nl, mota, start, finish, maks, makdl, anh, makv, giatre_em) VALUES ('$tourname','$gia_nl','$mota','$start','$finish','$maks','$makdl','$anh','$makv','$giatre_em')";

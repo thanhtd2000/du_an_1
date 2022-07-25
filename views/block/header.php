@@ -43,7 +43,7 @@
                                                 <a class="dropdown-item" href="#">
                                                     Tìm khách sạn
                                                 </a>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="index.php?act=listtour">
                                                     Tìm tour & trải nghiệm
                                                 </a>
                                             </div>
