@@ -182,7 +182,7 @@
                                     </ul>
                               </div>
                               <div class="tour__brand">
-                                    <h5>Loại sản phẩm</h5>
+                                    <h5>Dịch vụ</h5>
                                     <ul>
                                           <li>
                                                 <a href=""> <input type="checkbox" />Tất cả</a>
