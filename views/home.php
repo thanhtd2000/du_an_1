@@ -275,9 +275,9 @@
                         <?php extract($ks) ?>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
-                                    <a href=""><img src="./img/khachsan/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                    <a href="index.php?act=chitietks&&maks=<?= $maks ?>&&makv=<?= $makv ?>"><img src="./img/khachsan/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
-                                          <a href="">
+                                          <a href="index.php?act=chitietks&&maks=<?= $maks ?>&&makv=<?= $makv ?>">
                                                 <h5 class="card-title"><?= $tenks ?></h5>
                                           </a>
                                           <div class="products__detail">

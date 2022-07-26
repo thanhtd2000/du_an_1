@@ -104,27 +104,32 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitiettour':
             $mak = $_GET['makv'];
             $tourid = $_GET['tourid'];
-            $onetour= loadone_tour($tourid);
+            $onetour = loadone_tour($tourid);
             $listtour = loadall_tour();
             include "views/chitiet_tour.php";
             break;
         case 'listtour':
-            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
-                $kyw=$_POST['kyw'];
-
-            }else{
-                $kyw="";
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
             }
-            if(isset($_GET['makv'])&&($_GET['makv']>0)){
-                $makv=$_GET['makv'];
-                
-            }else{
-                $makv=0;
+            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+                $makv = $_GET['makv'];
+            } else {
+                $makv = 0;
             }
-            $tenkv=load_ten_kv($makv);
-            $listtours=loadall_tour_search($kyw,$makv);
+            $tenkv = load_ten_kv($makv);
+            $listtours = loadall_tour_search($kyw, $makv);
             include "views/listtour.php";
-            break;   
+            break;
+        case 'chitietks':
+            $mak = $_GET['makv'];
+            $maks = $_GET['maks'];
+            $oneks = loadone_khachsan($maks);
+            $listkhachsan =  loadall_khachsan();
+            include "views/chitiet_hotel.php";
+            break;
         default:
             include "views/home.php";
             break;
