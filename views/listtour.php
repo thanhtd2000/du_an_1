@@ -154,9 +154,32 @@
             <div class="row">
                   <div class="col-3">
                         <div class="tour__left">
+
                               <div class="tour__left_top d-flex">
                                     <h4 style="margin-bottom: 0; font-weight: 700;">Lọc kết quả</h4>
                                     <button>Đặt lại</button>
+                              </div>
+                              <div class="tour__service">
+                                    <h5>Khu vực</h5>
+                                    <ul>
+                                    <li>
+                                                      <a href="index.php?act=listtour"><button type="button" class="btn btn-warning">Tất cả</button></a>
+                                                </li>
+                                    <?php 
+                                          foreach($listkhuvuc as $kv){
+                                                extract($kv);
+                                                $linkkv="index.php?act=listtour&&makv=".$makv;
+                                                echo'
+                                                
+                                                <li>
+                                                      <a href="'.$linkkv.'"><button type="button" class="btn btn-warning">'.$tenkv.'</button></a>
+                                                </li>
+                                          
+
+                                                ';
+                                          }
+                                    ?>
+                                    </ul>
                               </div>
                               <div class="tour__brand">
                                     <h5>Loại sản phẩm</h5>
@@ -192,26 +215,7 @@
                                           </li>
                                     </ul>
                               </div>
-                              <div class="tour__service">
-                                    <h5>Khu vực</h5>
-                                    <ul>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Hồ chí minh</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Hà nội</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Đà nẵng</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Nha Trang</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Quản ninh</button>
-                                          </li>
-                                    </ul>
-                              </div>
+                              
                               <div class="tour__room">
                                     <h5>Độ dài kì nghỉ</h5>
                                     <ul>
@@ -293,230 +297,7 @@
                                           
                                     
                               
-                              <!-- <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
-                                          <div class="row">
-                                                <div class="col-5">
-                                                      <div class="tour__rightIMG">
-                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                                                  <div class="carousel-inner">
-                                                                        <div class="carousel-item active" style="height: 218px;">
-                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-
-                                                                  </div>
-                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                  </a>
-                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
-                                                                  </a>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="col-7">
-                                                      <div class="tour__right_detail">
-                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
-                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
-                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
-                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
-                                                            <div class="tour__right_detail__price d-flex justify-content-between">
-                                                                  <div class="tour__bought">
-                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
-                                                                  </div>
-                                                                  <div class="tour__price__more d-flex">
-                                                                        <div style="padding-right: 10px; padding-top: 0;">
-                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
-                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
-                                                                        </div>
-                                                                        <button type="button" class="btn">Mua ngay</button>
-                                                                  </div>
-                                                            </div>      
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
-                                          <div class="row">
-                                                <div class="col-5">
-                                                      <div class="tour__rightIMG">
-                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                                                  <div class="carousel-inner">
-                                                                        <div class="carousel-item active" style="height: 218px;">
-                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-
-                                                                  </div>
-                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                  </a>
-                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
-                                                                  </a>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="col-7">
-                                                      <div class="tour__right_detail">
-                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
-                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
-                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
-                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
-                                                            <div class="tour__right_detail__price d-flex justify-content-between">
-                                                                  <div class="tour__bought">
-                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
-                                                                  </div>
-                                                                  <div class="tour__price__more d-flex">
-                                                                        <div style="padding-right: 10px; padding-top: 0;">
-                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
-                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
-                                                                        </div>
-                                                                        <button type="button" class="btn">Mua ngay</button>
-                                                                  </div>
-                                                            </div>      
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
-                                          <div class="row">
-                                                <div class="col-5">
-                                                      <div class="tour__rightIMG">
-                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                                                  <div class="carousel-inner">
-                                                                        <div class="carousel-item active" style="height: 218px;">
-                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-
-                                                                  </div>
-                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                  </a>
-                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
-                                                                  </a>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="col-7">
-                                                      <div class="tour__right_detail">
-                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
-                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
-                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
-                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
-                                                            <div class="tour__right_detail__price d-flex justify-content-between">
-                                                                  <div class="tour__bought">
-                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
-                                                                  </div>
-                                                                  <div class="tour__price__more d-flex">
-                                                                        <div style="padding-right: 10px; padding-top: 0;">
-                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
-                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
-                                                                        </div>
-                                                                        <button type="button" class="btn">Mua ngay</button>
-                                                                  </div>
-                                                            </div>      
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
-                                          <div class="row">
-                                                <div class="col-5">
-                                                      <div class="tour__rightIMG">
-                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                                                  <div class="carousel-inner">
-                                                                        <div class="carousel-item active" style="height: 218px;">
-                                                                              <img src="./img/4f2fe8cf46664cdd8933039bc2591355_G15.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ea42d27134fc412990dc5f1b2c547a2d_G10.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/be8d2737352a4e488fefd20d1a799cc2_G7.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/ee83c6e49a454d01b27fd40ecfc1e12a_G11.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-                                                                        <div class="carousel-item" style="height: 218px;">
-                                                                              <img src="./img/528db8d92d56451784c8c2e796bc0d8f_G12.jpg" class="d-block w-100" alt="..." />
-                                                                        </div>
-
-                                                                  </div>
-                                                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                  </a>
-                                                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
-                                                                  </a>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                                <div class="col-7">
-                                                      <div class="tour__right_detail">
-                                                            <h3 style="font-size: 18px; font-weight: 600;">[NHA TRANG] FAMILY PACKAGE - 3N2Đ phòng gồm ăn sáng + VinWonders + miễn phí 01 trẻ em hoặc 02 bữa trưa + Giảm 500k khi mua qua App MyVinpearl</h3>
-                                                            <p style="font-size: 14px;">► 02 đêm nghỉ ► 02 bữa sáng ► Vui chơi VinWonders ► Tặng 02 bữa trưa Hoặc Miễn phí phụ thu 01 trẻ em ► Giảm thêm...</p>
-                                                            <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
-                                                            <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
-                                                            <div class="tour__right_detail__price d-flex justify-content-between">
-                                                                  <div class="tour__bought">
-                                                                        <span><i class="fa-solid fa-bolt"></i> 30 người mua</span>
-                                                                  </div>
-                                                                  <div class="tour__price__more d-flex">
-                                                                        <div style="padding-right: 10px; padding-top: 0;">
-                                                                              <p style="text-decoration: line-through;color: #9a9898; font-size: 16px;">8.143.000 đ</p>
-                                                                              <p style="font-size: 20px; color:#e29a38; font-weight: 700; ">5.700.000 đ</p>
-                                                                        </div>
-                                                                        <button type="button" class="btn">Mua ngay</button>
-                                                                  </div>
-                                                            </div>      
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
+                            
                         </div>
                   </div>
             </div>

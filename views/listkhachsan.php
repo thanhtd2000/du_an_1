@@ -202,24 +202,21 @@
                                     </ul>
                               </div>
                               <div class="tour__service">
-                                    <h5>Dịch vụ</h5>
-                                    <ul>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Hồ chí minh</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Hà nội</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Đà nẵng</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Nha Trang</button>
-                                          </li>
-                                          <li>
-                                                <button type="button" class="btn btn-warning">Quản ninh</button>
-                                          </li>
-                                    </ul>
+                                    <h5>Khu vực</h5>
+<?php 
+foreach($listkhuvuc as $kv){
+      extract($kv);
+      echo'
+      <ul>
+      <li>
+            <button type="button" class="btn btn-warning">'.$tenkv.'</button>
+      </li>
+     
+</ul>
+      ';
+}
+?>
+                                   
                               </div>
                               <div class="tour__room">
                                     <h5>Độ dài kì nghỉ</h5>

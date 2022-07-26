@@ -4,6 +4,7 @@ include "views/block/header.php";
 include "models/pdo.php";
 include "models/taikhoan.php";
 include "models/khachsan.php";
+include "models/khuvuc.php";
 include "models/tour.php";
 include "global.php";
 $listkhachsan = loadall_khachsan();
@@ -123,6 +124,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             $tenkv=load_ten_kv($makv);
             $listtours=loadall_tour_search($kyw,$makv);
+            $listkhuvuc=loadall_khuvuc();
             include "views/listtour.php";
             break;   
         default:
