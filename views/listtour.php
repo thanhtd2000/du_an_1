@@ -2,25 +2,25 @@
       <div class="body">
             <div class="slide__input2 d-block" id="dm-2">
                   <div class="d-flex">
-                  <form action="" method="post" class="form-inline my-2 my-lg-0">
-                  <div class="slide__location" style="margin: 20px 10px;
+                        <form action="" method="post" class="form-inline my-2 my-lg-0">
+                              <div class="slide__location" style="margin: 20px 10px;
                                     border: 1px solid #999;
                                     padding: 6px 0;
                                     border-radius: 5px;
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                              <input type="text" placeholder="Nhập tour" name="kyw">
-                        </div>
-                        
-                        <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
-                        <div class="tour__price__more d-flex">
-                                                                 
-                        <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
+                                    <input type="text" placeholder="Nhập tour" name="kyw">
+                              </div>
+
+                              <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
+                              <div class="tour__price__more d-flex">
+
+                                    <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
                                     height: 39px;">
-                                                            </div>
-                        
-                      </form>
+                              </div>
+
+                        </form>
                         <!-- <div class="slide__location" style="margin: 20px 10px;
                                     border: 1px solid #999;
                                     padding: 6px 0;
@@ -92,7 +92,7 @@
                                                 </div>
                                           </div>
                                     </div> -->
-                        
+
                   </div>
             </div>
       </div>
@@ -162,23 +162,23 @@
                               <div class="tour__service">
                                     <h5>Khu vực</h5>
                                     <ul>
-                                    <li>
-                                                      <a href="index.php?act=listtour"><button type="button" class="btn btn-warning">Tất cả</button></a>
-                                                </li>
-                                    <?php 
-                                          foreach($listkhuvuc as $kv){
+                                          <li>
+                                                <a href="index.php?act=listtour"><button type="button" class="btn btn-warning">Tất cả</button></a>
+                                          </li>
+                                          <?php
+                                          foreach ($listkhuvuc as $kv) {
                                                 extract($kv);
-                                                $linkkv="index.php?act=listtour&&makv=".$makv;
-                                                echo'
+                                                $linkkv = "index.php?act=listtour&&makv=" . $makv;
+                                                echo '
                                                 
                                                 <li>
-                                                      <a href="'.$linkkv.'"><button type="button" class="btn btn-warning">'.$tenkv.'</button></a>
+                                                      <a href="' . $linkkv . '"><button type="button" class="btn btn-warning">' . $tenkv . '</button></a>
                                                 </li>
                                           
 
                                                 ';
                                           }
-                                    ?>
+                                          ?>
                                     </ul>
                               </div>
                               <div class="tour__brand">
@@ -215,7 +215,7 @@
                                           </li>
                                     </ul>
                               </div>
-                              
+
                               <div class="tour__room">
                                     <h5>Độ dài kì nghỉ</h5>
                                     <ul>
@@ -241,14 +241,14 @@
                   </div>
                   <div class="col-9">
                         <div class="tour__right">
-                              
-                                    
-                                          <?php
-                                          foreach ($listtours as $lts) {
-                                                extract($lts);
-                                                $linktour = "index.php?act=chitiettour&&tourid=$tourid&&makv=$makv";
-                                                $hinh = $img_path . $anh;
-                                                echo '
+
+
+                              <?php
+                              foreach ($listtours as $lts) {
+                                    extract($lts);
+                                    $linktour = "index.php?act=chitiettour&&tourid=$tourid&&makv=$makv";
+                                    $hinh = $img_path . $anh;
+                                    echo '
                                                 <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
                                                 <div class="row">
                                                 <div class="col-5">
@@ -256,7 +256,7 @@
                                                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                                             <div class="carousel-inner">
                                                                   <div class="carousel-item active" style="height: 218px;">
-                                                                        <img src="'.$hinh.'" class="d-block w-100" alt="..." />
+                                                                        <img src="' . $hinh . '" class="d-block w-100" alt="..." />
                                                                   </div>
                                                                   
 
@@ -274,8 +274,8 @@
                                           </div>
                                           <div class="col-7">
                                                 <div class="tour__right_detail">
-                                                     <a href="'.$linktour.'"> <h3 style="font-size: 18px; font-weight: 600;">'.$tourname.'</h3></a>
-                                                      <p style="font-size: 14px;">'.$mota.'</p>
+                                                     <a href="' . $linktour . '"> <h3 style="font-size: 18px; font-weight: 600;">' . $tourname . '</h3></a>
+                                                      <p style="font-size: 14px;"> <!--' . $mota . '--></p>
                                                       <span><i class="fa-solid fa-clock-rotate-left"></i> 3 ngày 2 đêm</span>
                                                       <p style="padding-top: 20px;">Mã sản phẩm : P2022</p>
                                                       <div class="tour__right_detail__price d-flex justify-content-between">
@@ -292,12 +292,12 @@
                                           </div>
                                           </div>
                                                 ';
-                                          }
-                                          ?>
-                                          
-                                    
-                              
-                            
+                              }
+                              ?>
+
+
+
+
                         </div>
                   </div>
             </div>
