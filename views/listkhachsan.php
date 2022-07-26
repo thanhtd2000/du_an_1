@@ -10,7 +10,16 @@
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                              <input type="text" placeholder="Nhập tour" name="kyw">
+                              <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
+                        </div>
+                        <div class="slide__time" style="margin: 20px 10px;
+                                    border: 1px solid #999;
+                                    padding: 6px 0;
+                                    border-radius: 5px;
+                                    width: 225px;
+                                    height: 40px;
+                                    padding-left: 17px;">
+                              <input type="text" placeholder="Nhập địa điểm" name="kyw">
                         </div>
                         
                         <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
@@ -193,7 +202,7 @@
                                     </ul>
                               </div>
                               <div class="tour__service">
-                                    <h5>Khu vực</h5>
+                                    <h5>Dịch vụ</h5>
                                     <ul>
                                           <li>
                                                 <button type="button" class="btn btn-warning">Hồ chí minh</button>

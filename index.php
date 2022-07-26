@@ -102,7 +102,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/taikhoan/user.php";
             break;
         case 'chitiettour':
-            // $makv = $_GET['makv'];
+            $mak = $_GET['makv'];
             $tourid = $_GET['tourid'];
             $onetour= loadone_tour($tourid);
             $listtour = loadall_tour();
