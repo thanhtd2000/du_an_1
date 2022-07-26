@@ -13,9 +13,9 @@
                                     <span class="item active" data-this="dm-1">Đăng nhập/Login</span>
                                     <!-- <span class="item" data-this="dm-2">Đăng ký/Register</span> -->
                               </div>
-                              <?php if (isset($_GET['message'])) : ?>
+                              <?php if (isset($message)) : ?>
                                           <div class="card-body">
-                                                <h3 style="color:rgb(209, 76, 76);"><?= $_GET['message'] ?></h3>
+                                                <h5 style="color:rgb(209, 76, 76);"><?= $message ?></h5>
                                           </div>   
                               <?php endif ?>
                               <div class="body">
