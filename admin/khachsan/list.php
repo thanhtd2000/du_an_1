@@ -13,7 +13,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Mã khách sạn</th>
                         <th scope="col">Tên khách sạn</th>
-                        <th scope="col">Mã khu vực</th>
+                        <th scope="col">Tên Khu vực</th>
                         <th scope="col">Ảnh</th>
                         <th scope="col">Mô tả</th>
                         <th scope="col"></th>
@@ -27,7 +27,7 @@
                                         <th scope="row"><input id="check" type="checkbox"></th>
                                         <td>' . $maks . '</td>
                                         <td>' . $tenks . '</td>
-                                        <td>' . $makv . '</td>
+                                        <td>' . $tenkv . '</td>
                                         <td><img src="../img/khachsan/' . $anh . '" width="100" alt=""></td>
                                         <td><!--' . $mota . '--></td>
                                         <td>

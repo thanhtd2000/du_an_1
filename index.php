@@ -9,6 +9,7 @@ include "models/tour.php";
 include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
+$listkhuvuc = loadall_khuvuc();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {

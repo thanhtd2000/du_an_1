@@ -285,7 +285,8 @@
                                                       <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
                                                 </div>
                                                 <div class="products__right">
-                                                      <div>750.000 đ</div>
+                                          
+                                                      <div><?= $tenkv?></div>
                                                 </div>
                                           </div>
                                     </div>

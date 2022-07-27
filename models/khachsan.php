@@ -12,7 +12,7 @@ function loadone_khachsan($maks)
 }
 function loadall_khachsan()
 {
-    $sql = "SELECT*FROM khachsan ORDER BY maks DESC";
+    $sql = "SELECT a.*,b.tenkv FROM khachsan as a inner join khuvuc as b on a.makv = b.makv ORDER BY maks DESC";
     $listkhachsan = pdo_query($sql);
     return $listkhachsan;
 }
