@@ -29,3 +29,10 @@ function edit_khachsan($maks, $tenks, $makv, $anh, $mota)
         $sql = "UPDATE khachsan SET tenks='$tenks',makv='$makv',mota='$mota' WHERE maks = $maks";
     pdo_execute($sql);
 }
+
+function select_phong($maks)
+{
+    $sql = "SELECT b.anh,c.tenloai,c.giaphong FROM khachsan as a inner join phong as b on a.maks = b.maks inner join loaiphong  as c on b.maloai = c.maloai where a.maks = $maks";
+    $select_phong = pdo_query($sql);
+    return $select_phong;
+}

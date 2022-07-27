@@ -168,6 +168,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitietks':
             $mak = $_GET['makv'];
             $maks = $_GET['maks'];
+            $select_phong = select_phong($maks);
             $oneks = loadone_khachsan($maks);
             $listkhachsan =  loadall_khachsan();
             include "views/chitiet_hotel.php";

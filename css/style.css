@@ -1486,9 +1486,15 @@ form .mail {
     color: red;
 }
 
-.card-img-top {
+
+/* .card-img-top {
     max-width: 350px;
     max-height: 233.1px;
+} */
+
+.card-img-top {
+    width: 350px;
+    height: 233.1px;
 }
 
 .img-ct {
@@ -1509,124 +1515,162 @@ form .mail {
         transform: translateY(0);
     }
 }
-.cart__item{
-      border: 1px solid #e8e1e1;
-      padding: 20px;
+
+.cart__item {
+    border: 1px solid #e8e1e1;
+    padding: 20px;
 }
-.cart__item .cart__title{
-      padding-bottom: 20px;
+
+.cart__item .cart__title {
+    padding-bottom: 20px;
 }
-.cart__item .cart__title span{
-      font-size: 20px;
-      font-weight: 400;
+
+.cart__item .cart__title span {
+    font-size: 20px;
+    font-weight: 400;
 }
-.cart__item .cart__title input{
-      width: 16px;
-      height: 16px;
-      margin-right: 5px;
+
+.cart__item .cart__title input {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }
-.cart__detail div p,.cart__detail div span{
-      font-weight: 200;
+
+.cart__detail div p,
+.cart__detail div span {
+    font-weight: 200;
 }
-.cart__right{
-      border: 1px solid #e8e1e1;
-      padding: 20px;
+
+.cart__right {
+    border: 1px solid #e8e1e1;
+    padding: 20px;
 }
-.cart__infor{
-      border-top: 1px solid #bfbfbf;
-      border-bottom: 1px solid #bfbfbf;
-      padding: 15px 0;
+
+.cart__infor {
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 15px 0;
 }
-.cart__right h5{
-      padding-bottom: 20px;
+
+.cart__right h5 {
+    padding-bottom: 20px;
 }
-.cart__infor p,.cart__totalValue p{
-      font-weight: 200;
+
+.cart__infor p,
+.cart__totalValue p {
+    font-weight: 200;
 }
-.cart__totalValue span{
-font-size: 25px;
-font-weight: 500;
-color: #e29a38;
+
+.cart__totalValue span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #e29a38;
 }
-.cart__totalValue{
-      padding-top: 10px;
+
+.cart__totalValue {
+    padding-top: 10px;
 }
-.cart__item{
-      margin-bottom: 20px;
+
+.cart__item {
+    margin-bottom: 20px;
 }
-.client__content form label{
-      color: #4f4f4f;
-      font-size: 16px;
-      padding-top: 20px;
+
+.client__content form label {
+    color: #4f4f4f;
+    font-size: 16px;
+    padding-top: 20px;
 }
-.client__content form input{
-      border: 1px solid #e8e1e1;
-      width: 330px;
-      height: 45px;
-      padding-left: 10px;
-      margin-right: 20px;
-      color: #4f4f4f;
+
+.client__content form input {
+    border: 1px solid #e8e1e1;
+    width: 330px;
+    height: 45px;
+    padding-left: 10px;
+    margin-right: 20px;
+    color: #4f4f4f;
 }
-.client__content form textarea{
-      border: 1px solid #e8e1e1;   
+
+.client__content form textarea {
+    border: 1px solid #e8e1e1;
 }
+
 .client__content {
-      border: 1px solid #e8e1e1;
-      padding: 20px;
+    border: 1px solid #e8e1e1;
+    padding: 20px;
 }
-.payment__ATM img{
-      width: 48px;
-      height: 50px;
-      margin-right: 10px;
+
+.payment__ATM img {
+    width: 48px;
+    height: 50px;
+    margin-right: 10px;
 }
-.payment__ATM,.payment__QR,.payment__percen{
-      border: 1px solid #e8e1e1;
-      margin: 15px 0;
+
+.payment__ATM,
+.payment__QR,
+.payment__percen {
+    border: 1px solid #e8e1e1;
+    margin: 15px 0;
 }
-.payment__ATM label,.payment__QR label,.payment__percen label{
-      padding: 0;
-      margin: 0;
-      padding: 15px 10px;
+
+.payment__ATM label,
+.payment__QR label,
+.payment__percen label {
+    padding: 0;
+    margin: 0;
+    padding: 15px 10px;
 }
-.payment__ATM input,.payment__QR input,.payment__percen input{
-      margin-left: 13px;
+
+.payment__ATM input,
+.payment__QR input,
+.payment__percen input {
+    margin-left: 13px;
 }
-.payment__content h5{
-      padding: 20px 0;
-      padding-top: 30px;
+
+.payment__content h5 {
+    padding: 20px 0;
+    padding-top: 30px;
 }
-.payment__content{
-      border: 1px solid #e8e1e1;
-      padding: 20px;
-      margin-top: 50px;
+
+.payment__content {
+    border: 1px solid #e8e1e1;
+    padding: 20px;
+    margin-top: 50px;
 }
-.payment__content>label span{
-      color: #e29a38;
-      transition: all .5;
+
+.payment__content>label span {
+    color: #e29a38;
+    transition: all .5;
 }
-.payment__content>label span:hover{
-      text-decoration: underline;
+
+.payment__content>label span:hover {
+    text-decoration: underline;
 }
-.payment__content button{
-      margin-top: 20px;
+
+.payment__content button {
+    margin-top: 20px;
 }
-.dang__nhap{
-      border: 1px solid #ddedd5;
-      margin-bottom: 20px;
-      padding: 20px;
+
+.dang__nhap {
+    border: 1px solid #ddedd5;
+    margin-bottom: 20px;
+    padding: 20px;
 }
-.dang__nhap h5{
-      font-size: 18px;
+
+.dang__nhap h5 {
+    font-size: 18px;
 }
-.dang__nhap p{
-      color: #4f4f4f;
-      font-size: 14px;
+
+.dang__nhap p {
+    color: #4f4f4f;
+    font-size: 14px;
 }
-.dang__nhap a{
-      color: #e29a38;
-      text-decoration: underline;
+
+.dang__nhap a {
+    color: #e29a38;
+    text-decoration: underline;
 }
-.dang__nhap img{
-      width: 100px;
-      height: 100px;
+
+.dang__nhap img {
+    width: 100px;
+    height: 100px;
 }
