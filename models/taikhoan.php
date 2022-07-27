@@ -50,3 +50,11 @@ function edit_user($iduser, $email, $password, $diachi, $hoten, $sdt, $anh, $vai
         $sql = "UPDATE user SET password='$password',diachi='$diachi',hoten='$hoten',sdt='$sdt',email='$email',vaitro='$vaitro' WHERE iduser= $iduser";
     pdo_execute($sql);
 }
+function edit_user2($iduser, $password, $diachi, $hoten, $sdt, $anh)
+{
+    if ($anh != "")
+        $sql = "UPDATE user SET password='$password',diachi='$diachi',hoten='$hoten',anh='$anh',sdt='$sdt' WHERE iduser= $iduser";
+    else
+        $sql = "UPDATE user SET password='$password',diachi='$diachi',hoten='$hoten',sdt='$sdt' WHERE iduser= $iduser";
+    pdo_execute($sql);
+}

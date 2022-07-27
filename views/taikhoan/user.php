@@ -45,6 +45,7 @@
                                     <label for="">Mật khẩu</label>
                                     <input type="text" disabled placeholder="***********">
                                 </form>
+                                <a href="index.php?act=sua-thongtin&&iduser=<?=$user['iduser']?>"><input type="submit" name="themmoi" value="Thay đổi thông tin" class="btn btn-success"></a>
                             </div>
                         </div>
                         <div class="infor__offer" id="dm-2">
