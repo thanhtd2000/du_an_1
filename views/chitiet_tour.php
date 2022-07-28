@@ -189,8 +189,11 @@
                                                                         <div class="room__nomal">
                                                                               <div class="h5"><?= $tenloai ?></div>
                                                                               <form action="" method="post">
-                                                                                    <input class="" type="button" value="<?= $tenphong ?>" placeholder="">
-                        
+                                                                                    <?php foreach ($select_phong as $phong2) : ?>
+                                                                                          <?php if($phong2['maphong']==$maphong) : ?>
+                                                                                          <input class="" type="button" value="<?= $phong2['tenphong'] ?>" placeholder="">
+                                                                                          <?php endif ?>
+                                                                                    <?php endforeach ?>
                                                                               </form>
                                                                         </div>
                                                                   <?php endforeach ?>

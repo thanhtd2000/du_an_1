@@ -147,6 +147,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
             $listtour = loadall_tour();
+            $select_phong = select_phong($maks);
             $select_phong2 = select_phong2($maks);
             include "views/chitiet_tour.php";
             break;
