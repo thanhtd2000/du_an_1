@@ -6,6 +6,8 @@ include "models/taikhoan.php";
 include "models/khachsan.php";
 include "models/khuvuc.php";
 include "models/tour.php";
+include "models/phong.php";
+include "models/loaiphong.php";
 include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
@@ -146,9 +148,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $maks = $_GET['maks'];
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
-            $listtour = loadall_tour();
-            $select_phong = select_phong($maks);
-            $select_phong2 = select_phong2($maks);
+            $listphong =loadall_phong();
+            $select_phong4 = select_phong4($maks);
             include "views/chitiet_tour.php";
             break;
         case 'listtour':

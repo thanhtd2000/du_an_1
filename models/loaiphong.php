@@ -1,7 +1,8 @@
 <?php
-function loadall_loaiphong(){
-    $sql="SELECT*FROM loaiphong ORDER BY maloai DESC";
-    $listloaiphong=pdo_query($sql);
+function loadall_loaiphong()
+{
+    $sql = "SELECT*FROM loaiphong ORDER BY maloai DESC";
+    $listloaiphong = pdo_query($sql);
     return $listloaiphong;
 }
 function loadone_loaiphong($maloai)
@@ -24,4 +25,10 @@ function delete_loaiphong($maloai)
 {
     $sql = "DELETE FROM loaiphong WHERE maloai=$maloai";
     pdo_execute($sql);
+}
+function select_phong4()
+{
+    $sql = "SELECT*FROM loaiphong ";
+    $select_phong4 = pdo_query($sql);
+    return $select_phong4;
 }

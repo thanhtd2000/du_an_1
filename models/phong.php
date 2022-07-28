@@ -29,3 +29,9 @@ function edit_phong($maphong, $tenphong, $maks, $maloai, $anh)
         $sql = "UPDATE phong SET tenphong='$tenphong',maks='$maks',maloai='$maloai' WHERE maphong = $maphong";
     pdo_execute($sql);
 }
+function select_phong3($maks)
+{
+    $sql = "SELECT a.tenphong,a.maloai,b.tenloai FROM phong as a inner join loaiphong as b on a.maloai = b.maloai where maks = $maks";
+    $select_phong3 = pdo_query($sql);
+    return $select_phong3;
+}

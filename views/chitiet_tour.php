@@ -180,24 +180,26 @@
                                                 <div class="modal-dialog">
                                                       <div class="modal-content">
                                                             <div class="modal-body">
-                                                                  <?php foreach ($select_phong2 as $phong) : ?>
-                                                                        <?php extract($phong) ?>
-                                                                        <div class="modal-header">
-                                                                              <h3 class="modal-title" id="exampleModalLabel">
-                                                                                    Khách sạn <?= $tenks ?></h3>
-                                                                        </div>
+                                                                  <div class="modal-header">
+                                                                        <h3 class="modal-title" id="exampleModalLabel">
+                                                                              Khách sạn </h3>
+                                                                  </div>
+                                                                  <form action="" method="post">
                                                                         <div class="room__nomal">
-                                                                              <div class="h5"><?= $tenloai ?></div>
-                                                                              <form action="" method="post">
-                                                                                    <?php foreach ($select_phong as $phong2) : ?>
-                                                                                          <?php if($phong2['maphong']==$maphong) : ?>
-                                                                                          <input class="" type="button" value="<?= $phong2['tenphong'] ?>" placeholder="">
+                                                                              <?php foreach ($select_phong4 as $phong) : ?>
+                                                                                    <?php extract($phong) ?>
+                                                                                    <div class="h5"><?= $tenloai ?></div>
+                                                                                    <?php foreach ($listphong as $phong1) : ?>
+                                                                                          <?php if ($maks == $phong1['maks']) : ?>
+                                                                                                <?php if ($maloai == $phong1['maloai']) : ?>
+                                                                                                      <input class="" type="button" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                <?php endif ?>
                                                                                           <?php endif ?>
                                                                                     <?php endforeach ?>
-                                                                              </form>
+                                                                              <?php endforeach ?>
                                                                         </div>
-                                                                  <?php endforeach ?>
-                                                                  <!-- <div class="room__medium">
+
+                                                                        <!-- <div class="room__medium">
                                                                         <div class="h5"><?= $select_phong2['tenloai'] ?></div>
                                                                         <form action="">
                                                                               <input type="text" placeholder="PM001">
@@ -237,6 +239,7 @@
                                     </div>
                               </div>
                               <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Đặt combo ngay</a></button>
+                              </form>
                               <ul>
                                     <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
                                     <li><i class="fa-solid fa-check"></i>Không phí thanh toán</li>
@@ -349,7 +352,7 @@
                         <?php if ($mak == $makv) : ?>
                               <div class="item">
                                     <div class="card" style="width: 22rem;">
-                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maks=<?= $maks ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                           <div class="card-body">
                                                 <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
                                                       <h5 class="card-title"><?= $tourname ?></h5>

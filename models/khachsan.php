@@ -36,9 +36,3 @@ function select_phong($maks)
     $select_phong = pdo_query($sql);
     return $select_phong;
 }
-function select_phong2($maks)
-{
-    $sql = "SELECT a.tenks,b.tenphong,c.tenloai,c.giaphong,b.maphong FROM khachsan as a inner join phong as b on a.maks = b.maks inner join loaiphong  as c on b.maloai = c.maloai where a.maks = $maks";
-    $select_phong2 = pdo_query($sql);
-    return $select_phong2;
-}
