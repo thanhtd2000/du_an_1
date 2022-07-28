@@ -136,16 +136,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 if (!array_filter($error)) {
                     edit_user2($iduser, $password, $diachi, $hoten, $sdt, $anh);
                     move_uploaded_file($file['tmp_name'], './img/user/' . $anh);
-                    echo "<script> window.location.href='index.php?act=thongtin&&iduser=".$oneuser['iduser']."&&message=Sửa thành công'</script>";
+                    echo "<script> window.location.href='index.php?act=thongtin&&iduser=" . $oneuser['iduser'] . "&&message=Sửa thành công'</script>";
                 }
             }
             include "views/taikhoan/edituser.php";
             break;
         case 'chitiettour':
             $mak = $_GET['makv'];
+            $maks = $_GET['maks'];
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
             $listtour = loadall_tour();
+            $select_phong2 = select_phong2($maks);
             include "views/chitiet_tour.php";
             break;
         case 'listtour':

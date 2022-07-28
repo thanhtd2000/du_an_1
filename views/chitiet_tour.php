@@ -142,13 +142,13 @@
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
+                                          <img src="./img/tour/<?= $onetour['anh'] ?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
                                     <div class="carousel-item active">
-                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
+                                          <img src="./img/tour/<?= $onetour['anh'] ?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
                                     <div class="carousel-item active">
-                                    <img src="./img/tour/<?=$onetour['anh']?>" class="d-block w-100 img-ct" alt="...">
+                                          <img src="./img/tour/<?= $onetour['anh'] ?>" class="d-block w-100 img-ct" alt="...">
                                     </div>
                               </div>
                               <button class="carousel-control-prev" style="opacity: 0;" type="button" data-target="#carouselExampleControls" data-slide="prev">
@@ -163,7 +163,7 @@
                   </div>
                   <div class="col-4">
                         <div class="infor__tour__detail">
-                              <p>Mã SP: <span>CB<?=$onetour['tourid']?></span></p>
+                              <p>Mã SP: <span>CB<?= $onetour['tourid'] ?></span></p>
                               <div class="infor__tour__price">
                                     <div>Trẻ em : <?= number_format($onetour['giatre_em']) ?> VNĐ</div>
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
@@ -179,27 +179,23 @@
                                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                       <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                  <h3 class="modal-title" id="exampleModalLabel">
-                                                                        Khách sạn <?=$onetour['maks']?></h3>
-                                                            </div>
                                                             <div class="modal-body">
-                                                                  <div class="room__nomal">
-                                                                        <div class="h5">Phòng thường</div>
-                                                                        <form action="">
-                                                                              <input class="check" type="button" value="PN001" placeholder="PN001">
-                                                                              <input type="button" value="PN002">
-                                                                              <input type="text" placeholder="PN003">
-                                                                              <input type="text" placeholder="PN004">
-                                                                              <input type="text" placeholder="PN005">
-                                                                              <input class="check" type="text" placeholder="PN006">
-                                                                              <input type="text" placeholder="PN007">
-                                                                              <input type="text" placeholder="PN008">
-                                                                              <input type="text" placeholder="PN009">
-                                                                        </form>
-                                                                  </div>
-                                                                  <div class="room__medium">
-                                                                        <div class="h5">Phòng thương gia</div>
+                                                                  <?php foreach ($select_phong2 as $phong) : ?>
+                                                                        <?php extract($phong) ?>
+                                                                        <div class="modal-header">
+                                                                              <h3 class="modal-title" id="exampleModalLabel">
+                                                                                    Khách sạn <?= $tenks ?></h3>
+                                                                        </div>
+                                                                        <div class="room__nomal">
+                                                                              <div class="h5"><?= $tenloai ?></div>
+                                                                              <form action="" method="post">
+                                                                                    <input class="" type="button" value="<?= $tenphong ?>" placeholder="">
+                        
+                                                                              </form>
+                                                                        </div>
+                                                                  <?php endforeach ?>
+                                                                  <!-- <div class="room__medium">
+                                                                        <div class="h5"><?= $select_phong2['tenloai'] ?></div>
                                                                         <form action="">
                                                                               <input type="text" placeholder="PM001">
                                                                               <input class="check" type="text" placeholder="PM002">
@@ -226,7 +222,7 @@
                                                                               <input type="text" placeholder="PK008">
                                                                               <input type="text" placeholder="PK009">
                                                                         </form>
-                                                                  </div>
+                                                                  </div> -->
                                                             </div>
                                                             <div class="modal-footer">
                                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -347,25 +343,25 @@
             <div class="owl-carousel owl-theme">
                   <?php foreach ($listtour as $tour) : ?>
                         <?php extract($tour) ?>
-                        <?php if($mak == $makv ): ?>
-                        <div class="item">
-                              <div class="card" style="width: 22rem;">
-                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
-                                    <div class="card-body">
-                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
-                                                <h5 class="card-title"><?= $tourname ?></h5>
-                                          </a>
-                                          <div class="products__detail">
-                                                <div class="products__left">
-                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
-                                                </div>
-                                                <div class="products__right">
-                                                      <div><?= number_format($giatre_em) ?>-<?= number_format($gia_nl) ?> VNĐ</div>
+                        <?php if ($mak == $makv) : ?>
+                              <div class="item">
+                                    <div class="card" style="width: 22rem;">
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                          <div class="card-body">
+                                                <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
+                                                      <h5 class="card-title"><?= $tourname ?></h5>
+                                                </a>
+                                                <div class="products__detail">
+                                                      <div class="products__left">
+                                                            <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                      </div>
+                                                      <div class="products__right">
+                                                            <div><?= number_format($giatre_em) ?>-<?= number_format($gia_nl) ?> VNĐ</div>
+                                                      </div>
                                                 </div>
                                           </div>
                                     </div>
                               </div>
-                        </div>
                         <?php endif ?>
                   <?php endforeach ?>
             </div>
