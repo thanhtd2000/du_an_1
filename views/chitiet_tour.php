@@ -173,8 +173,8 @@
                                     <?php
                                     if (isset($_SESSION['phong'])) {
                                           foreach ($_SESSION['phong'] as $room) {
-                                                echo '    <input class="" type="button" name="tenphong" value="' . $room[0] . '" placeholder="">
-                                                <i class="fa-solid fa-xmark"></i>
+                                                echo '    <input class="room" type="button" name="tenphong" value="' . $room[0] . '" placeholder="">
+                                                <i class="close fa-solid fa-xmark"></i>
         <input class="" type="hidden" name="giaphong" value="' . $room[1] . '" placeholder="">
         <input class="" type="hidden" name="mota" value="' . $room[2] . '" placeholder="">';
                                           }

@@ -1682,3 +1682,11 @@ form .mail {
 .products a:hover {
     color: red;
 }
+.room {
+      position: relative;
+}
+.close{
+      position: absolute;
+      top: 0;
+      right: 0;
+}
