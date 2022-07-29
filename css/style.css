@@ -1674,3 +1674,11 @@ form .mail {
     width: 100px;
     height: 100px;
 }
+
+.products a {
+    text-decoration: none;
+}
+
+.products a:hover {
+    color: red;
+}

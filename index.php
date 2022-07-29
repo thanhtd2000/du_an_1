@@ -148,7 +148,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $maks = $_GET['maks'];
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
-            $listphong =loadall_phong();
+            $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
             include "views/chitiet_tour.php";
             break;
@@ -169,6 +169,25 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $listtours = loadall_tour_search($kyw, $makv);
             $listkhuvuc = loadall_khuvuc();
             include "views/listtour.php";
+            break;
+
+        case 'listks':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+                $makv = $_GET['makv'];
+            } else {
+                $makv = 0;
+            }
+            $tenkv = load_ten_kv($makv);
+            $listkhachsan = loadall_ks_search($kyw, $makv);
+            $tenkv = load_ten_kv($makv);
+            $listkhachsan = loadall_ks_search($kyw, $makv);
+            $listkhuvuc = loadall_khuvuc();
+            include "views/listkhachsan.php";
             break;
         case 'chitietks':
             $mak = $_GET['makv'];

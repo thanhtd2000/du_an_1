@@ -36,3 +36,19 @@ function select_phong($maks)
     $select_phong = pdo_query($sql);
     return $select_phong;
 }
+function loadall_ks_search($kyw,$makv){
+    
+    // $sql="SELECT*FROM tour ORDER BY tourid DESC";
+    $sql="SELECT*FROM khachsan where 1";
+    if($kyw!=''){
+        $sql.=" AND tenks LIKE '%".$kyw."%'";
+    }
+    if($makv>0){
+        $sql.=" AND makv='".$makv."'";
+    }
+    
+    $sql.=" ORDER BY maks DESC";
+    
+    $listkhachsan=pdo_query($sql);
+    return $listkhachsan;
+}

@@ -240,14 +240,16 @@
       </div>
 </div>
 <div class="products container">
-      <h2>Combo Du Lịch</h2>
+      <a class="title66" href="index.php?act=listtour">
+            <h2>Combo Du Lịch</h2>
+      </a>
       <div class="products__content">
             <div class="owl-carousel owl-theme">
                   <?php foreach ($listtour as $tour) : ?>
                         <?php extract($tour) ?>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
-                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&maks=<?=$maks?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&maks=<?= $maks ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                           <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
                                                 <h5 class="card-title"><?= $tourname ?></h5>
@@ -257,7 +259,7 @@
                                                       <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
                                                 </div>
                                                 <div class="products__right">
-                                                      <div><?= number_format($giatre_em) ?>-<?=number_format( $gia_nl) ?> VNĐ</div>
+                                                      <div><?= number_format($giatre_em) ?>-<?= number_format($gia_nl) ?> VNĐ</div>
                                                 </div>
                                           </div>
                                     </div>
@@ -268,7 +270,9 @@
       </div>
 </div>
 <div class="products container">
-      <h2>Khách sạn</h2>
+      <a class="title66" href="index.php?act=listtour">
+            <h2>Khách sạn</h2>
+      </a>
       <div class="products__content">
             <div class="owl-carousel owl-theme">
                   <?php foreach ($listkhachsan as $ks) : ?>
@@ -285,8 +289,8 @@
                                                       <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
                                                 </div>
                                                 <div class="products__right">
-                                          
-                                                      <div><?= $tenkv?></div>
+
+                                                      <div><?= $tenkv ?></div>
                                                 </div>
                                           </div>
                                     </div>

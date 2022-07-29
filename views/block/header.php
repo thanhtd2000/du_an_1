@@ -40,7 +40,7 @@
                                                 ĐẶT DỊCH VỤ
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" href="index.php?act=listks">
                                                     Tìm khách sạn
                                                 </a>
                                                 <a class="dropdown-item" href="index.php?act=listtour">
