@@ -1,4 +1,3 @@
-
 <div class="slide" style="background-color: #DCE0EE;">
       <div class="slide__bot container d-flex justify-content-between">
             <div class="body">
@@ -170,18 +169,19 @@
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
                               <div class="choice__hotel">
-                              <h4>Vui lòng chọn khách sạn</h4>
-                                    <?php 
-if(isset($_SESSION['phong'])){
-      foreach($_SESSION['phong'] as $room){
-        echo'    <input class="" type="button" name="tenphong" value="'.$room[0]. '" placeholder="">
-        <input class="" type="hidden" name="giaphong" value="'.$room[1]. '" placeholder="">
-        <input class="" type="hidden" name="mota" value="'.$room[2]. '" placeholder="">';
-      }
-}
+                                    <h4>Vui lòng chọn khách sạn</h4>
+                                    <?php
+                                    if (isset($_SESSION['phong'])) {
+                                          foreach ($_SESSION['phong'] as $room) {
+                                                echo '    <input class="" type="button" name="tenphong" value="' . $room[0] . '" placeholder="">
+                                                <i class="fa-solid fa-xmark"></i>
+        <input class="" type="hidden" name="giaphong" value="' . $room[1] . '" placeholder="">
+        <input class="" type="hidden" name="mota" value="' . $room[2] . '" placeholder="">';
+                                          }
+                                    }
 
                                     ?>
-                                    
+
 
                                     <div class="choice__hotel__content">
 
@@ -208,15 +208,17 @@ if(isset($_SESSION['phong'])){
                                                                               <?php foreach ($listphong as $phong1) : ?>
                                                                                     <?php if ($maks == $phong1['maks']) : ?>
                                                                                           <?php if ($maloai == $phong1['maloai']) : ?>
-                                                                                                <form action="" method="post">
-                                                                                                      <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
-                                                                                                      <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
-                                                                                                </form>
+                                                                                                <div class="d-flex">
+                                                                                                      <form action="" method="post">
+                                                                                                            <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
+                                                                                                            <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
+                                                                                                      </form>
+                                                                                                </div>
                                                                                           <?php endif ?>
                                                                                     <?php endif ?>
                                                                               <?php endforeach ?>
