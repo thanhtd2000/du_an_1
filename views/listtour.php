@@ -315,7 +315,7 @@
                                     <div class="card" style="width: 22rem;">
                                           <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maks=<?= $maks ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                           <div class="card-body">
-                                                <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
+                                                <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maks=<?= $maks ?>">
                                                       <h5 class="card-title"><?= $tourname ?></h5>
                                                 </a>
                                                 <div class="products__detail">
