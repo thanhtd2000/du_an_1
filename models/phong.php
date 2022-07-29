@@ -12,7 +12,7 @@ function loadone_phong($maphong)
 }
 function loadall_phong()
 {
-    $sql = "SELECT*FROM phong ORDER BY maphong DESC";
+    $sql = "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai ORDER BY maphong DESC";
     $listphong = pdo_query($sql);
     return $listphong;
 }

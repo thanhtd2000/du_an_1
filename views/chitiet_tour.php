@@ -1,3 +1,4 @@
+
 <div class="slide" style="background-color: #DCE0EE;">
       <div class="slide__bot container d-flex justify-content-between">
             <div class="body">
@@ -169,9 +170,21 @@
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
                               <div class="choice__hotel">
-                                    <h4>Vui lòng chọn khách sạn</h4>
+                              <h4>Vui lòng chọn khách sạn</h4>
+                                    <?php 
+if(isset($_SESSION['phong'])){
+      foreach($_SESSION['phong'] as $room){
+        echo'    <input class="" type="button" name="tenphong" value="'.$room[0]. '" placeholder="">
+        <input class="" type="hidden" name="giaphong" value="'.$room[1]. '" placeholder="">
+        <input class="" type="hidden" name="mota" value="'.$room[2]. '" placeholder="">';
+      }
+}
+
+                                    ?>
+                                    
+
                                     <div class="choice__hotel__content">
-                                          <!-- Button trigger modal -->
+
                                           <button type="button" class="btn btn-primary" data-toggle="modal" style=" background-color: #f39f2d; outline: none;" data-target="#exampleModal">
                                                 Chọn phòng khách sạn
                                           </button>
@@ -181,57 +194,40 @@
                                                       <div class="modal-content">
                                                             <div class="modal-body">
                                                                   <div class="modal-header">
+
                                                                         <h3 class="modal-title" id="exampleModalLabel">
-                                                                              Khách sạn </h3>
+                                                                              Khách sạn</h3>';
+
                                                                   </div>
-                                                                  <form action="" method="post">
-                                                                        <div class="room__nomal">
-                                                                              <?php foreach ($select_phong4 as $phong) : ?>
-                                                                                    <?php extract($phong) ?>
-                                                                                    <div class="h5"><?= $tenloai ?></div>
-                                                                                    <?php foreach ($listphong as $phong1) : ?>
-                                                                                          <?php if ($maks == $phong1['maks']) : ?>
-                                                                                                <?php if ($maloai == $phong1['maloai']) : ?>
-                                                                                                      <input class="" type="button" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                <?php endif ?>
+
+                                                                  <div class="room__nomal">
+
+                                                                        <?php foreach ($select_phong4 as $phong) : ?>
+                                                                              <?php extract($phong) ?>
+                                                                              <div class="h5"><?= $tenloai ?></div>
+                                                                              <?php foreach ($listphong as $phong1) : ?>
+                                                                                    <?php if ($maks == $phong1['maks']) : ?>
+                                                                                          <?php if ($maloai == $phong1['maloai']) : ?>
+                                                                                                <form action="" method="post">
+                                                                                                      <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
+                                                                                                      <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
+                                                                                                      <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
+                                                                                                      <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                      <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                      <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
+                                                                                                      <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
+                                                                                                </form>
                                                                                           <?php endif ?>
-                                                                                    <?php endforeach ?>
+                                                                                    <?php endif ?>
                                                                               <?php endforeach ?>
-                                                                        </div>
+                                                                        <?php endforeach ?>
 
-                                                                        <!-- <div class="room__medium">
-                                                                        <div class="h5"><?= $select_phong2['tenloai'] ?></div>
-                                                                        <form action="">
-                                                                              <input type="text" placeholder="PM001">
-                                                                              <input class="check" type="text" placeholder="PM002">
-                                                                              <input type="text" placeholder="PM003">
-                                                                              <input type="text" placeholder="PM004">
-                                                                              <input type="text" placeholder="PM005">
-                                                                              <input class="check" type="text" placeholder="PM006">
-                                                                              <input type="text" placeholder="PM007">
-                                                                              <input type="text" placeholder="PM008">
-                                                                              <input class="check" type="text" placeholder="PM009">
-
-                                                                        </form>
                                                                   </div>
-                                                                  <div class="room__king">
-                                                                        <div class="h5">Phòng cao cấp</div>
-                                                                        <form action="">
-                                                                              <input type="text" placeholder="PK001">
-                                                                              <input class="check" type="text" placeholder="PK002">
-                                                                              <input type="text" placeholder="PK003">
-                                                                              <input type="text" placeholder="PK004">
-                                                                              <input class="check" type="text" placeholder="PK005">
-                                                                              <input type="text" placeholder="PK006">
-                                                                              <input type="text" placeholder="PK007">
-                                                                              <input type="text" placeholder="PK008">
-                                                                              <input type="text" placeholder="PK009">
-                                                                        </form>
-                                                                  </div> -->
+
                                                             </div>
                                                             <div class="modal-footer">
                                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                  <button type="button" class="btn btn-primary">Save</button>
+
                                                             </div>
                                                       </div>
                                                 </div>

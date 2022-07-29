@@ -284,7 +284,7 @@
                                                             </div>
                                                             <div class="tour__price__more d-flex">
                                                                  
-                                                                  <button type="button" class="btn">Xem ngay</button>
+                                                            <a href="' . $linktour . '"><button type="button" class="btn">Xem ngay</button></a>
                                                             </div>
                                                       </div>
                                                 </div>

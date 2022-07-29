@@ -5,12 +5,14 @@ function loadall_loaiphong()
     $listloaiphong = pdo_query($sql);
     return $listloaiphong;
 }
+
 function loadone_loaiphong($maloai)
 {
     $sql = "SELECT*FROM loaiphong where maloai = $maloai";
     $onelp = pdo_query_one($sql);
     return $onelp;
 }
+
 function insert_loaiphong($tenloai, $giaphong, $mota)
 {
     $sql = "INSERT INTO loaiphong(tenloai, giaphong, mota) VALUES ('$tenloai','$giaphong','$mota')";

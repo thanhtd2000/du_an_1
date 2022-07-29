@@ -146,10 +146,27 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitiettour':
             $mak = $_GET['makv'];
             $maks = $_GET['maks'];
+
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
             $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
+            if (!isset($_SESSION['phong'])) $_SESSION['phong'] = [];
+            if (isset($_POST['datphong']) && ($_POST['datphong'])) {
+                $tenphong = $_POST['tenphong'];
+                $giaphong = $_POST['giaphong'];
+                $mota = $_POST['mota'];
+                $tourid = $_POST['tourid'];
+                $maks = $_POST['maks'];
+                $makv = $_POST['makv'];
+
+                $phong = [$tenphong, $giaphong, $mota, $tourid, $maks];
+
+                $_SESSION['phong'][] = $phong;
+                echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&makv='.$makv.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
+            }
+
+
             include "views/chitiet_tour.php";
             break;
         case 'listtour':
@@ -196,6 +213,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $oneks = loadone_khachsan($maks);
             $listkhachsan =  loadall_khachsan();
             include "views/chitiet_hotel.php";
+            break;
+        case 'datphong':
+
+            include "views/chitiet_tour.php";
             break;
         default:
             include "views/home.php";
