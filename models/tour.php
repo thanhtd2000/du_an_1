@@ -7,6 +7,12 @@ function loadall_tour(){
     $listtour=pdo_query($sql);
     return $listtour;
 }
+function loadall_tour2($item_per_page, $offset){
+    $sql="SELECT*FROM tour ORDER BY tourid DESC limit $item_per_page offset $offset";
+    
+    $listtour2=pdo_query($sql);
+    return $listtour2;
+}
 function loadall_tour_search($kyw,$makv){
     
     // $sql="SELECT*FROM tour ORDER BY tourid DESC";

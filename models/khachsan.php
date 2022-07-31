@@ -12,9 +12,16 @@ function loadone_khachsan($maks)
 }
 function loadall_khachsan()
 {
-    $sql = "SELECT a.*,b.tenkv FROM khachsan as a inner join khuvuc as b on a.makv = b.makv ORDER BY maks DESC";
+    $sql = "SELECT a.*,b.tenkv FROM khachsan as a inner join khuvuc as b on a.makv = b.makv ORDER BY maks DESC ";
     $listkhachsan = pdo_query($sql);
     return $listkhachsan;
+}
+
+function loadall_khachsan2($item_per_page, $offset)
+{
+    $sql = "SELECT a.*,b.tenkv FROM khachsan as a inner join khuvuc as b on a.makv = b.makv ORDER BY maks DESC limit $item_per_page offset $offset";
+    $listkhachsan2 = pdo_query($sql);
+    return $listkhachsan2;
 }
 function delete_khachsan($maks)
 {

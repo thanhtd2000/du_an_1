@@ -21,7 +21,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($listphong as $phong) {
+                    foreach ($listphong2 as $phong) {
                         extract($phong);
                         echo '<tr>
                                         <th scope="row"><input id="check" type="checkbox"></th>

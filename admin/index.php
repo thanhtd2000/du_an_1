@@ -83,9 +83,14 @@ if (isset($_GET['act'])) {
 
             //tour
         case 'listtour':
-
-            $listtour = loadall_tour();
-
+            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 3;
+            $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+            $offset = ($current_page - 1) * $item_per_page;
+            $listtour2 = loadall_tour2($item_per_page, $offset);
+            $total = mysqli_query($mysqli, "SELECT*FROM tour");
+            $total = $total->num_rows;
+            $ttpage = ceil($total / $item_per_page);
+           
             include "tour/list.php";
             break;
             //tour
@@ -193,7 +198,6 @@ if (isset($_GET['act'])) {
                 move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
                 echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
             }
-            $listtour = loadall_tour();
             $listkhudulich = loadall_khudulich();
             $listkhuvuc = loadall_khuvuc();
             $listkhachsan = loadall_khachsan();
@@ -201,7 +205,13 @@ if (isset($_GET['act'])) {
             break;
             //khách sạn
         case 'khachsan':
-            $listkhachsan = loadall_khachsan();
+            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 3;
+            $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+            $offset = ($current_page - 1) * $item_per_page;
+            $listkhachsan2 = loadall_khachsan2($item_per_page, $offset);
+            $total = mysqli_query($mysqli, "SELECT*FROM khachsan");
+            $total = $total->num_rows;
+            $ttpage = ceil($total / $item_per_page);
             include "khachsan/list.php";
             break;
         case 'addkhachsan':
@@ -485,7 +495,7 @@ if (isset($_GET['act'])) {
             $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 3;
             $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
             $offset = ($current_page - 1) * $item_per_page;
-            $listphong = loadall_phong($item_per_page, $offset);
+            $listphong2 = loadall_phong2($item_per_page, $offset);
             $total = mysqli_query($mysqli, "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai");
             $total = $total->num_rows;
             $ttpage = ceil($total / $item_per_page);
