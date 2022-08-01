@@ -20,10 +20,10 @@
                 <div class="slide__input active" id="dm-1">
                     <div class="d-flex">
                         <div class="slide__location">
-                            <input type="text" placeholder="Nhập khu vực">
+                            <input type="text" name="kyw_kv" placeholder="Nhập khu vực">
                         </div>
                         <div class="slide__location">
-                            <input type="text" placeholder="Nhập khách sạn">
+                            <input type="text" name="kyw_ks" placeholder="Nhập khách sạn">
                         </div>
                         <!-- <div class="slide__room">
                                                 <div class="dropdown">
@@ -188,6 +188,13 @@
                     <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Đặt phòng ngay</a></button>
                 </div>
             </div>
+            <div class="describe container">
+      <div class="describe__title">
+            <span class="item active" data-this="dm-1">Comment</span>
+            
+      </div>
+      <iframe src="views/binhluan_ks.php?maks=<?=$maks?>" width="100%"  frameboder="0"></iframe>
+</div>
             <div class="view__more__ofer">
                 <div class="products container">
                     <h2>Sản phẩm dành cho bạn</h2>

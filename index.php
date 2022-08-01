@@ -12,6 +12,7 @@ include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
 $listkhuvuc = loadall_khuvuc();
+if (!isset($_SESSION['tour'])) $_SESSION['tour'] = [];
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -151,7 +152,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $onetour = loadone_tour($tourid);
             $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
-            if (!isset($_SESSION['phong'])) $_SESSION['phong'] = [];
+            
             if (isset($_POST['datphong']) && ($_POST['datphong'])) {
                 $tenphong = $_POST['tenphong'];
                 $giaphong = $_POST['giaphong'];
@@ -162,7 +163,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
                 $phong = [$tenphong, $giaphong, $mota, $tourid, $maks];
 
-                $_SESSION['phong'][] = $phong;
+                array_push($_SESSION['phong'],$phong);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&makv='.$makv.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
 
@@ -175,34 +176,40 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $kyw = "";
             }
-            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
-                $makv = $_GET['makv'];
-            } else {
-                $makv = 0;
+            // if (isset($_POST['kyw_kv']) && ($_POST['kyw_kv'] !="")) {
+            //     $kyw_kv = $_POST['kyw_kv'];
+            // } else {
+            //     $kyw_kv = "";
+            // }
+            if(isset($_GET['makv'])&&($_GET['makv']>0)){
+                $makv=$_GET['makv'];
+                
+            }else{
+                $makv=0;
             }
-            $tenkv = load_ten_kv($makv);
-            $listtours = loadall_tour_search($kyw, $makv);
-            $tenkv = load_ten_kv($makv);
-            $listtours = loadall_tour_search($kyw, $makv);
+            
+            $listtours = loadall_tour_search($kyw,$makv);
+            
+            $tenkv=load_ten_kv($makv);
             $listkhuvuc = loadall_khuvuc();
             include "views/listtour.php";
             break;
 
         case 'listks':
-            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
-                $kyw = $_POST['kyw'];
+            if (isset($_POST['kyw_ks']) && ($_POST['kyw_ks'] != "")) {
+                $kyw_ks = $_POST['kyw_ks'];
             } else {
-                $kyw = "";
+                $kyw_ks = "";
             }
-            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
-                $makv = $_GET['makv'];
-            } else {
-                $makv = 0;
+            if(isset($_GET['makv'])&&($_GET['makv']>0)){
+                $makv=$_GET['makv'];
+                
+            }else{
+                $makv=0;
             }
-            $tenkv = load_ten_kv($makv);
-            $listkhachsan = loadall_ks_search($kyw, $makv);
-            $tenkv = load_ten_kv($makv);
-            $listkhachsan = loadall_ks_search($kyw, $makv);
+           
+            $listks = loadall_ks_search($kyw_ks,$makv);
+            $tenkv=load_ten_kv($makv);
             $listkhuvuc = loadall_khuvuc();
             include "views/listkhachsan.php";
             break;
@@ -214,10 +221,40 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $listkhachsan =  loadall_khachsan();
             include "views/chitiet_hotel.php";
             break;
-        case 'datphong':
+        case 'giohang':
+            if (isset($_POST['dattour']) && ($_POST['dattour'])) {
+                
+                
+                $tourid = $_POST['tourid'];
+                $tourname = $_POST['tourname'];
+                $gia_nl = $_POST['gia_nl'];
+                $giatre_em = $_POST['giatre_em'];
+                $songuoilon = $_POST['songuoilon'];
+                $sotreem = $_POST['sotreem'];
+                $mota = $_POST['mota'];
+                $start = $_POST['start'];
+                $finish = $_POST['finish'];
+                $maks = $_POST['maks'];
+                $anh = $_POST['anh'];
+                $maloai = $_POST['maloai'];
+                
 
-            include "views/chitiet_tour.php";
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem,$mota, $start, $finish,$maks, $anh,$maloai];
+
+                array_push($_SESSION['tour'],$tour);
+                echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
+            }
+            include "views/giohang.php";
             break;
+            case 'deltour':
+                if(isset($_POST['tourid'])){
+                    array_slice($_SESSION['tour'],$_POST['tourid'],1);
+
+                }else{
+                    $_SESSION['tour']=[];
+                }
+                echo "<script> window.location.href='index.php?act=giohang'</script>";
+                break;
         default:
             include "views/home.php";
             break;

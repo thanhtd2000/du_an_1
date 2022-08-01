@@ -99,6 +99,21 @@ if(is_array($onetour)){
                    
 
                 </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Loại phòng</label>
+                    <br>
+                    <select multiple class="form-control" id="exampleFormControlSelect2" name="maloai">
+                        <!-- <option value="" selected></option> -->
+                        <?php foreach($listloaiphong as $lp){
+                         extract($lp);
+                         if($lp['maloai']==$onetour['maloai']) echo '<option value="'.$maloai.'" selected>'.$tenloai.'</option>';
+                         else echo '<option value="'.$maloai.'" >'.$tenloai.'</option>';
+                        }
+                  ?>
+                    </select>
+                   
+
+                </div>
                 <input type="submit" name="themmoi" value="Cập nhật" class="btn btn-success">
                 <button type="reset" class="btn btn-danger">Nhập lại</button>
                 <a href="danhSachKh.html"><button type="button" class="btn btn-info">Danh sách</button></a>

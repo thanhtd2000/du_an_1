@@ -1,4 +1,3 @@
-
 <div class="slide" style="background-color: #DCE0EE;">
       <div class="slide__bot container d-flex justify-content-between">
             <div class="body">
@@ -82,12 +81,12 @@
             </div>
             <div class="cart__shopping d-block">
                   <!-- Button trigger modal -->
-                  <button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
-                        <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-                  </button>
+                  <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
+                              <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
+                        </button></a>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleModa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <!-- <div class="modal fade" id="exampleModa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                     <div class="modal-header">
@@ -131,7 +130,7 @@
                                     </div>
                               </div>
                         </div>
-                  </div>
+                  </div> -->
             </div>
       </div>
 </div>
@@ -169,26 +168,34 @@
                                     <div>Trẻ em : <?= number_format($onetour['giatre_em']) ?> VNĐ</div>
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
-                              <div class="choice__hotel">
-                              <h4>Vui lòng chọn khách sạn</h4>
-                                    <?php 
-if(isset($_SESSION['phong'])){
-      foreach($_SESSION['phong'] as $room){
-        echo'    <input class="" type="button" name="tenphong" value="'.$room[0]. '" placeholder="">
-        <input class="" type="hidden" name="giaphong" value="'.$room[1]. '" placeholder="">
-        <input class="" type="hidden" name="mota" value="'.$room[2]. '" placeholder="">';
-      }
-}
+                              <!-- <div class="choice__hotel">
+                                    <h4>Vui lòng chọn khách sạn</h4>
+                                    <?php
 
-                                    ?>
-                                    
+                                    // for($i=0;$i<sizeof($_SESSION['phong']);$i++){
+                                    //       if($_SESSION['phong'][$i][0]==$onetour['tenphong']){
+                                    //             break;
+                                    //       }
+                                    // else {
 
-                                    <div class="choice__hotel__content">
+                                    foreach ($_SESSION['phong'] as $room) {
+                                          echo '    <input class="" type="button" name="tenphong" value="' . $room[0] . '" placeholder="">
+                                                <input class="" type="hidden" name="giaphong" value="' . $room[1] . '" placeholder="">
+                                                <input class="" type="hidden" name="mota" value="' . $room[2] . '" placeholder="">';
+                                    }
+                                    //       }
+                                    // }
+
+
+                                    ?> -->
+
+
+                              <!-- <div class="choice__hotel__content">
 
                                           <button type="button" class="btn btn-primary" data-toggle="modal" style=" background-color: #f39f2d; outline: none;" data-target="#exampleModal">
                                                 Chọn phòng khách sạn
                                           </button>
-                                          <!-- Modal -->
+                                          
                                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                       <div class="modal-content">
@@ -208,7 +215,7 @@ if(isset($_SESSION['phong'])){
                                                                               <?php foreach ($listphong as $phong1) : ?>
                                                                                     <?php if ($maks == $phong1['maks']) : ?>
                                                                                           <?php if ($maloai == $phong1['maloai']) : ?>
-                                                                                                <form action="" method="post">
+                                                                                                <form action="index.php?act=giohang" method="post">
                                                                                                       <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
                                                                                                       <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
                                                                                                       <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
@@ -232,9 +239,42 @@ if(isset($_SESSION['phong'])){
                                                       </div>
                                                 </div>
                                           </div>
+                                    </div> -->
+                              <!-- </div> -->
+                              <!-- <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none;" name="datphong" value="Đặt combo ngay" placeholder=""> -->
+                              <form action="index.php?act=giohang" method="post">
+                                    
+                              <div class="d-flex justify-content-between">
+                                    <p>Số người lớn</p>
+                                    <div class="buttons_added">
+                                          <input style="    width: 30px;
+                                          height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                                          <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="1">
+                                          <input style="    width: 30px;
+                                          height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
                                     </div>
                               </div>
-                              <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Đặt combo ngay</a></button>
+                              <div class="d-flex justify-content-between">
+                                    <p>Số trẻ em</p>
+                                    <div class="buttons_added">
+                                          <input style="    width: 30px;
+                                          height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                                          <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="1">
+                                          <input style="    width: 30px;
+                                          height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
+                                    </div>
+                              </div>
+                              <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">   
+                              <input class="" type="hidden" name="tourname" value="<?= $onetour['tourname'] ?>" placeholder=""> 
+                              <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">  
+                              <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder=""> 
+                              <input class="" type="hidden" name="mota" value="<?= $onetour['mota'] ?>" placeholder=""> 
+                              <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">    
+                              <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
+                              <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
+                              <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
+                              <input class="" type="hidden" name="maloai" value="<?= $onetour['maloai'] ?>" placeholder="">                             
+                                    <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none;" name="dattour" value="Đặt combo ngay" placeholder="">
                               </form>
                               <ul>
                                     <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
@@ -337,6 +377,13 @@ if(isset($_SESSION['phong'])){
                         tùy thuộc vào tình trạng cung cấp dịch vụ của khách sạn tại thời điểm đặt dịch vụ</p>
             </div>
       </div>
+</div>
+<div class="describe container">
+      <div class="describe__title">
+            <span class="item active" data-this="dm-1">Comment</span>
+
+      </div>
+      <iframe src="views/binhluan.php?tourid=<?= $tourid ?>" width="100%" frameboder="0"></iframe>
 </div>
 <div class="products container">
       <h2>Sản phẩm tương tự</h2>
@@ -475,6 +522,24 @@ if(isset($_SESSION['phong'])){
                         items: 3
                   }
             }
+      })
+      $('input.input-qty').each(function() {
+            var $this = $(this),
+                  qty = $this.parent().find('.is-form'),
+                  min = Number($this.attr('min')),
+                  max = Number($this.attr('max'))
+            if (min == 0) {
+                  var d = 0
+            } else d = min
+            $(qty).on('click', function() {
+                  if ($(this).hasClass('minus')) {
+                        if (d > min) d += -1
+                  } else if ($(this).hasClass('plus')) {
+                        var x = Number($this.val()) + 1
+                        if (x <= max) d += 1
+                  }
+                  $this.attr('value', d).val(d)
+            })
       })
 </script>
 <script src="../js/backtotop/util.js"></script>

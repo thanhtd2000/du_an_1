@@ -19,7 +19,7 @@
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                                    <input type="text" placeholder="Nhập địa điểm" name="kyw">
+                                    <input type="text" placeholder="Nhập địa điểm" name="kyw_kv">
                               </div>
 
                               <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
@@ -210,11 +210,11 @@
                                           <?php
                                           foreach ($listkhuvuc as $kv) {
                                                 extract($kv);
-                                                $linkkv = "index.php?act=listks&&makv=" . $makv;
+                                                $linkk = "index.php?act=listks&&makv=" . $makv;
                                                 echo '
                                                 
                                                 <li>
-                                                      <a href="' . $linkkv . '"><button type="button" class="btn btn-warning">' . $tenkv . '</button></a>
+                                                      <a href="' . $linkk . '"><button type="button" class="btn btn-warning">' . $tenkv . '</button></a>
                                                 </li>
                                           
 
@@ -251,7 +251,7 @@
 
 
                               <?php
-                              foreach ($listkhachsan as $lks) {
+                              foreach ($listks as $lks) {
                                     extract($lks);
                                     $linkks = "index.php?act=chitietks&&maks= " . $maks . "&&makv=" . $makv;
                                     $hinh = $img_path1 . $anh;

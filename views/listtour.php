@@ -12,6 +12,15 @@
                                     padding-left: 17px;">
                                     <input type="text" placeholder="Nhập tour" name="kyw">
                               </div>
+                              <div class="slide__location" style="margin: 20px 10px;
+                                    border: 1px solid #999;
+                                    padding: 6px 0;
+                                    border-radius: 5px;
+                                    width: 225px;
+                                    height: 40px;
+                                    padding-left: 17px;">
+                                    <input type="text" placeholder="Nhập khu du lịch" name="kyw_kv">
+                              </div>
 
                               <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
                               <div class="tour__price__more d-flex">
@@ -21,77 +30,7 @@
                               </div>
 
                         </form>
-                        <!-- <div class="slide__location" style="margin: 20px 10px;
-                                    border: 1px solid #999;
-                                    padding: 6px 0;
-                                    border-radius: 5px;
-                                    width: 225px;
-                                    height: 40px;
-                                    padding-left: 17px;">
-                              <input type="text" placeholder="Nhập khu vực" name="kyw">
-                        </div>
-                        <div class="slide__time" style="margin: 20px 10px;
-                                    border: 1px solid #999;
-                                    padding: 6px 0;
-                                    border-radius: 5px;
-                                    width: 225px;
-                                    height: 40px;
-                                    padding-left: 17px;">
-                              <input type="text" placeholder="Nhập địa điểm">
-                        </div> -->
-                        <!-- <div class="slide__member">
-                                          <div class="dropdown">
-                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Số người
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Người lớn</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Trẻ em</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Em bé</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
+               
 
                   </div>
             </div>

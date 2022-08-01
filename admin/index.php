@@ -99,7 +99,8 @@ if (isset($_GET['act'])) {
                 'makv' => '',
                 'makdl' => '',
                 'mota' => '',
-                'anh' => ''
+                'anh' => '',
+                'maloai' => ''
             ];
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tourname = $_POST['tourname'];
@@ -110,6 +111,7 @@ if (isset($_GET['act'])) {
                 $maks = $_POST['maks'];
                 $makdl = $_POST['makdl'];
                 $makv = $_POST['makv'];
+                $maloai = $_POST['maloai'];
                 $mota = $_POST['mota'];
                 $file = $_FILES['anh'];
                 $anh = $file['name'];
@@ -137,6 +139,9 @@ if (isset($_GET['act'])) {
                 if ($makv == '') {
                     $error['makv'] = "Bạn chưa chọn tên khu vực";
                 }
+                if ($maloai == '') {
+                    $error['maloai'] = "Bạn chưa chọn loại phòng";
+                }
                 if ($mota == '') {
                     $error['mota'] = "Bạn chưa nhập mô tả";
                 }
@@ -149,11 +154,12 @@ if (isset($_GET['act'])) {
                     $error['anh'] = "Ảnh không đúng định dạng";
                 }
                 if (!array_filter($error)) {
-                    insert_tour($tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em);
+                    insert_tour($tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em,$maloai);
                     move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
                     echo "<script> window.location.href='index.php?act=listtour&&message=Thêm thành công'</script>";
                 }
             }
+            $listloaiphong = loadall_loaiphong();
             $listkhudulich = loadall_khudulich();
             $listkhuvuc = loadall_khuvuc();
             $listkhachsan = loadall_khachsan();
@@ -181,6 +187,7 @@ if (isset($_GET['act'])) {
                 $maks = $_POST['maks'];
                 $makdl = $_POST['makdl'];
                 $makv = $_POST['makv'];
+                $maloai = $_POST['maloai'];
                 $mota = $_POST['mota'];
                 $file = $_FILES['anh'];
                 $anh = $file['name'];
@@ -188,10 +195,11 @@ if (isset($_GET['act'])) {
 
 
 
-                edit_tour($tourid, $tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em);
+                edit_tour($tourid, $tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em,$maloai);
                 move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
                 echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
             }
+            $listloaiphong = loadall_loaiphong();
             $listtour = loadall_tour();
             $listkhudulich = loadall_khudulich();
             $listkhuvuc = loadall_khuvuc();

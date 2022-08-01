@@ -36,12 +36,13 @@ function select_phong($maks)
     $select_phong = pdo_query($sql);
     return $select_phong;
 }
-function loadall_ks_search($kyw,$makv){
+
+function loadall_ks_search($kyw_ks,$makv){
     
     // $sql="SELECT*FROM tour ORDER BY tourid DESC";
-    $sql="SELECT*FROM khachsan where 1";
-    if($kyw!=''){
-        $sql.=" AND tenks LIKE '%".$kyw."%'";
+    $sql="SELECT * FROM khachsan  WHERE 1";
+    if($kyw_ks!=''){
+        $sql.=" AND tenks LIKE '%".$kyw_ks."%'";
     }
     if($makv>0){
         $sql.=" AND makv='".$makv."'";
@@ -49,6 +50,6 @@ function loadall_ks_search($kyw,$makv){
     
     $sql.=" ORDER BY maks DESC";
     
-    $listkhachsan=pdo_query($sql);
-    return $listkhachsan;
+    $listks=pdo_query($sql);
+    return $listks;
 }

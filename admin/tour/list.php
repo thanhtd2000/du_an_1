@@ -19,6 +19,7 @@
                         <th scope="col">Khu du lịch</th>
                         <th scope="col">Khu vực</th>
                         <th scope="col">Ảnh</th>
+                        <th scope="col">Loại phòng</th>
                          <th scope="col"></th> 
                     </tr>
                 </thead>
@@ -39,6 +40,7 @@
                         <td>'.$makdl.'</td>
                         <td>'.$makv.'</td>
                         <td><img src="../img/tour/' . $anh . '" width="100" alt=""></td>
+                        <td>'.$tenloai.'</td>
                         <td>
                             <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"
                                 href="index.php?act=suatour&&tourid='.$tourid.'">Sửa</a>
