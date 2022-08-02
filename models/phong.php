@@ -12,9 +12,15 @@ function loadone_phong($maphong)
 }
 function loadall_phong()
 {
-    $sql = "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai ORDER BY maphong DESC";
+    $sql = "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai order by maphong desc ";
     $listphong = pdo_query($sql);
     return $listphong;
+}
+function loadall_phong2($item_per_page,$offset)
+{
+    $sql = "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai order by maphong desc limit $item_per_page offset $offset";
+    $listphong2 = pdo_query($sql);
+    return $listphong2;
 }
 function delete_phong($maphong)
 {

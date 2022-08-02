@@ -168,28 +168,7 @@
                                     <div>Trẻ em : <?= number_format($onetour['giatre_em']) ?> VNĐ</div>
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
-                              <!-- <div class="choice__hotel">
-                                    <h4>Vui lòng chọn khách sạn</h4>
-                                    <?php
-
-                                    // for($i=0;$i<sizeof($_SESSION['phong']);$i++){
-                                    //       if($_SESSION['phong'][$i][0]==$onetour['tenphong']){
-                                    //             break;
-                                    //       }
-                                    // else {
-
-                                    foreach ($_SESSION['phong'] as $room) {
-                                          echo '    <input class="" type="button" name="tenphong" value="' . $room[0] . '" placeholder="">
-                                                <input class="" type="hidden" name="giaphong" value="' . $room[1] . '" placeholder="">
-                                                <input class="" type="hidden" name="mota" value="' . $room[2] . '" placeholder="">';
-                                    }
-                                    //       }
-                                    // }
-
-
-                                    ?> -->
-
-
+                             
                               <!-- <div class="choice__hotel__content">
 
                                           <button type="button" class="btn btn-primary" data-toggle="modal" style=" background-color: #f39f2d; outline: none;" data-target="#exampleModal">
@@ -224,6 +203,17 @@
                                                                                                       <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
                                                                                                       <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
                                                                                                 </form>
+                                                                                                <div class="d-flex">
+                                                                                                      <form action="" method="post">
+                                                                                                            <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
+                                                                                                            <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
+                                                                                                            <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
+                                                                                                      </form>
+                                                                                                </div>
                                                                                           <?php endif ?>
                                                                                     <?php endif ?>
                                                                               <?php endforeach ?>

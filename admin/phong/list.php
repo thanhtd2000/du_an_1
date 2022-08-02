@@ -21,14 +21,14 @@
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($listphong as $phong) {
+                    foreach ($listphong2 as $phong) {
                         extract($phong);
                         echo '<tr>
                                         <th scope="row"><input id="check" type="checkbox"></th>
                                         <td>' . $maphong . '</td>
                                         <td>' . $tenphong . '</td>
                                         <td>' . $maks . '</td>
-                                        <td>' . $maloai . '</td>
+                                        <td>' . $tenloai . '</td>
                                         <td><img src="../img/phong/' . $anh . '" width="100" alt=""></td>
                                         <td>
                                               <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suaphong&&maphong=' . $maphong . '">Sửa</a>
@@ -41,7 +41,18 @@
 
                 </tbody>
             </table>
-
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <?php for ($num = 1; $num <= $ttpage; $num++) : ?>
+                        <?php if ($num != $current_page) : ?>
+                            <li class="page-item"><a class="page-link" href="index.php?act=phong&per_page=<?= $item_per_page ?>&page=<?= $num ?>"><?= $num ?></a></li>
+                        <?php else : ?>
+                            <li class="page-item"><a class="page-link" style="color: black;" href=""><strong><?= $num ?></a></strong></li>
+                        <?php endif ?>
+                    <?php endfor ?>
+                
+                </ul>
+            </nav>
             <button type="button" id="checkAll" class="btn btn-secondary">Chọn tất cả</button>
             <button type="button" id="uncheckAll" class="btn btn-success">Bỏ chọn tất cả</button>
             <button type="button" class="btn btn-danger">Xoá các mục đã chọn</button>
