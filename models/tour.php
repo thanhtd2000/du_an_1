@@ -8,7 +8,7 @@ function loadall_tour(){
     return $listtour;
 }
 function loadall_tour2($item_per_page, $offset){
-    $sql="SELECT*FROM tour ORDER BY tourid DESC limit $item_per_page offset $offset";
+    $sql="SELECT a.*,b.tenloai FROM tour as a inner join loaiphong as b on a.maloai = b.maloai ORDER BY tourid DESC limit $item_per_page offset $offset";
     
     $listtour2=pdo_query($sql);
     return $listtour2;
