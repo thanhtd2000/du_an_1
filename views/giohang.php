@@ -135,7 +135,7 @@
                               <div class="d-flex">
                                     <div>
                                           <label for="">* Họ</label>
-                                          <input class="d-block" type="text" value="THANH">
+                                          <input class="d-block" type="text" value="<?=$hoten?>">
                                     </div>
                                     <div>
                                           <label for="">* Tên đệm và tên</label>
@@ -145,11 +145,11 @@
                               <div class="d-flex">
                                     <div>
                                           <label for="">* Điện thoại</label>
-                                          <input class="d-block" type="number">
+                                          <input class="d-block" type="number" value="<?=$sdt?>">
                                     </div>
                                     <div>
                                           <label for="">* Email</label>
-                                          <input class="d-block" type="text" value="thanhhandgun1@gmail.com">
+                                          <input class="d-block" type="text" value="<?=$email?>">
                                     </div>
                               </div>
                               <label for="">Ghi chú</label>
