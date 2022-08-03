@@ -258,7 +258,6 @@
                               <input class="" type="hidden" name="tourname" value="<?= $onetour['tourname'] ?>" placeholder=""> 
                               <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">  
                               <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder=""> 
-                              <input class="" type="hidden" name="mota" value="<?= $onetour['mota'] ?>" placeholder=""> 
                               <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">    
                               <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
                               <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
