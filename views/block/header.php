@@ -63,19 +63,9 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="uudai__khuyenmai.html">ƯU ĐÃI KHUYẾN MÃI</a>
+                                            <a class="nav-link" href="index.php?act=uudai">ƯU ĐÃI KHUYẾN MÃI</a>
                                         </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                PEARL CLUB
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Tổng quan</a>
-                                                <a class="dropdown-item" href="#">
-                                                    Quyền lợi
-                                                </a>
-                                            </div>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </nav>
@@ -86,7 +76,7 @@
                                         extract($_SESSION['email']);
                                     ?>
                                         <span>
-                                            <a class="nav-link dropdown-toggle" style="color: #000;display: block;max-width: 80px;overflow: hidden;white-space: nowrap;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a class="nav-link dropdown-toggle" style="color: #000;display: block;overflow: hidden;white-space: nowrap;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa-solid fa-user"></i>
                                                 <b><?= $hoten ?></b>
                                             </a>
@@ -118,25 +108,11 @@
                                     <?php } ?>
 
                                 </div>
-                                <!-- <a class="nav-link dropdown-toggle" style="color: #000;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa-solid fa-user"></i>
-                                    Name User
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-                                    <a class="dropdown-item" href="#">Quản Lý Trang</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">
-                                        Lịch sử giao dịch
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        Đăng xuất
-                                    </a> -->
+                                
                         </div>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>

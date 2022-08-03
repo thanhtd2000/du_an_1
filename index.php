@@ -16,6 +16,9 @@ if (!isset($_SESSION['tour'])) $_SESSION['tour'] = [];
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
+        case 'uudai':
+            include "views/uu_dai.php";
+            break;
         case 'dangky':
             $error = [
                 'email' => '',
@@ -152,7 +155,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $onetour = loadone_tour($tourid);
             $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
-            
+
             if (isset($_POST['datphong']) && ($_POST['datphong'])) {
                 $tenphong = $_POST['tenphong'];
                 $giaphong = $_POST['giaphong'];
@@ -163,7 +166,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
                 $phong = [$tenphong, $giaphong, $mota, $tourid, $maks];
 
-                array_push($_SESSION['phong'],$phong);
+                array_push($_SESSION['phong'], $phong);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&makv='.$makv.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
 
@@ -181,16 +184,15 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             // } else {
             //     $kyw_kv = "";
             // }
-            if(isset($_GET['makv'])&&($_GET['makv']>0)){
-                $makv=$_GET['makv'];
-                
-            }else{
-                $makv=0;
+            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+                $makv = $_GET['makv'];
+            } else {
+                $makv = 0;
             }
-            
-            $listtours = loadall_tour_search($kyw,$makv);
-            
-            $tenkv=load_ten_kv($makv);
+
+            $listtours = loadall_tour_search($kyw, $makv);
+
+            $tenkv = load_ten_kv($makv);
             $listkhuvuc = loadall_khuvuc();
             include "views/listtour.php";
             break;
@@ -201,15 +203,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $kyw_ks = "";
             }
-            if(isset($_GET['makv'])&&($_GET['makv']>0)){
-                $makv=$_GET['makv'];
-                
-            }else{
-                $makv=0;
+            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+                $makv = $_GET['makv'];
+            } else {
+                $makv = 0;
             }
-           
-            $listks = loadall_ks_search($kyw_ks,$makv);
-            $tenkv=load_ten_kv($makv);
+
+            $listks = loadall_ks_search($kyw_ks, $makv);
+            $tenkv = load_ten_kv($makv);
             $listkhuvuc = loadall_khuvuc();
             include "views/listkhachsan.php";
             break;
@@ -223,8 +224,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'giohang':
             if (isset($_POST['dattour']) && ($_POST['dattour'])) {
-                
-                
+
+
                 $tourid = $_POST['tourid'];
                 $tourname = $_POST['tourname'];
                 $gia_nl = $_POST['gia_nl'];
@@ -237,25 +238,24 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maks = $_POST['maks'];
                 $anh = $_POST['anh'];
                 $maloai = $_POST['maloai'];
-                
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem,$mota, $start, $finish,$maks, $anh,$maloai];
 
-                array_push($_SESSION['tour'],$tour);
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $mota, $start, $finish, $maks, $anh, $maloai];
+
+                array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
             include "views/giohang.php";
             break;
-            case 'deltour':
-               $tourid =  $_GET['tourid'];
-                if(isset($_GET['tourid'])){
-                    array_splice($_SESSION['tour'],$tourid,1);
-
-                }else{
-                    $_SESSION['tour']=[];
-                }
-                echo "<script> window.location.href='index.php?act=giohang'</script>";
-                break;
+        case 'deltour':
+            $tourid =  $_GET['tourid'];
+            if (isset($_GET['tourid'])) {
+                array_splice($_SESSION['tour'], $tourid, 1);
+            } else {
+                $_SESSION['tour'] = [];
+            }
+            echo "<script> window.location.href='index.php?act=giohang'</script>";
+            break;
         default:
             include "views/home.php";
             break;
