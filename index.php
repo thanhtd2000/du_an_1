@@ -247,8 +247,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/giohang.php";
             break;
             case 'deltour':
-                if(isset($_POST['tourid'])){
-                    array_slice($_SESSION['tour'],$_POST['tourid'],1);
+               $tourid =  $_GET['tourid'];
+                if(isset($_GET['tourid'])){
+                    array_splice($_SESSION['tour'],$tourid,1);
 
                 }else{
                     $_SESSION['tour']=[];
