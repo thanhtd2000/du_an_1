@@ -1694,3 +1694,42 @@ form .mail {
       top: 50%;
       right: 50%;
 }
+.option h2{
+      font-size: 30px;
+    line-height: 37px;
+    color: #222;
+    padding: 30px 0;
+    border-bottom: 2px solid #bfbfbf;
+
+}
+.option__content .option__item {
+      padding: 20px 0;
+}
+.option__item img{
+      width: 100%;
+}
+.option__item h5{
+      font-size: 22px;
+      line-height: 27px;
+      color: #222;
+      margin-bottom: 15px;
+      padding-top: 30px;
+      line-height: 35px;
+}
+.option__item span{
+      font-size: 14px;
+}
+.option__content nav{
+      padding-top: 30px;
+}
+.option__content nav ul{
+      justify-content: center;
+}
+.option__content nav ul li a{
+      color: #ca811d;
+
+}
+.option__content nav ul li a.active{
+      background-color: #e29a38;
+      color: #fff;
+}
