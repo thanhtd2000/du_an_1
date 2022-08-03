@@ -19,7 +19,7 @@
                               <?php
                               $i=0;
                               foreach ($_SESSION['tour'] as $tour) {
-                                    $hinh = $img_path . $tour[10];
+                                    $hinh = $img_path . $tour[9];
                                     
                                     $xoa= '<a href="index.php?act=deltour&tourid='.$i.'"><img style="width: 20px;" src="./img/delete.png" alt=""></a>';
                                     echo '
@@ -37,7 +37,7 @@
                                                       </div>
                                                       <div class="col-8">
                                                             <h5>' . $tour[1] . '</h5>
-                                                            <p>' . $tour[6] . '</p>
+                                                            
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Giá người lớn:</p>
                                                                   <span>' . $tour[2] . ' đ</span>
@@ -49,19 +49,19 @@
                                                            
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Ngày khởi hành  :</p>
-                                                                  <span>' . $tour[7] . '</span>
+                                                                  <span>' . $tour[6] . '</span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Ngày về :</p>
-                                                                  <span>' . $tour[8] . '</span>
+                                                                  <span>' . $tour[7] . '</span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Khách sạn </p>
-                                                                  <span>' . $tour[9] . ' </span>
+                                                                  <span>' . $tour[8] . ' </span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Loại phòng</p>
-                                                                  <span>' . $tour[11] . ' </span>
+                                                                  <span>' . $tour[10] . ' </span>
                                                             </div>
                                                       </div>
                                                       </div>

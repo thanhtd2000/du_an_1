@@ -232,7 +232,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $giatre_em = $_POST['giatre_em'];
                 $songuoilon = $_POST['songuoilon'];
                 $sotreem = $_POST['sotreem'];
-                $mota = $_POST['mota'];
+               
                 $start = $_POST['start'];
                 $finish = $_POST['finish'];
                 $maks = $_POST['maks'];
@@ -240,7 +240,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maloai = $_POST['maloai'];
 
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $mota, $start, $finish, $maks, $anh, $maloai];
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem,  $start, $finish, $maks, $anh, $maloai];
 
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
