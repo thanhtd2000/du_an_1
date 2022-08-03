@@ -267,10 +267,6 @@ if (isset($_GET['act'])) {
 
         case 'listkhudulich':
             $listkhudulich = loadall_khudulich();
-
-
-
-
             include "khudulich/list.php";
             break;
         case 'addkdl':

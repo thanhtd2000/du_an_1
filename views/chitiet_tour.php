@@ -234,7 +234,7 @@
                               <!-- <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none;" name="datphong" value="Đặt combo ngay" placeholder=""> -->
                               <form action="index.php?act=giohang" method="post">
                                     
-                              <div class="d-flex justify-content-between">
+                              <div class="d-flex justify-content-between" style="padding-top: 30px;">
                                     <p>Số người lớn</p>
                                     <div class="buttons_added">
                                           <input style="    width: 30px;
@@ -264,7 +264,7 @@
                               <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
                               <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
                               <input class="" type="hidden" name="maloai" value="<?= $onetour['maloai'] ?>" placeholder="">                             
-                                    <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none;" name="dattour" value="Đặt combo ngay" placeholder="">
+                                    <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
                               </form>
                               <ul>
                                     <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>

@@ -44,7 +44,7 @@
                                                             </div>
                                                             <div class="d-flex justify-content-between">
                                                             <p>Giá trẻ em:</p>
-                                                            <span>' . $tour[3] . ' đ</span>
+                                                            <span>' .  $tour[3] . ' đ</span>
                                                       </div>
                                                            
                                                             <div class="d-flex justify-content-between">
@@ -56,12 +56,12 @@
                                                                   <span>' . $tour[8] . '</span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">
-                                                                  <p>Số lượng người lớn</p>
-                                                                  <span>' . $tour[4] . ' </span>
+                                                                  <p>Khách sạn </p>
+                                                                  <span>' . $tour[9] . ' </span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">
-                                                                  <p>Số lượng trẻ em</p>
-                                                                  <span>' . $tour[5] . ' </span>
+                                                                  <p>Loại phòng</p>
+                                                                  <span>' . $tour[11] . ' </span>
                                                             </div>
                                                       </div>
                                                       </div>
@@ -93,11 +93,11 @@
                                     <p>' . $tour[6] . '</p>
                                     <div class=" d-flex justify-content-between">
                                           <p>Giá người lớn : </p>
-                                          <span style="color: #f39f2d;font-size: 500;">' . $tour[2] . ' đ</span>
+                                          <span style="color: #f39f2d;font-size: 500;">' .  number_format($tour[2]) . ' đ</span>
                                     </div>
                                     <div class=" d-flex justify-content-between">
                                           <p>Giá trẻ em : </p>
-                                          <span style="color: #f39f2d;font-size: 500;">' . $tour[3] . ' đ</span>
+                                          <span style="color: #f39f2d;font-size: 500;">' .  number_format($tour[3]) . ' đ</span>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                     <p>Số lượng người lớn</p>
@@ -115,7 +115,7 @@
                               echo'
                               <div class="cart__totalValue d-flex justify-content-between">
                                     <p>Tổng tiền </p>
-                                    <span>'.$tong.' đ</span>
+                                    <span>'. number_format($tong).' đ</span>
                               </div>
                               ';
                               ?>
