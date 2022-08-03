@@ -169,69 +169,7 @@
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
                              
-                              <!-- <div class="choice__hotel__content">
 
-                                          <button type="button" class="btn btn-primary" data-toggle="modal" style=" background-color: #f39f2d; outline: none;" data-target="#exampleModal">
-                                                Chọn phòng khách sạn
-                                          </button>
-                                          
-                                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                      <div class="modal-content">
-                                                            <div class="modal-body">
-                                                                  <div class="modal-header">
-
-                                                                        <h3 class="modal-title" id="exampleModalLabel">
-                                                                              Khách sạn</h3>';
-
-                                                                  </div>
-
-                                                                  <div class="room__nomal">
-
-                                                                        <?php foreach ($select_phong4 as $phong) : ?>
-                                                                              <?php extract($phong) ?>
-                                                                              <div class="h5"><?= $tenloai ?></div>
-                                                                              <?php foreach ($listphong as $phong1) : ?>
-                                                                                    <?php if ($maks == $phong1['maks']) : ?>
-                                                                                          <?php if ($maloai == $phong1['maloai']) : ?>
-                                                                                                <form action="index.php?act=giohang" method="post">
-                                                                                                      <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
-                                                                                                      <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
-                                                                                                      <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
-                                                                                                </form>
-                                                                                                <div class="d-flex">
-                                                                                                      <form action="" method="post">
-                                                                                                            <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
-                                                                                                            <input class="" type="hidden" name="maks" value="<?= $onetour['maks'] ?>" placeholder="">
-                                                                                                            <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
-                                                                                                            <input class="" type="submit" name="datphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                            <input class="" type="hidden" name="tenphong" value="<?= $phong1['tenphong'] ?>" placeholder="">
-                                                                                                            <input class="" type="hidden" name="giaphong" value="<?= $phong1['giaphong'] ?>" placeholder="">
-                                                                                                            <input class="" type="hidden" name="mota" value="<?= $phong1['mota'] ?>" placeholder="">
-                                                                                                      </form>
-                                                                                                </div>
-                                                                                          <?php endif ?>
-                                                                                    <?php endif ?>
-                                                                              <?php endforeach ?>
-                                                                        <?php endforeach ?>
-
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
-                              <!-- </div> -->
-                              <!-- <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none;" name="datphong" value="Đặt combo ngay" placeholder=""> -->
                               <form action="index.php?act=giohang" method="post">
                                     
                               <div class="d-flex justify-content-between" style="padding-top: 30px;">
@@ -297,13 +235,8 @@
                   <span>• Hành lý được gắn thẻ ưu tiên</span>
                   <span>• Lên tàu bay bằng lối đi ưu tiên và xe buýt ưu tiên trong trường hợp ra tàu bay bằng xe
                         buýt</span>
-                  <span>- 02 đêm nghỉ cho 01 khách (Áp dụng cho 02 người lớn/phòng) tùy theo gói Quý khách lựa
-                        chọn tại:</span>
-                  <span>+ Phòng tiêu chuẩn khách sạn VinOasis Phú Quốc</span>
-                  <span>+ Hoặc Phòng Deluxe Hướng Vườn tại Vinpearl Resort & Golf Phú Quốc hoặc Vinpearl Resort &
-                        Spa Phú Quốc</span>
-                  <span>+ Hoặc Villa hướng vườn tại Vinpearl Discovery Wonderworld Phú Quốc hoặc Vinpearl
-                        Discovery Coastalland Phú Quốc hoặc Vinpearl Discovery Green Hill Phú Quốc</span>
+                  <span>- 02 đêm nghỉ cho 01 khách (Áp dụng cho 02 người lớn/phòng) :</span>
+                  <span><strong><?= $onelp['mota']?></strong></span>
                   <p>- Ưu đãi dành riêng cho khách mua trên App MyVinpearl: Nhập mã THU200 giảm 200.000đ/đơn hàng
                         từ 02 voucher trở lên</p>
                   <span>Vui lòng tải App MyVinpearl tại đây và đăng nhập để nhận ưu đãi. Ưu đãi mã giảm giá không

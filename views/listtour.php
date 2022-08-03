@@ -185,7 +185,7 @@
                               <?php
                               foreach ($listtours as $lts) {
                                     extract($lts);
-                                    $linktour = "index.php?act=chitiettour&&tourid=$tourid&&makv=$makv&&maks=$maks";
+                                    $linktour = "index.php?act=chitiettour&&tourid=$tourid&&makv=$makv&&maks=$maks&&maloai=$maloai";
                                     $hinh = $img_path . $anh;
                                     echo '
                                                 <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">

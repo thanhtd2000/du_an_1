@@ -17,7 +17,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case 'uudai':
-            include "views/uu_dai.php";
+            include "views/uudai.php";
             break;
         case 'dangky':
             $error = [
@@ -150,12 +150,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitiettour':
             $mak = $_GET['makv'];
             $maks = $_GET['maks'];
-
+            $maloai = $_GET['maloai'];
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
+            $onelp= loadone_loaiphong($maloai);
             $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
-
             if (isset($_POST['datphong']) && ($_POST['datphong'])) {
                 $tenphong = $_POST['tenphong'];
                 $giaphong = $_POST['giaphong'];
@@ -232,7 +232,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $giatre_em = $_POST['giatre_em'];
                 $songuoilon = $_POST['songuoilon'];
                 $sotreem = $_POST['sotreem'];
-               
+                $mota = $_POST['mota'];
                 $start = $_POST['start'];
                 $finish = $_POST['finish'];
                 $maks = $_POST['maks'];
@@ -240,7 +240,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maloai = $_POST['maloai'];
 
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem,  $start, $finish, $maks, $anh, $maloai];
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $mota, $start, $finish, $maks, $anh, $maloai];
 
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";

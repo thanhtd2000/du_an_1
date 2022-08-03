@@ -249,9 +249,9 @@
                         <?php extract($tour) ?>
                         <div class="item">
                               <div class="card" style="width: 22rem;">
-                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&maks=<?= $maks ?>&&makv=<?= $makv ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                    <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&maks=<?= $maks ?>&&makv=<?= $makv ?>&&maloai=<?= $maloai ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
-                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maloai=<?= $maloai ?>">
                                                 <h5 class="card-title"><?= $tourname ?></h5>
                                           </a>
                                           <div class="products__detail">
