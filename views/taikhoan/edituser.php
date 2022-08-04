@@ -153,7 +153,7 @@
                         <h3 style="border-bottom: 1px solid #B1B1B1;padding-bottom: 24px;">Lịch sử giao dịch</h3>
                         <img style="text-align: center;
                                           padding: 50px 0;" src="./img/empty-page.6fb3601e.png" alt="">
-                       <table class="table">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th>Mã đơn</th>
@@ -164,6 +164,7 @@
                                     <th>Ngày kết thúc</th>
                                     <th>Ngày đặt hàng</th>
                                     <th>Tổng tiền</th>
+                                    <th>Trạng Thái</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -177,7 +178,8 @@
                                         <td><?= $start ?></td>
                                         <td><?= $finish ?></td>
                                         <td><?= $ngaydathang ?></td>
-                                        <td><?=number_format($total)?> VNĐ</td>
+                                        <td><?= number_format($total) ?> VNĐ</td>
+                                        <td style="color: green;"><?= $bill_status?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

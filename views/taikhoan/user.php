@@ -158,6 +158,7 @@
                                     <th>Ngày kết thúc</th>
                                     <th>Ngày đặt hàng</th>
                                     <th>Tổng tiền</th>
+                                    <th>Trạng thái</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -172,6 +173,7 @@
                                         <td><?= $finish ?></td>
                                         <td><?= $ngaydathang ?></td>
                                         <td><?=number_format($total)?> VNĐ</td>
+                                        <td style="color: green;"><?= $bill_status?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>
