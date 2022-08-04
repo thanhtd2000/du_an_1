@@ -35,57 +35,22 @@
                   </div>
             </div>
       </div>
+      <?php
+if(isset($_SESSION['email'])){
+      echo'
       <div class="cart__shopping d-block">
-            <!-- Button trigger modal -->
-            <button type="button" style="outline: none; line-height: 70px;" data-toggle="modal" data-target="#exampleModal">
+      <!-- Button trigger modal -->
+      <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
                   <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-            </button>
+            </button></a>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                              <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">All of bill</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                    </button>
-                              </div>
-                              <div class="modal-body">
-                                    <div class="tour__detail">
-                                          <div class="tour__item">
-                                                <div class="row">
-                                                      <div class="col-4">
-                                                            <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp" alt="">
-                                                      </div>
-                                                      <div class="col-8">
-                                                            <div class="tour__item__infor">
-                                                                  <h3>[HN – PHÚ QUỐC] THU VIVU COMBO | VMB Vietnam Airlines + 3N2Đ phòng gồm
-                                                                        ăn sáng/</h3>
-                                                                  <p>Người lớn - Phòng tiêu chuẩn x 2</p>
-                                                                  <span>Price : 15.000.000 đ</span>
-                                                            </div>
+    
+</div>
+      ';
+}else{
 
-                                                      </div>
-
-                                                </div>
-                                          </div>
-                                          <div class="tour__detail__price d-flex justify-content-between" style="margin-top: 50px;">
-                                                <div>
-                                                      <h6>Tổng tiền (2 items)</h6>
-                                                      <span>15000000 VNĐ</span>
-                                                </div>
-                                                <button type="button" class="btn btn-danger">Xem giỏ hàng</button>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-      </div>
+}
+                             ?>
 </div>
 </div>
 <div class="tour container">

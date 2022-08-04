@@ -1,3 +1,4 @@
+
 <div class="cart container">
       <div class="cart__content">
             <div class="row">
@@ -17,6 +18,7 @@
                         <div class="cart__left">
 
                               <?php
+                              if(isset($_SESSION['email'])){
                               $i=0;
                               foreach ($_SESSION['tour'] as $tour) {
                                     $hinh = $img_path . $tour[9];
@@ -70,6 +72,7 @@
                                                       ';
                                                       $i+=1;
                               }
+                        }
                               ?>
 
 
@@ -80,44 +83,10 @@
                         <div class="cart__right">
                               <h5>Thông tin thanh toán</h5>
                               <?php
-                              $tong = 0;
-                              foreach ($_SESSION['tour'] as $tour) {
-                                    $hinh = $img_path . $tour[10];
-                                    $total = $tour[2] * $tour[4] + $tour[3] * $tour[5];
-                                    $tong += $total;
-                                   
-                                    echo '
-                                    <div class="cart__infor">
-                                    
-                                    <h5>' . $tour[1] . '</h5>
-                                    <p>' . $tour[6] . '</p>
-                                    <div class=" d-flex justify-content-between">
-                                          <p>Giá người lớn : </p>
-                                          <span style="color: #f39f2d;font-size: 500;">' .  number_format($tour[2]) . ' đ</span>
-                                    </div>
-                                    <div class=" d-flex justify-content-between">
-                                          <p>Giá trẻ em : </p>
-                                          <span style="color: #f39f2d;font-size: 500;">' .  number_format($tour[3]) . ' đ</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                    <p>Số lượng người lớn</p>
-                                    <span>' . $tour[4] . ' </span>
-                              </div>
-                              <div class="d-flex justify-content-between">
-                                    <p>Số lượng trẻ em</p>
-                                    <span>' . $tour[5] . ' </span>
-                              </div>
-                              </div>
-                              
-                                    ';
-                                    
-                              }
-                              echo'
-                              <div class="cart__totalValue d-flex justify-content-between">
-                                    <p>Tổng tiền </p>
-                                    <span>'. number_format($tong).' đ</span>
-                              </div>
-                              ';
+                              if(isset($_SESSION['email'])){
+                                    viewcart();
+                             
+                        }
                               ?>
                               
                             
@@ -126,35 +95,39 @@
             </div>
       </div>
 </div>
-<div class="client container">
+<?php
+if(isset($_SESSION['email'])){
+      echo'
+      <form action="index.php?act=bill" class="d-block" method="post">
+      <div class="client container">
       <div class="row">
             <div class="col-8">
                   <div class="client__content">
                         <h5>Thông tin khách hàng</h5>
-                        <form action="" class="d-block">
+                        
                               <div class="d-flex">
                                     <div>
                                           <label for="">* Họ</label>
-                                          <input class="d-block" type="text" value="<?=$hoten?>">
+                                          <input class="d-block" type="text" name="name" value="'.$hoten.'">
                                     </div>
                                     <div>
-                                          <label for="">* Tên đệm và tên</label>
-                                          <input class="d-block" type="text" value="TRAN">
-                                    </div>
+                                    <label for="">* Điện thoại</label>
+                                    <input class="d-block" type="number" name="sdt" value="'.$sdt.'">
+                              </div>
+                                    
                               </div>
                               <div class="d-flex">
-                                    <div>
-                                          <label for="">* Điện thoại</label>
-                                          <input class="d-block" type="number" value="<?=$sdt?>">
-                                    </div>
+                              <div>
+                              <label for="">* Địa chỉ</label>
+                              <input class="d-block" type="text" name="diachi" value="'.$diachi.'">
+                        </div>
                                     <div>
                                           <label for="">* Email</label>
-                                          <input class="d-block" type="text" value="<?=$email?>">
+                                          <input class="d-block" type="text" name="email" value="'.$email.'">
                                     </div>
                               </div>
-                              <label for="">Ghi chú</label>
-                              <textarea class="d-block" name="" id="" cols="50" rows="10"></textarea>
-                        </form>
+                             
+                        
                   </div>
             </div>
             <div class="col-4">
@@ -170,27 +143,29 @@
                         <form action="">
                               <div class="payment__ATM d-flex justify-content-between">
                                     <div>
-                                          <input type="radio" name="1">
+                                          <input type="radio" name="pttt" value="Thẻ ATM / Tài khoản ngân hàng">
                                           <label for="">Thẻ ATM / Tài khoản ngân hàng</label>
                                     </div>
                                     <img src="./img/credit-card.png" alt="">
                               </div>
                               <div class="payment__QR d-flex justify-content-between">
                                     <div>
-                                          <input type="radio" name="1">
+                                          <input type="radio" name="pttt" value="Thanh toán bằng mã QRCode">
                                           <label for="">Thanh toán bằng mã QRCode</label>
                                     </div>
                               </div>
                               <div class="payment__percen d-flex justify-content-between">
                                     <div>
-                                          <input type="radio" name="1">
+                                          <input type="radio" name="pttt" value="Thanh toán trả góp 0% ">
                                           <label for="">Thanh toán trả góp 0% (Trong 6 tháng chỉ từ 2.500.000 đ/tháng)</label>
                                     </div>
                               </div>
                         </form>
                         <input type="checkbox">
                         <label for="">Tôi đồng ý với các <span>điều khoản</span>,<span>điều kiện</span> và <span>chính sách riêng tư</span> của Vinpearl</label>
-                        <button type="button" class="btn btn-warning d-block w-100"><a href="" class="text-center" style="color: #fff; text-decoration: none;">Thanh toán</a></button>
+                        <br>
+                        <input class="" type="submit" name="thanhtoan" class="btn btn-warning d-block w-100" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;"  value="Thanh toán" placeholder="">
+                        
                   </div>
 
             </div>
@@ -199,6 +174,35 @@
             </div>
       </div>
 </div>
+</form>
+      ';
+}else{
+      echo'
+
+      <div class="cart__content container">
+      <div class="row">
+            <div class="col-8">
+      <div class="dang__nhap">
+      <div class="row">
+            <div class="col-3">
+                  <img src="./img/deal.png" alt="">
+            </div>
+            <div class="col-9">
+                  <h5>Đăng nhập để hưởng thêm ưu đãi dành riêng cho thành viên</h5>
+                  <p>Tích lũy giao dịch & nhận đêm nghỉ miễn phí</p>
+                  <a href="index.php?act=dangnhap">Đăng nhập hoặc đăng kí</a>
+            </div>
+      </div>
+</div>
+</div>
+            </div>
+            </div>
+      ';
+}
+
+?>
+
+
 <div class="partner container">
       <div class="partner__content">
             <div class="partner__item d-flex">

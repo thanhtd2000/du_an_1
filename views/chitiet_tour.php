@@ -1,3 +1,4 @@
+
 <div class="slide" style="background-color: #DCE0EE;">
       <div class="slide__bot container d-flex justify-content-between">
             <div class="body">
@@ -21,117 +22,30 @@
                                     padding-left: 17px;">
                                     <input type="text" style="background-color: #DCE0EE;" placeholder="Nhập địa điểm">
                               </div>
-                              <!-- <div class="slide__member">
-                                          <div class="dropdown">
-                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Số người
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Người lớn</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-      
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Trẻ em</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-      
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Em bé</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-      
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
+                             
                               <button style="width: 150px;
                                     height: 39px;"><a href="">TÌM KIẾM</a></button>
                         </div>
                   </div>
             </div>
-            <div class="cart__shopping d-block">
-                  <!-- Button trigger modal -->
-                  <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
-                              <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-                        </button></a>
+            <?php
+if(isset($_SESSION['email'])){
+      echo'
+      <div class="cart__shopping d-block">
+      <!-- Button trigger modal -->
+      <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
+                  <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
+            </button></a>
 
-                  <!-- Modal -->
-                  <!-- <div class="modal fade" id="exampleModa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                    <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLabel">All of bill</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                          </button>
-                                    </div>
-                                    <div class="modal-body">
-                                          <div class="tour__detail">
-                                                <div class="tour__item">
-                                                      <div class="row">
-                                                            <div class="col-4">
-                                                                  <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp" alt="">
-                                                            </div>
-                                                            <div class="col-8">
-                                                                  <div class="tour__item__infor">
-                                                                        <h3>[HN – PHÚ QUỐC] THU VIVU COMBO | VMB
-                                                                              Vietnam Airlines + 3N2Đ phòng gồm ăn
-                                                                              sáng/</h3>
-                                                                        <p>Người lớn - Phòng tiêu chuẩn x 2</p>
-                                                                        <span>Price : 15.000.000 đ</span>
-                                                                  </div>
+    
+</div>
+      ';
+}else{
 
-                                                            </div>
+}
+                             ?>
 
-                                                      </div>
-                                                </div>
-                                                <div class="tour__detail__price d-flex justify-content-between" style="margin-top: 50px;">
-                                                      <div>
-                                                            <h6>Tổng tiền (2 items)</h6>
-                                                            <span>15000000 VNĐ</span>
-                                                      </div>
-                                                      <button type="button" class="btn btn-danger">Xem giỏ
-                                                            hàng</button>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                              </div>
-                        </div>
-                  </div> -->
-            </div>
+           
       </div>
 </div>
 <div class="infor__tour container">
@@ -169,40 +83,44 @@
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
                              
-
-                              <form action="index.php?act=giohang" method="post">
+      <form action="index.php?act=giohang" method="post">
                                     
-                              <div class="d-flex justify-content-between" style="padding-top: 30px;">
-                                    <p>Số người lớn</p>
-                                    <div class="buttons_added">
-                                          <input style="    width: 30px;
-                                          height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                                          <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="1">
-                                          <input style="    width: 30px;
-                                          height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
-                                    </div>
-                              </div>
-                              <div class="d-flex justify-content-between">
-                                    <p>Số trẻ em</p>
-                                    <div class="buttons_added">
-                                          <input style="    width: 30px;
-                                          height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                                          <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="1">
-                                          <input style="    width: 30px;
-                                          height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
-                                    </div>
-                              </div>
-                              <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">   
-                              <input class="" type="hidden" name="tourname" value="<?= $onetour['tourname'] ?>" placeholder=""> 
-                              <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">  
-                              <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder=""> 
-                              <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">    
-                              <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
-                              <input class="" type="hidden" name="maks" value="<?= $oneks['tenks'] ?>" placeholder="">
-                              <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
-                              <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">                             
-                                    <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
-                              </form>
+      <div class="d-flex justify-content-between" style="padding-top: 30px;">
+            <p>Số người lớn</p>
+            <div class="buttons_added">
+                  <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="1">
+                  <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
+            </div>
+      </div>
+      <div class="d-flex justify-content-between">
+            <p>Số trẻ em</p>
+            <div class="buttons_added">
+                  <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="1">
+                  <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
+            </div>
+      </div>
+      <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">   
+      <input class="" type="hidden" name="tourname" value="<?=$onetour['tourname'] ?>" placeholder=""> 
+      <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">  
+      <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder=""> 
+      <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">    
+      <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
+      <input class="" type="hidden" name="maks" value="<?= $oneks['tenks'] ?>" placeholder="">
+      <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
+      <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">                             
+            <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
+      </form>
+     
+
+                           
+
+                             
                               <ul>
                                     <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
                                     <li><i class="fa-solid fa-check"></i>Không phí thanh toán</li>
