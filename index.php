@@ -267,6 +267,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $bill_address=$_POST['diachi'];
             $bill_tell=$_POST['sdt'];
             $bill_pttt=$_POST['pttt'];
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $ngaydathang = new DateTime();
+            $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
             $ngaydathang=date('h:i:sa d/m/Y');
             $total=tongdonhang();
 
