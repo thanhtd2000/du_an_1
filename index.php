@@ -9,6 +9,7 @@ include "models/tour.php";
 include "models/phong.php";
 include "models/loaiphong.php";
 include "models/cart.php";
+include "models/hoadon.php";
 include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
@@ -108,6 +109,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $iduser = $_GET['iduser'];
             $sql = "SELECT*FROM user WHERE iduser = '$iduser'";
             $user = pdo_query_one($sql);
+            $listhd = load_allhd($iduser);
             include "views/taikhoan/user.php";
             break;
         case 'sua-thongtin':

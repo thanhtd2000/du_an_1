@@ -1745,38 +1745,52 @@ form .mail {
 iframe {
     height: 300px;
 }
-.comment{
-      padding: 0;
-      margin-top: 30px;
+
+.comment {
+    padding: 0;
+    margin-top: 30px;
 }
 
-.comment__content form input{
+.comment__content form input {
     border: 1px solid #b1b1b1;
     height: 45px;
     border-radius: 5px;
     padding-left: 20px;
 }
-.comment__content form button{
+
+.comment__content form button {
     background-color: #e29a38;
     margin-left: 20px;
     width: 100px;
     color: #fff;
 }
-.comment__show img{
-      width: 40px;
-      height: 40px;
-      margin-right: 20px;
+
+.comment__show img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
 }
-.comment__content{
-      border: 1px solid #e5e5e5;
-      padding: 20px;
+
+.comment__content {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
 }
-.comment__show{
-      padding-top: 20px;
-      margin-bottom: 30px;
+
+.comment__show {
+    padding-top: 20px;
+    margin-bottom: 30px;
 }
-.comment__show span{
-      font-size: 14px;
-      color: #999;
-      margin-bottom: 30px;
+
+.comment__show span {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+th {
+    color: red;
+}
+
+td {
+    font-size: 14px;
 }

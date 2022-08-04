@@ -218,29 +218,12 @@ if(isset($_SESSION['email'])){
             </div>
       </div>
 </div>
-<!-- <div class="describe container">
+<div class="describe container">
       <div class="describe__title">
             <span class="item active" data-this="dm-1">Comment</span>
 
       </div>
       <iframe src="views/binhluan.php?tourid=<?= $tourid ?>" width="100%" frameboder="0"></iframe>
-</div> -->
-<div class="comment container">
-      <div class="comment__content">
-            <h5>Comment</h5>
-            <div class="comment__show">
-                  <div class="d-flex">
-                        <img src="/img/9751b3d7b8214428a410ee9ec3d0918c_G8.jpg" alt="">
-                        <p style="line-height: 40px;">Name</p>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ab nulla quo, officia voluptas est aperiam, excepturi deserunt cupiditate suscipit molestiae voluptates maxime voluptatem corporis. Recusandae perspiciatis quo nisi quia ex accusamus aliquam. Nihil tenetur quis amet perspiciatis sit, maxime facere quos. Nesciunt fugit tenetur ullam sint sunt laboriosam, nisi recusandae alias eius modi quae amet omnis non veritatis, illo libero. Architecto suscipit itaque ab perferendis, nostrum est quidem commodi debitis quo atque id cum provident distinctio consectetur modi pariatur nulla impedit excepturi ratione aut ducimus blanditiis explicabo incidunt voluptates. Maxime odit ad, ipsam laborum explicabo illo id excepturi eligendi!</p>
-                  <span>20/8/2022</span>
-            </div>
-            <form action="" style="display: flex;">
-                  <input type="text" style="width:80%;" placeholder="Thêm bình luận">
-                  <button type="button" class="btn">Thêm</button>
-            </form>
-      </div>
 </div>
 <div class="products container">
       <h2>Sản phẩm tương tự</h2>
