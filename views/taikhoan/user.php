@@ -150,6 +150,7 @@
                             <h3 style="border-bottom: 1px solid #B1B1B1;padding-bottom: 24px;">Lịch sử giao dịch</h3>
                             <img style="text-align: center;
                                           padding: 50px 0;" src="./img/empty-page.6fb3601e.png" alt="">
+                                
                             <p style="text-align: center;
                                           padding: 50px 0;">Hiện tại chưa có giá trị nào</p>
                         </div>
