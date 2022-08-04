@@ -115,6 +115,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'sua-thongtin':
             $iduser = $_GET['iduser'];
             $oneuser = loadone_user($iduser);
+            $listhd = load_allhd($iduser);
             //kiểm tra người dùng có click vào thêm hay không
             $error = [
                 'password' => '',

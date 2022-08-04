@@ -30,18 +30,21 @@ $dsbl=loadall_binhluan($tourid);
 
         
             <table class="table">
-                <?php
-                        foreach ($dsbl as $bl) {
-                            extract($bl);
-                            echo $bl['hoten'].':'.$bl['noidung'] .'<br>';
-                              
-                        }
-                        
-                        ?>
+                <tr>
+                    <th>Người Bình luận</th>
+                    <th>Nội dung</th>
+                    <th>Thời gian</th>
+                </tr>
+                <?php foreach ($dsbl as $bl) :?>
+                    <?php extract($bl)?>
+                    <tr>
+                        <td><?=$bl['hoten']?></td>
+                        <td><?=$bl['noidung']?></td>
+                        <td><?=$bl['ngaybinhluan']?></td>
+                    </tr>
+                    <?php endforeach?>
             </table>
         </div>
-       
-        
         <?php
                 if(isset($_SESSION['email'])&&(is_array($_SESSION['email']))){
                     extract($_SESSION['email']);
