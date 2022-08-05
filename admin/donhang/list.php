@@ -13,6 +13,7 @@
                                     <th>Mã đơn</th>
                                     <th>Khách sạn</th>
                                     <th>Số phòng</th>
+                                    <th>Hạng Phòng</th>
                                     <th>Tour</th>
                                     <th>Ngày bắt đầu</th>
                                     <th>Ngày kết thúc</th>
@@ -22,18 +23,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($listhd as $dh) : ?>
+                                <?php foreach ($listhd2 as $dh) : ?>
                                     <?php extract($dh) ?>
                                     <tr>
                                         <td><?= $madh ?></td>
                                         <td><?= $maks ?></td>
                                         <td><?= $madh ?></td>
+                                        <td><?= $maloai ?></td>
                                         <td><?= $name ?></td>
                                         <td><?= $start ?></td>
                                         <td><?= $finish ?></td>
                                         <td><?= $ngaydathang ?></td>
                                         <td><?=number_format($total)?> VNĐ</td>
                                         <td style="color: green;"><?= $bill_status?></td>
+                                        <td>
+                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suadh&&madh=<?=$madh?>">Sửa</a>
+                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="index.php?act=xoadh&&madh=<?=$madh?>&id=<?=$id?>" onclick="">Xoá</a>
+                                        </td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>
@@ -42,7 +48,7 @@
                 <ul class="pagination">
                     <?php for ($num = 1; $num <= $ttpage; $num++) : ?>
                         <?php if ($num != $current_page) : ?>
-                            <li class="page-item"><a class="page-link" href="index.php?act=khachsan&per_page=<?= $item_per_page ?>&page=<?= $num ?>"><?= $num ?></a></li>
+                            <li class="page-item"><a class="page-link" href="index.php?act=donhang&per_page=<?= $item_per_page ?>&page=<?= $num ?>"><?= $num ?></a></li>
                         <?php else : ?>
                             <li class="page-item"><a class="page-link" style="color: black;" href=""><strong><?= $num ?></a></strong></li>
                         <?php endif ?>
@@ -53,7 +59,7 @@
             <button type="button" id="checkAll" class="btn btn-secondary">Chọn tất cả</button>
             <button type="button" id="uncheckAll" class="btn btn-success">Bỏ chọn tất cả</button>
             <button type="button" class="btn btn-danger">Xoá các mục đã chọn</button>
-            <a href="index.php?act=addkhachsan"><button type="button" class="btn btn-info">Nhập thêm</button></a>
+            <a href="index.php?act=adddonhang"><button type="button" class="btn btn-info">Nhập thêm</button></a>
 
         </div>
     </div>

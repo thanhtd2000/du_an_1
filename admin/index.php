@@ -5,6 +5,7 @@ include "../models/khachsan.php";
 include "../models/phong.php";
 include "../models/khuvuc.php";
 include "../models/khudulich.php";
+include "../models/hoadon.php";
 include "../models/loaiphong.php";
 include "../models/dichvuphu.php";
 include "../models/taikhoan.php";
@@ -90,7 +91,7 @@ if (isset($_GET['act'])) {
             $total = mysqli_query($mysqli, "SELECT*FROM tour");
             $total = $total->num_rows;
             $ttpage = ceil($total / $item_per_page);
-           
+
             include "tour/list.php";
             break;
             //tour
@@ -160,7 +161,7 @@ if (isset($_GET['act'])) {
                     $error['anh'] = "Ảnh không đúng định dạng";
                 }
                 if (!array_filter($error)) {
-                    insert_tour($tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em,$maloai);
+                    insert_tour($tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em, $maloai);
                     move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
                     echo "<script> window.location.href='index.php?act=listtour&&message=Thêm thành công'</script>";
                 }
@@ -178,10 +179,6 @@ if (isset($_GET['act'])) {
             include "tour/list.php";
             break;
         case 'suatour';
-            // $error = [
-
-            //     'anh' => '',
-            // ];
             $tourid = $_GET['tourid'];
             $onetour = loadone_tour($tourid);
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
@@ -201,7 +198,7 @@ if (isset($_GET['act'])) {
 
 
 
-                edit_tour($tourid, $tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em,$maloai);
+                edit_tour($tourid, $tourname, $gia_nl, $mota, $start, $finish, $maks, $makdl, $anh, $makv, $giatre_em, $maloai);
                 move_uploaded_file($file['tmp_name'], '../img/tour/' . $anh);
                 echo "<script> window.location.href='index.php?act=listtour&&message=Sửa thành công'</script>";
             }
@@ -214,7 +211,7 @@ if (isset($_GET['act'])) {
             break;
             //khách sạn
         case 'khachsan':
-            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 3;
+            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 5;
             $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
             $offset = ($current_page - 1) * $item_per_page;
             $listkhachsan2 = loadall_khachsan2($item_per_page, $offset);
@@ -723,8 +720,22 @@ if (isset($_GET['act'])) {
             }
             include "user/edit.php";
             break;
-
-
+        case 'donhang':
+            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 5;
+            $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+            $offset = ($current_page - 1) * $item_per_page;
+            $listhd2 = load_allhd2($item_per_page, $offset);
+            $total = mysqli_query($mysqli, "SELECT*FROM donhang");
+            $total = $total->num_rows;
+            $ttpage = ceil($total / $item_per_page);
+            include "donhang/list.php";
+            break;
+        case 'xoadh':
+            $madh = $_GET['madh'];
+            $id = $_GET['id'];
+            $delete_dh = delete_dh($madh, $id);
+            echo "<script> window.location.href='index.php?act=donhang&&message=Xoá thành công'</script>";
+            break;
         default:
             include "home.php";
             break;

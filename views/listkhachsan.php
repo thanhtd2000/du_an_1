@@ -272,7 +272,7 @@
                                                             </div>
                                                             <div class="tour__price__more d-flex">
                                                                  
-                                                            <a href="' . $linkks . '"><button type="button" class="btn">Xem ngay</button></a>
+                                                            <a href="' . $linkks . '"><button type="button" class="btn">Xem ngay</button></a>   
                                                             </div>
                                                       </div>
                                                 </div>

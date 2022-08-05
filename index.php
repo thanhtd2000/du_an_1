@@ -156,9 +156,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $maks = $_GET['maks'];
             $maloai = $_GET['maloai'];
             $tourid = $_GET['tourid'];
-            $oneks=loadone_khachsan($maks);
+            $oneks = loadone_khachsan($maks);
             $onetour = loadone_tour($tourid);
-            $onelp= loadone_loaiphong($maloai);
+            $onelp = loadone_loaiphong($maloai);
             $listphong = loadall_phong();
             $select_phong4 = select_phong4($maks);
             if (isset($_POST['datphong']) && ($_POST['datphong'])) {
@@ -243,15 +243,15 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maks = $_POST['maks'];
                 $anh = $_POST['anh'];
                 $maloai = $_POST['maloai'];
-                $ttien=$songuoilon*$gia_nl+$sotreem*$giatre_em;
+                $ttien = $songuoilon * $gia_nl + $sotreem * $giatre_em;
 
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai,$ttien];
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai, $ttien];
 
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
-       
+
             include "views/giohang.php";
             break;
         case 'deltour':
@@ -264,29 +264,29 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             echo "<script> window.location.href='index.php?act=giohang'</script>";
             break;
         case 'bill':
-          if(isset($_POST['thanhtoan'])&&($_POST['thanhtoan'])){
-            $bill_name=$_POST['name'];
-            $bill_email=$_POST['email'];
-            $bill_address=$_POST['diachi'];
-            $bill_tell=$_POST['sdt'];
-            $bill_pttt=$_POST['pttt'];
-            date_default_timezone_set('Asia/Ho_Chi_Minh');
-            $ngaydathang = new DateTime();
-            $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
-            $ngaydathang=date('h:i:sa d/m/Y');
-            $total=tongdonhang();
+            if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
+                $bill_name = $_POST['name'];
+                $bill_email = $_POST['email'];
+                $bill_address = $_POST['diachi'];
+                $bill_tell = $_POST['sdt'];
+                $bill_pttt = $_POST['pttt'];
+                date_default_timezone_set('Asia/Ho_Chi_Minh');
+                $ngaydathang = new DateTime();
+                $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
+                $ngaydathang = date('h:i:sa d/m/Y');
+                $total = tongdonhang();
 
 
-           $idbill= insert_bill($bill_name,$bill_address,$bill_tell,$bill_email,$bill_pttt,$total,$ngaydathang);
+                $idbill = insert_bill($bill_name, $bill_address, $bill_tell, $bill_email, $bill_pttt, $total, $ngaydathang);
 
-           foreach($_SESSION['tour'] as $tour){
-            insert_cart($_SESSION['email']['iduser'],$tour[0],$tour[4],$total,$tour[10],$tour[5],$tour[2],$tour[3],$tour[9],$tour[1],$idbill,$tour[6],$tour[7],$tour[8]);
-           }
-           $_SESSION['tour'] = [];
-          }
-          $bill=loadone_bill($idbill);
-          $billct=loadall_cart($idbill);
-          include "views/bill.php";
+                foreach ($_SESSION['tour'] as $tour) {
+                    insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8]);
+                }
+                $_SESSION['tour'] = [];
+            }
+            $bill = loadone_bill($idbill);
+            $billct = loadall_cart($idbill);
+            include "views/bill.php";
             break;
         default:
             include "views/home.php";
