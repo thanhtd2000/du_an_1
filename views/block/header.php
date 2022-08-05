@@ -87,9 +87,7 @@
                                                         <?php endif ?>
                                                 <a class="dropdown-item" href="#">Đặc quyền thẻ</a>
                                                 <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">
-                                                    Lịch sử giao dịch
-                                                </a>
+                                                
                                                 <a class="dropdown-item" href="index.php?act=dangxuat">
                                                     Đăng xuất
                                                 </a>
