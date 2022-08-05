@@ -256,7 +256,8 @@
                                           </a>
                                           <div class="products__detail">
                                                 <div class="products__left">
-                                                      <i class="fa-solid fa-bolt-lightning"></i><span style="padding-left:15px;">3290 người mua</span>
+                                                      <i class="fa-solid fa-bolt-lightning"></i>
+                                                      <span style="padding-left:15px;">551</span>
                                                 </div>
                                                 <div class="products__right">
                                                       <div><?= number_format($giatre_em) ?>-<?= number_format($gia_nl) ?> VNĐ</div>

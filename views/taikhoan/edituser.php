@@ -158,7 +158,7 @@
                                 <tr>
                                     <th>Mã đơn</th>
                                     <th>Khách sạn</th>
-                                    <th>Số phòng</th>
+                                    <th>Loại phòng</th>
                                     <th>Tour</th>
                                     <th>Ngày bắt đầu</th>
                                     <th>Ngày kết thúc</th>
@@ -173,7 +173,7 @@
                                     <tr>
                                         <td><?= $madh ?></td>
                                         <td><?= $maks ?></td>
-                                        <td><?= $madh ?></td>
+                                        <td><?= $maloai ?></td>
                                         <td><?= $name ?></td>
                                         <td><?= $start ?></td>
                                         <td><?= $finish ?></td>
