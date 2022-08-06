@@ -10,6 +10,7 @@ include "models/phong.php";
 include "models/loaiphong.php";
 include "models/cart.php";
 include "models/hoadon.php";
+include "models/binhluan.php";
 include "global.php";
 $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
@@ -287,6 +288,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $bill = loadone_bill($idbill);
             $billct = loadall_cart($idbill);
             include "views/bill.php";
+            break;
+        case 'xoabl':
+            $tourid = $_GET['tourid'];
+            $mabl = $_GET['mabl'];
+            delete_binhluan($mabl);
             break;
         default:
             include "views/home.php";

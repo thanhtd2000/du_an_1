@@ -1,7 +1,7 @@
 <div class="addProducts contain">
     <div class="addProducts__Content">
         <div class="addProducts__title">
-            <h5>QUẢN LÝ ĐƠN HÀNG</h5>
+            <h5>QUẢN LÝ BÌNH LUẬN</h5>
         </div>
         <?php if (isset($_GET['message'])) : ?>
             <h4 style="color: red;"><?= $_GET['message'] ?></h4>
@@ -10,37 +10,27 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Mã đơn</th>
-                        <th>Khách sạn</th>
-                        <th>Loại phòng</th>
-                        <th>Hạng Phòng</th>
-                        <th>Tour</th>
-                        <th>Ngày bắt đầu</th>
-                        <th>Ngày kết thúc</th>
-                        <th>Ngày đặt hàng</th>
-                        <th>Tổng tiền</th>
-                        <th>Trạng thái</th>
+                        <th>Mã bình luận</th>
+                        <th>Người bình luận</th>
+                        <th>Nội dung</th>
+                        <th>Tour ID</th>
+                        <th>Mã khách sạn</th>
+                        <th>Thời gian</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($listhd2 as $dh) : ?>
-                        <?php extract($dh) ?>
+                    <?php foreach ($listbinhluan2 as $bl) : ?>
+                        <?php extract($bl) ?>
                         <tr>
-                            <td><?= $madh ?></td>
+                            <td><?= $mabl ?></td>
+                            <td><?= $hoten ?></td>
+                            <td><?= $noidung ?></td>
+                            <td><?= $tourid ?></td>
                             <td><?= $maks ?></td>
-                            <td><?= $maloai ?></td>
-                            <td><?= $maloai ?></td>
-                            <td><?= $name ?></td>
-                            <td><?= $start ?></td>
-                            <td><?= $finish ?></td>
-                            <td><?= $ngaydathang ?></td>
-                            <td><?= number_format($total) ?> VNĐ</td>
-                            <td style="color: green;"><?= $bill_status ?></td>
+                            <td><?= $ngaybinhluan ?></td>
                             <td>
-                                <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
-                                <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=xoadh&&madh=<?= $madh ?>&id=<?= $id ?>" onclick="">Xoá</a>
+                                <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=xoabl&&mabl=<?= $mabl ?>" onclick="">Xoá</a>
                             </td>
-                            <td><a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
@@ -49,7 +39,7 @@
                 <ul class="pagination">
                     <?php for ($num = 1; $num <= $ttpage; $num++) : ?>
                         <?php if ($num != $current_page) : ?>
-                            <li class="page-item"><a class="page-link" href="index.php?act=donhang&per_page=<?= $item_per_page ?>&page=<?= $num ?>"><?= $num ?></a></li>
+                            <li class="page-item"><a class="page-link" href="index.php?act=binhluan&per_page=<?= $item_per_page ?>&page=<?= $num ?>"><?= $num ?></a></li>
                         <?php else : ?>
                             <li class="page-item"><a class="page-link" style="color: black;" href=""><strong><?= $num ?></a></strong></li>
                         <?php endif ?>
