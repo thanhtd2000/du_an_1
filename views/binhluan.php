@@ -40,7 +40,7 @@ $dsbl = loadall_binhluan($tourid);
                     <td><?= $bl['hoten'] ?></td>
                     <td><?= $bl['noidung'] ?></td>
                     <td><?= $bl['ngaybinhluan'] ?></td>
-                    <?php if ($bl['iduser'] == $_SESSION['email']['iduser']||$_SESSION['email']['iduser']==1) : ?>
+                    <?php if ($bl['iduser'] == $_SESSION['email']['iduser']||$_SESSION['email']['vaitro']==1) : ?>
                         <td><a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="../index.php?act=xoabl&&mabl=<?= $mabl ?>&&tourid=<?= $tourid ?>" onclick="">Xoá</a></td>
                     <?php else : ?>
                         <?php echo "" ?>
