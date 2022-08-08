@@ -760,6 +760,35 @@ if (isset($_GET['act'])) {
             delete_binhluan($mabl);
             echo "<script> window.location.href='index.php?act=binhluan&&message=Xoá thành công'</script>";
             break;
+        case 'thongke':
+            include "thongke/thongke.php";
+            break;
+        case 'addtk':
+
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ngaydathang = $_POST['ngaydathang'];
+                $donhang = $_POST['donhang'];
+                $doanhthu = $_POST['doanhthu'];
+                if ($ngaydathang == '') {
+                    $error['ngaydathang'] = "Bạn chưa nhập doanh số";
+                }
+                if ($doanhthu == '') {
+                    $error['doanhthu'] = "Bạn chưa nhập doanh số";
+                }
+                if ($donhang == '') {
+                    $error['donhang'] = "Bạn chưa nhập số đơn hàng";
+                }
+                
+                if (!array_filter($error)) {
+                    $sql="INSERT INTO thongke( ngaydathang, donhang, doanhthu) VALUES ('$ngaydathang','$donhang','$doanhthu')";
+                    pdo_execute($sql);
+                    echo "<script> window.location.href='index.php?act=thongke'</script>";
+                }
+            }
+
+            include "thongke/add.php";
+            break;
         default:
             include "home.php";
             break;
