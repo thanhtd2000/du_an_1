@@ -13,7 +13,7 @@
     <LINK REL="SHORTCUT ICON" HREF="../img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                     <a class="nav-link" href="index.php?act=listkhuvuc">Khu vực</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Thống kê</a>
+                    <a class="nav-link" href="index.php?act=thongke">Thống kê</a>
                 </li>
             </ul>
         </div>

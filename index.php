@@ -304,7 +304,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 }
                 $_SESSION['tour'] = [];
                 foreach ($_SESSION['khachsan'] as $ks) {
-                    insert_cart_ks($_SESSION['email']['iduser'], $total,$ks[1],  $ks[4], $idbill, $ks[0], $ks[2], $ks[3]);
+                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill, $ks[0], $ks[2], $ks[3]);
                 }
                 $_SESSION['khachsan'] = [];
             }

@@ -9,6 +9,9 @@ include "../models/hoadon.php";
 include "../models/loaiphong.php";
 include "../models/dichvuphu.php";
 include "../models/taikhoan.php";
+include "../models/binhluan.php";
+include "../models/thongke.php";
+
 $mysqli = new mysqli("localhost", "root", "", "duan_1");
 include "header.php";
 if (isset($_GET['act'])) {
@@ -735,6 +738,58 @@ if (isset($_GET['act'])) {
             $id = $_GET['id'];
             $delete_dh = delete_dh($madh, $id);
             echo "<script> window.location.href='index.php?act=donhang&&message=Xoá thành công'</script>";
+            break;
+        case 'suadh':
+            $id = $_GET['id'];
+            $bill_status = $_GET['bill_status'];
+            if (isset($bill_status)) {
+                edit_bill($id, $bill_status);
+                echo "<script> window.location.href='index.php?act=donhang&&message=Xác nhận thành công'</script>";
+            }
+            break;
+        case 'binhluan':
+            $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 6;
+            $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+            $offset = ($current_page - 1) * $item_per_page;
+            $listbinhluan2 = loadall_binhluan2($item_per_page, $offset);
+            $total = mysqli_query($mysqli, "SELECT*FROM binhluan  INNER JOIN user ON binhluan.iduser=user.iduser");
+            $total = $total->num_rows;
+            $ttpage = ceil($total / $item_per_page);
+            include "binhluan/list.php";
+            break;
+        case 'xoabl':
+            $mabl = $_GET['mabl'];
+            delete_binhluan($mabl);
+            echo "<script> window.location.href='index.php?act=binhluan&&message=Xoá thành công'</script>";
+            break;
+        case 'thongke':
+            include "thongke/thongke.php";
+            break;
+        case 'addtk':
+
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ngaydathang = $_POST['ngaydathang'];
+                $donhang = $_POST['donhang'];
+                $doanhthu = $_POST['doanhthu'];
+                if ($ngaydathang == '') {
+                    $error['ngaydathang'] = "Bạn chưa nhập doanh số";
+                }
+                if ($doanhthu == '') {
+                    $error['doanhthu'] = "Bạn chưa nhập doanh số";
+                }
+                if ($donhang == '') {
+                    $error['donhang'] = "Bạn chưa nhập số đơn hàng";
+                }
+                
+                if (!array_filter($error)) {
+                    $sql="INSERT INTO thongke( ngaydathang, donhang, doanhthu) VALUES ('$ngaydathang','$donhang','$doanhthu')";
+                    pdo_execute($sql);
+                    echo "<script> window.location.href='index.php?act=thongke'</script>";
+                }
+            }
+
+            include "thongke/add.php";
             break;
         default:
             include "home.php";

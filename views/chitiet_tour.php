@@ -235,7 +235,7 @@ if(isset($_SESSION['email'])){
                         <?php if ($mak == $makv) : ?>
                               <div class="item">
                                     <div class="card" style="width: 22rem;">
-                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maks=<?= $maks ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                                          <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>&&maks=<?= $maks ?>&&maloai=<?= $maloai ?>"><img src="./img/tour/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                           <div class="card-body">
                                                 <a href="index.php?act=chitiettour&&tourid=<?= $tourid ?>&&makv=<?= $makv ?>">
                                                       <h5 class="card-title"><?= $tourname ?></h5>

@@ -22,3 +22,8 @@ function countdh($tourid)
     $sql = "SELECT COUNT (tourid) FROM donhang WHERE tourid = $tourid";
     pdo_execute($sql);
 }
+function edit_bill($id, $bill_status)
+{
+    $sql = "UPDATE bill SET id='$id',bill_status='$bill_status' WHERE id = $id";
+    pdo_execute($sql);
+}
