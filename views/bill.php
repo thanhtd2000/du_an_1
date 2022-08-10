@@ -63,11 +63,13 @@
                                 ';
                     }
                     $i = 0;
+                    if(isset($_SESSION['tour'])){
                     foreach ($billct as $bct) {
                         extract($bct);
-                        $hinh = $img_path . $bct['anh'];
-
-
+                        $hinh1 = $img_path . $bct['anh'];
+                        
+                         
+                            
                         echo '
                                                       <div class="cart__item">
                                                       <div class="d-flex justify-content-between">
@@ -79,7 +81,7 @@
                                                       <div class="cart__detail">
                                                       <div class="row">
                                                       <div class="col-4">
-                                                            <img class="img-fluid" src="' . $hinh . '" alt="">
+                                                            <img class="img-fluid" src="' . $hinh1 . '" alt="">
                                                       </div>
                                                       <div class="col-8">
                                                             <h5>' . $bct['name'] . '</h5>
@@ -101,22 +103,65 @@
                                                                   <p>Ngày về :</p>
                                                                   <span>' . $bct['finish'] . '</span>
                                                             </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                  <p>Khách sạn </p>
-                                                                  <span>' . $bct['maks'] . ' </span>
+                                                           
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      </div> 
+                                                      ';
+                                                    }
+                                                    
+                                                    
+                                                    
+                                                    
+                        
+                    }
+                    if(isset($_SESSION['khachsan'])){
+
+                        foreach ($billct as $bct) {
+                            extract($bct);                           
+                            $hinh2 = $img_path2. $bct['anh'];                          
+                                                        
+                        echo '
+                                                      <div class="cart__item">
+                                                      <div class="d-flex justify-content-between">
+                                                            <div class="cart__title">
+                                                                  <input type="checkbox" aria-label="Checkbox for following text input">  <span>Thông tin chi tiết sản phẩm</span>
                                                             </div>
+                                                            
+                                                      </div>
+                                                      <div class="cart__detail">
+                                                      <div class="row">
+                                                      <div class="col-4">
+                                                            <img class="img-fluid" src="' . $hinh2 . '" alt="">
+                                                      </div>
+                                                      <div class="col-8">
+                                                            <h5>' . $bct['maks'] . '</h5>
+                                                            
+                                                    
+                                                            <div class="d-flex justify-content-between">
+                                                            <p>Giá phòng:</p>
+                                                            <span>' .  $bct['giaphong'] . ' đ</span>
+                                                      </div>
+                                                           
+                                                           
+                                                            
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Loại phòng</p>
                                                                   <span>' . $bct['maloai'] . ' </span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                  <p>Tên phòng </p>
+                                                                  <span>' . $bct['tenphong'] . ' </span>
                                                             </div>
                                                       </div>
                                                       </div>
                                                       </div>
                                                       </div> 
                                                       ';
-                        $i += 1;
-                    }
-
+                                                    }
+                                                }
+                                                $i += 1;
                     ?>
 
 

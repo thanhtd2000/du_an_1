@@ -15,6 +15,7 @@ $listkhachsan = loadall_khachsan();
 $listtour = loadall_tour();
 $listkhuvuc = loadall_khuvuc();
 if (!isset($_SESSION['tour'])) $_SESSION['tour'] = [];
+if (!isset($_SESSION['khachsan'])) $_SESSION['khachsan'] = [];
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -251,6 +252,25 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
+            if (isset($_POST['datks']) && ($_POST['datks'])) {
+
+
+                
+              
+                $giaphong= $_POST['giaphong'];
+                $tenphong=$_POST['tenphong'];
+               
+                $tenks = $_POST['tenks'];
+                $anh = $_POST['anh'];
+                $tenloai = $_POST['tenloai'];
+                $tongtien = $giaphong;
+
+
+                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong,$anh,$tongtien];
+
+                array_push($_SESSION['khachsan'], $khachsan);
+               
+            }
 
             include "views/giohang.php";
             break;
@@ -283,11 +303,33 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8]);
                 }
                 $_SESSION['tour'] = [];
+                foreach ($_SESSION['khachsan'] as $ks) {
+                    insert_cart_ks($_SESSION['email']['iduser'], $total,$ks[1],  $ks[4], $idbill, $ks[0], $ks[2], $ks[3]);
+                }
+                $_SESSION['khachsan'] = [];
             }
             $bill = loadone_bill($idbill);
             $billct = loadall_cart($idbill);
             include "views/bill.php";
             break;
+            case 'chitietphong':
+               $maloai = $_GET['maloai'];
+               $maks = $_GET['maks'];
+               $select_phong = select_phong($maks);
+               $onelp =  loadone_loaiphong($maloai);
+               $select_phong5 = select_phong5($maks,$maloai);
+               $oneks = loadone_khachsan($maks);
+                include "views/chitiet_phong.php";
+                break; 
+                case 'delks':
+                    $maks =  $_GET['maks'];
+                    if (isset($_GET['khachsan'])) {
+                        array_splice($_SESSION['khachsan'], $maks, 1);
+                    } else {
+                        $_SESSION['khachsan'] = [];
+                    }
+                    echo "<script> window.location.href='index.php?act=giohang'</script>";
+                    break; 
         default:
             include "views/home.php";
             break;

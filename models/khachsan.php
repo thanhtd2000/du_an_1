@@ -39,7 +39,7 @@ function edit_khachsan($maks, $tenks, $makv, $anh, $mota)
 
 function select_phong($maks)
 {
-    $sql = "SELECT b.anh,c.tenloai,c.giaphong,b.tenphong,b.maphong FROM khachsan as a inner join phong as b on a.maks = b.maks inner join loaiphong  as c on b.maloai = c.maloai where a.maks = $maks";
+    $sql = "SELECT c.tenloai,c.giaphong,b.tenphong,b.maphong ,b.maloai,c.anh FROM khachsan as a inner join phong as b on a.maks = b.maks inner join loaiphong  as c on b.maloai = c.maloai where a.maks = $maks";
     $select_phong = pdo_query($sql);
     return $select_phong;
 }

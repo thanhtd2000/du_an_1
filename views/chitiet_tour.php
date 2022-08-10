@@ -366,6 +366,7 @@ if(isset($_SESSION['email'])){
       $('input.input-qty').each(function() {
             var $this = $(this),
                   qty = $this.parent().find('.is-form'),
+            
                   min = Number($this.attr('min')),
                   max = Number($this.attr('max'))
             if (min == 0) {

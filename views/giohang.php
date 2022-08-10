@@ -72,6 +72,51 @@
                                                       ';
                                                       $i+=1;
                               }
+                       
+                       
+                              foreach ($_SESSION['khachsan'] as $ks) {
+                                    $hinh1 = $img_path2 . $ks[4];
+                                    
+                                    $xoaks= '<a href="index.php?act=delks&maloai='.$i.'"><img style="width: 20px;" src="./img/delete.png" alt=""></a>';
+                                    echo '
+                                                      <div class="cart__item">
+                                                      <div class="d-flex justify-content-between">
+                                                            <div class="cart__title">
+                                                                  <input type="checkbox" aria-label="Checkbox for following text input">  <span>Thông tin chi tiết sản phẩm</span>
+                                                            </div>
+                                                            '.$xoaks.'
+                                                      </div>
+                                                      <div class="cart__detail">
+                                                      <div class="row">
+                                                      <div class="col-4">
+                                                            <img class="img-fluid" src="' . $hinh1 . '" alt="">
+                                                      </div>
+                                                      <div class="col-8">
+                                                            <h5>' . $ks[0] . '</h5>
+                                                            
+                                                            <div class="d-flex justify-content-between">
+                                                                  <p>Giá phòng:</p>
+                                                                  <span>' . $ks[3] . ' đ/đêm</span>
+                                                            </div>
+                                                           
+                                                           
+                                                            
+                                                            
+                                                            <div class="d-flex justify-content-between">
+                                                                  <p>loại phòng</p>
+                                                                  <span>' . $ks[1] . ' </span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                  <p>Tên phòng phòng</p>
+                                                                  <span>' . $ks[2] . ' </span>
+                                                            </div>
+                                                      </div>
+                                                      </div>
+                                                      </div>
+                                                      </div> 
+                                                      ';
+                                                      $i+=1;
+                              }
                         }
                               ?>
 

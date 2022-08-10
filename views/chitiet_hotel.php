@@ -11,111 +11,7 @@
                 <li><a href=""><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half"></i></a></li>
             </ul>
         </div>
-        <div class="slide__bottom">
-            <div class="slide__title">
-                <span class="item active" data-this="dm-1">Tìm khách sạn</span>
-                <span class="item" data-this="dm-2">Tour & Trải nghiệm</span>
-            </div>
-            <div class="body">
-                <div class="slide__input active" id="dm-1">
-                    <div class="d-flex">
-                        <div class="slide__location">
-                            <input type="text" name="kyw_kv" placeholder="Nhập khu vực">
-                        </div>
-                        <div class="slide__location">
-                            <input type="text" name="kyw_ks" placeholder="Nhập khách sạn">
-                        </div>
-                        <!-- <div class="slide__room">
-                                                <div class="dropdown">
-                                                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Số phòng
-                                                      </button>
-                                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <div class="dropdown__content">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>PHÒNG</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div> -->
-                        <button><a href="">TÌM KIẾM</a></button>
-                    </div>
-                </div>
-                <div class="slide__input2" id="dm-2">
-                    <div class="d-flex">
-                        <div class="slide__location">
-                            <input type="text" placeholder="Nhập hoạt động">
-                        </div>
-                        <div class="slide__time">
-                            <input type="text" placeholder="Nhập địa điểm">
-                        </div>
-                        <!-- <div class="slide__member">
-                                                <div class="dropdown">
-                                                      <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Số người
-                                                      </button>
-                                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                                  <div class="dropdown__item">
-                                                                        <div class="dropdown__left">
-                                                                              <h5>Người lớn</h5>
-                                                                        </div>
-                                                                        <div class="dropdown__right">
-                                                                              <div class="buttons_added">
-                                                                                    <input class="minus is-form" type="button" value="-">
-                                                                                    <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                                    <input class="plus is-form" type="button" value="+">
-                                                                              </div>
-            
-                                                                        </div>
-      
-                                                                  </div>
-                                                                  <div class="dropdown__item">
-                                                                        <div class="dropdown__left">
-                                                                              <h5>Trẻ em</h5>
-                                                                        </div>
-                                                                        <div class="dropdown__right">
-                                                                              <div class="buttons_added">
-                                                                                    <input class="minus is-form" type="button" value="-">
-                                                                                    <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                                    <input class="plus is-form" type="button" value="+">
-                                                                              </div>
-            
-                                                                        </div>
-      
-                                                                  </div>
-                                                                  <div class="dropdown__item">
-                                                                        <div class="dropdown__left">
-                                                                              <h5>Em bé</h5>
-                                                                        </div>
-                                                                        <div class="dropdown__right">
-                                                                              <div class="buttons_added">
-                                                                                    <input class="minus is-form" type="button" value="-">
-                                                                                    <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                                    <input class="plus is-form" type="button" value="+">
-                                                                              </div>
-            
-                                                                        </div>
-      
-                                                                  </div>
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div> -->
-                        <button><a href="">TÌM KIẾM</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--  -->
     </div>
 </div>
 <div class="view container">
@@ -162,7 +58,7 @@
                             <?php extract($phong) ?>
                             <div class="item">
                                 <div class="card" style="width: 22rem;">
-                                    <img src="../img/phong/<?= $anh ?>" class="card-img-top" alt="...">
+                                  <a href="index.php?act=chitietphong&&maks=<?= $maks ?>&&maloai=<?= $maloai ?>">  <img src="./img/loaiphong/<?= $anh ?>" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $tenloai ?></h5>
                                         <div class="products__room__detail">
@@ -185,7 +81,7 @@
             </div>
             <div style="text-align: center;padding: 30px 0;">
                 <div style="text-align: center;padding: 30px 0;">
-                    <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Đặt phòng ngay</a></button>
+                    <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Nhấn vào loại phòng để đặt</a></button>
                 </div>
             </div>
             <div class="describe container">

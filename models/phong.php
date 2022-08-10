@@ -37,7 +37,14 @@ function edit_phong($maphong, $tenphong, $maks, $maloai, $anh)
 }
 function select_phong3($maks)
 {
-    $sql = "SELECT a.tenphong,a.maloai,b.tenloai FROM phong as a inner join loaiphong as b on a.maloai = b.maloai where maks = $maks";
+    $sql = "SELECT a.tenphong,a.maloai,b.tenloai,a.anh FROM phong as a inner join loaiphong as b on a.maloai = b.maloai where maks = $maks";
     $select_phong3 = pdo_query($sql);
     return $select_phong3;
+}
+
+function select_phong5($maks,$maloai)
+{
+    $sql = "SELECT a.tenphong,a.maloai,b.tenloai,a.anh FROM phong as a inner join loaiphong as b on a.maloai = b.maloai where maks = $maks and a.maloai = $maloai";
+    $select_phong5 = pdo_query($sql);
+    return $select_phong5;
 }
