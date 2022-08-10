@@ -67,7 +67,7 @@
                         <div class="slide__input active" id="dm-1">
                               <div class="d-flex">
                                     <div class="slide__location">
-                                          <input type="text" placeholder="Nhập khu vực">
+                                          <input type="text" placeholder="Nhập tour" name="kyw">
                                     </div>
                                     <div class="slide__location">
                                           <input type="text" placeholder="Nhập khách sạn">

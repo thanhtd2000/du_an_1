@@ -274,7 +274,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
                 $ngaydathang = new DateTime();
                 $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
-                $ngaydathang = date('h:i:sa d/m/Y');
+                $ngaydathang = date('Y/m/d h:i:sa');
                 $total = tongdonhang();
 
 

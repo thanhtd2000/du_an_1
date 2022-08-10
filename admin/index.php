@@ -10,6 +10,8 @@ include "../models/loaiphong.php";
 include "../models/dichvuphu.php";
 include "../models/taikhoan.php";
 include "../models/binhluan.php";
+include "../models/thongke.php";
+
 $mysqli = new mysqli("localhost", "root", "", "duan_1");
 include "header.php";
 if (isset($_GET['act'])) {

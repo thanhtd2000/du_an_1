@@ -161,9 +161,7 @@ if(isset($_SESSION['email'])){
                                     </div>
                               </div>
                         </form>
-                        <input type="checkbox">
-                        <label for="">Tôi đồng ý với các <span>điều khoản</span>,<span>điều kiện</span> và <span>chính sách riêng tư</span> của Vinpearl</label>
-                        <br>
+                       
                         <input class="" type="submit" name="thanhtoan" class="btn btn-warning d-block w-100" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;"  value="Thanh toán" placeholder="">
                         
                   </div>
