@@ -42,7 +42,7 @@
             <div class="buttons_added">
                   <input style="    width: 30px;
                   height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="1">
+                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="2">
                   <input style="    width: 30px;
                   height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
             </div>
@@ -52,7 +52,7 @@
             <div class="buttons_added">
                   <input style="    width: 30px;
                   height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="1">
+                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="0">
                   <input style="    width: 30px;
                   height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
             </div>

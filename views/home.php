@@ -73,7 +73,7 @@
                                           <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
                                     </div>
                                     <div class="slide__location">
-                                          <input type="text" placeholder="Nhập khách sạn">
+                                          <input type="text" placeholder="Nhập địa điểm">
                                     </div>
                                     <!-- <div class="slide__room">
                                           <div class="dropdown">
@@ -104,7 +104,7 @@
                               </form>
                         </div>
                         <div class="slide__input2" id="dm-2">
-                              <form action="" method="post">
+                              <form action="index.php?act=listtour" method="post">
                               <div class="d-flex">
                                     <div class="slide__location">
                                           <input type="text" placeholder="Nhập tour" name="kyw">
