@@ -30,113 +30,29 @@
 
                         </form>
 
-                                          <div class="dropdown">
-                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Số người
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Người lớn</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Trẻ em</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Em bé</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
-
-                  </div>
+                                          
+                  </div> 
             </div>
       </div>
-      <div class="cart__shopping d-block">
+      <?php
+      if(isset($_SESSION['email'])){
+            echo'
+            <div class="cart__shopping d-block">
             <!-- Button trigger modal -->
-            <button type="button" style="outline: none; line-height: 70px;" data-toggle="modal" data-target="#exampleModal">
-                  <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-            </button>
+            <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
+                        <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
+                  </button></a>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                              <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">All of bill</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                    </button>
-                              </div>
-                              <div class="modal-body">
-                                    <div class="tour__detail">
-                                          <div class="tour__item">
-                                                <div class="row">
-                                                      <div class="col-4">
-                                                            <img src="./img/263ddf2506ce46af9cad02decca77164_ca956a76d2db4c43a76b2e038fc5d5f8_JUN_9458_2.jpg.webp" alt="">
-                                                      </div>
-                                                      <div class="col-8">
-                                                            <div class="tour__item__infor">
-                                                                  <h3>[HN – PHÚ QUỐC] THU VIVU COMBO | VMB Vietnam Airlines + 3N2Đ phòng gồm
-                                                                        ăn sáng/</h3>
-                                                                  <p>Người lớn - Phòng tiêu chuẩn x 2</p>
-                                                                  <span>Price : 15.000.000 đ</span>
-                                                            </div>
-
-                                                      </div>
-
-                                                </div>
-                                          </div>
-                                          <div class="tour__detail__price d-flex justify-content-between" style="margin-top: 50px;">
-                                                <div>
-                                                      <h6>Tổng tiền (2 items)</h6>
-                                                      <span>15000000 VNĐ</span>
-                                                </div>
-                                                <button type="button" class="btn btn-danger">Xem giỏ hàng</button>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              </div>
-                        </div>
-                  </div>
-            </div>
+      
       </div>
+            ';
+      }else{
+
+      }
+                              ?>
+      
+</div>
+      
 </div>
 </div>
 <div class="tour container">
@@ -147,6 +63,28 @@
                               <div class="tour__left_top d-flex">
                                     <h4 style="margin-bottom: 0; font-weight: 700;">Lọc kết quả</h4>
                                     <button>Đặt lại</button>
+                              </div>
+                              <div class="tour__service">
+                                    <h5>Khu vực</h5>
+                                    <ul>
+                                          <li>
+                                                <a href="index.php?act=listks"><button type="button" class="btn btn-warning">Tất cả</button></a>
+                                          </li>
+                                          <?php
+                                          foreach ($listkhuvuc as $kv) {
+                                                extract($kv);
+                                                $linkk = "index.php?act=listks&&makv=" . $makv;
+                                                echo '
+                                                
+                                                <li>
+                                                      <a href="' . $linkk . '"><button type="button" class="btn btn-warning">' . $tenkv . '</button></a>
+                                                </li>
+                                          
+
+                                                ';
+                                          }
+                                          ?>
+                                    </ul>
                               </div>
                               <div class="tour__brand">
                                     <h5>Loại sản phẩm</h5>
@@ -182,28 +120,7 @@
                                           </li>
                                     </ul>
                               </div>
-                              <div class="tour__service">
-                                    <h5>Khu vực</h5>
-                                    <ul>
-                                          <li>
-                                                <a href="index.php?act=listks"><button type="button" class="btn btn-warning">Tất cả</button></a>
-                                          </li>
-                                          <?php
-                                          foreach ($listkhuvuc as $kv) {
-                                                extract($kv);
-                                                $linkk = "index.php?act=listks&&makv=" . $makv;
-                                                echo '
-                                                
-                                                <li>
-                                                      <a href="' . $linkk . '"><button type="button" class="btn btn-warning">' . $tenkv . '</button></a>
-                                                </li>
-                                          
-
-                                                ';
-                                          }
-                                          ?>
-                                    </ul>
-                              </div>
+                             
                               <div class="tour__room">
                                     <h5>Độ dài kì nghỉ</h5>
                                     <ul>

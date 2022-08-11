@@ -64,10 +64,13 @@
                         <span class="item" data-this="dm-2">Tour & Trải nghiệm</span>
                   </div>
                   <div class="body">
+                  
                         <div class="slide__input active" id="dm-1">
+                        <form action="index.php?act=listks" method="post">
                               <div class="d-flex">
+                                    
                                     <div class="slide__location">
-                                          <input type="text" placeholder="Nhập tour" name="kyw">
+                                          <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
                                     </div>
                                     <div class="slide__location">
                                           <input type="text" placeholder="Nhập khách sạn">
@@ -94,72 +97,26 @@
                                                 </div>
                                           </div>
                                     </div> -->
-                                    <button><a href="">TÌM KIẾM</a></button>
+                                    <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
+                                    height: 39px;">
+                                   
                               </div>
+                              </form>
                         </div>
                         <div class="slide__input2" id="dm-2">
+                              <form action="" method="post">
                               <div class="d-flex">
                                     <div class="slide__location">
-                                          <input type="text" placeholder="Nhập hoạt động">
+                                          <input type="text" placeholder="Nhập tour" name="kyw">
                                     </div>
                                     <div class="slide__time">
                                           <input type="text" placeholder="Nhập địa điểm">
                                     </div>
-                                    <!-- <div class="slide__member">
-                                          <div class="dropdown">
-                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Số người
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Người lớn</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Trẻ em</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Em bé</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div> -->
-                                    <button><a href="">TÌM KIẾM</a></button>
+                                   
+                                    <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
+                                    height: 39px;">
                               </div>
+                              </form>
                         </div>
                   </div>
             </div>

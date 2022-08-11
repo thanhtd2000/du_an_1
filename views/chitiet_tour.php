@@ -1,53 +1,5 @@
 
-<div class="slide" style="background-color: #DCE0EE;">
-      <div class="slide__bot container d-flex justify-content-between">
-            <div class="body">
-                  <div class="slide__input2 d-block" id="dm-2">
-                        <div class="d-flex" style="background-color: #DCE0EE;">
-                              <div class="slide__location" style="margin: 20px 10px;
-                                    border: 1px solid #999;
-                                    padding: 6px 0;
-                                    border-radius: 5px;
-                                    width: 225px;
-                                    height: 40px;
-                                    padding-left: 17px;">
-                                    <input type="text" style="background-color: #DCE0EE;" placeholder="Nhập khu vực">
-                              </div>
-                              <div class="slide__time" style="margin: 20px 10px;
-                                    border: 1px solid #999;
-                                    padding: 6px 0;
-                                    border-radius: 5px;
-                                    width: 225px;
-                                    height: 40px;
-                                    padding-left: 17px;">
-                                    <input type="text" style="background-color: #DCE0EE;" placeholder="Nhập địa điểm">
-                              </div>
-                             
-                              <button style="width: 150px;
-                                    height: 39px;"><a href="">TÌM KIẾM</a></button>
-                        </div>
-                  </div>
-            </div>
-            <?php
-if(isset($_SESSION['email'])){
-      echo'
-      <div class="cart__shopping d-block">
-      <!-- Button trigger modal -->
-      <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
-                  <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-            </button></a>
 
-    
-</div>
-      ';
-}else{
-
-}
-                             ?>
-
-           
-      </div>
-</div>
 <div class="infor__tour container">
       <h4><?= $onetour['tourname'] ?></h4>
       <div class="infor__tour__content">

@@ -36,22 +36,22 @@
             </div>
       </div>
       <?php
-if(isset($_SESSION['email'])){
-      echo'
-      <div class="cart__shopping d-block">
-      <!-- Button trigger modal -->
-      <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
-                  <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
-            </button></a>
+      if(isset($_SESSION['email'])){
+            echo'
+            <div class="cart__shopping d-block">
+            <!-- Button trigger modal -->
+            <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
+                        <img class="img-fluid" style="width: 30px; height: 30px;" src="./img/shopping-cart.png" alt="">
+                  </button></a>
 
-    
-</div>
-      ';
-}else{
+      
+      </div>
+            ';
+      }else{
 
-}
-                             ?>
-</div>
+      }
+                              ?>
+      
 </div>
 <div class="tour container">
       <div class="tour__content">
