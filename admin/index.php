@@ -733,12 +733,7 @@ if (isset($_GET['act'])) {
             $ttpage = ceil($total / $item_per_page);
             include "donhang/list.php";
             break;
-        case 'xoadh':
-            $madh = $_GET['madh'];
-            $id = $_GET['id'];
-            $delete_dh = delete_dh($madh, $id);
-            echo "<script> window.location.href='index.php?act=donhang&&message=Xoá thành công'</script>";
-            break;
+
         case 'suadh':
             $id = $_GET['id'];
             $bill_status = $_GET['bill_status'];
@@ -781,9 +776,9 @@ if (isset($_GET['act'])) {
                 if ($donhang == '') {
                     $error['donhang'] = "Bạn chưa nhập số đơn hàng";
                 }
-                
+
                 if (!array_filter($error)) {
-                    $sql="INSERT INTO thongke( ngaydathang, donhang, doanhthu) VALUES ('$ngaydathang','$donhang','$doanhthu')";
+                    $sql = "INSERT INTO thongke( ngaydathang, donhang, doanhthu) VALUES ('$ngaydathang','$donhang','$doanhthu')";
                     pdo_execute($sql);
                     echo "<script> window.location.href='index.php?act=thongke'</script>";
                 }

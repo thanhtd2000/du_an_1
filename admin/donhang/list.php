@@ -20,6 +20,7 @@
                         <th>Ngày đặt hàng</th>
                         <th>Tổng tiền</th>
                         <th>Trạng thái</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -37,10 +38,10 @@
                             <td><?= number_format($total) ?> VNĐ</td>
                             <td style="color: green;"><?= $bill_status ?></td>
                             <td>
-                                <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
-                                <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=xoadh&&madh=<?= $madh ?>&id=<?= $id ?>" onclick="">Xoá</a>
+                                <a style="color: #FF7F50; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
+                                
                             </td>
-                            <td><a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
+                            <td><a style="color: red; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
