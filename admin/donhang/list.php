@@ -7,12 +7,12 @@
             <h4 style="color: red;"><?= $_GET['message'] ?></h4>
         <?php endif ?>
         <div class="addProducts_form">
+            <h6>ĐƠN HÀNG TOUR</h6>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Mã đơn</th>
                         <th>Khách sạn</th>
-                        <th>Loại phòng</th>
                         <th>Hạng Phòng</th>
                         <th>Tour</th>
                         <th>Ngày bắt đầu</th>
@@ -20,29 +20,66 @@
                         <th>Ngày đặt hàng</th>
                         <th>Tổng tiền</th>
                         <th>Trạng thái</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($listhd2 as $dh) : ?>
                         <?php extract($dh) ?>
-                        <tr>
-                            <td><?= $madh ?></td>
-                            <td><?= $maks ?></td>
-                            <td><?= $maloai ?></td>
-                            <td><?= $maloai ?></td>
-                            <td><?= $name ?></td>
-                            <td><?= $start ?></td>
-                            <td><?= $finish ?></td>
-                            <td><?= $ngaydathang ?></td>
-                            <td><?= number_format($total) ?> VNĐ</td>
-                            <td style="color: green;"><?= $bill_status ?></td>
-                            <td>
-                                <a style="color: #FF7F50; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
-                                
-                            </td>
-                            <td><a style="color: red; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
-                        </tr>
+                        <?php if ($ldh == 0) : ?>
+                            <tr>
+                                <td><?= $madh ?></td>
+                                <td><?= $maks ?></td>
+                                <td><?= $maloai ?></td>
+                                <td><?= $name ?></td>
+                                <td><?= $start ?></td>
+                                <td><?= $finish ?></td>
+                                <td><?= $ngaydathang ?></td>
+                                <td><?= number_format($total) ?> VNĐ</td>
+                                <td style="color: green;"><?= $bill_status ?></td>
+                                <td>
+                                    <a style="color: #FF7F50; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
+
+                                </td>
+                                <td><a style="color: red; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
+                            </tr>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+            <h6>ĐƠN HÀNG KHÁCH SẠN</h6>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Khách sạn</th>
+                        <th>Hạng Phòng</th>
+                        <th>Tên phòng</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($listhd2 as $dh) : ?>
+                        <?php extract($dh) ?>
+                        <?php if ($ldh == 1) : ?>
+                            <tr>
+                                <td><?= $madh ?></td>
+                                <td><?= $maks ?></td>
+                                <td><?= $maloai ?></td>
+                                <td><?=$tenphong?></td>
+                                <td><?= $ngaydathang ?></td>
+                                <td><?= number_format($total) ?> VNĐ</td>
+                                <td style="color: green;"><?= $bill_status ?></td>
+                                <td>
+                                    <a style="color: #FF7F50; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
+
+                                </td>
+                                <td><a style="color: red; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
+                            </tr>
+                        <?php endif ?>
                     <?php endforeach ?>
                 </tbody>
             </table>
