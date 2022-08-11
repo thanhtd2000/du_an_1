@@ -18,7 +18,7 @@ function loadall_phong()
 }
 function loadall_phong2($item_per_page,$offset)
 {
-    $sql = "SELECT*FROM phong INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai order by maphong desc limit $item_per_page offset $offset";
+    $sql = "SELECT phong.*,loaiphong.tenloai FROM phong  INNER JOIN loaiphong ON  phong.maloai = loaiphong.maloai order by maphong desc limit $item_per_page offset $offset";
     $listphong2 = pdo_query($sql);
     return $listphong2;
 }

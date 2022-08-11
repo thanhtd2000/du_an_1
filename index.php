@@ -255,21 +255,20 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             if (isset($_POST['datks']) && ($_POST['datks'])) {
 
 
-                
-              
-                $giaphong= $_POST['giaphong'];
-                $tenphong=$_POST['tenphong'];
-               
+
+
+                $giaphong = $_POST['giaphong'];
+                $tenphong = $_POST['tenphong'];
+
                 $tenks = $_POST['tenks'];
                 $anh = $_POST['anh'];
                 $tenloai = $_POST['tenloai'];
                 $tongtien = $giaphong;
 
 
-                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong,$anh,$tongtien];
+                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh, $tongtien];
 
                 array_push($_SESSION['khachsan'], $khachsan);
-               
             }
 
             include "views/giohang.php";
@@ -312,24 +311,24 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $billct = loadall_cart($idbill);
             include "views/bill.php";
             break;
-            case 'chitietphong':
-               $maloai = $_GET['maloai'];
-               $maks = $_GET['maks'];
-               $select_phong = select_phong($maks);
-               $onelp =  loadone_loaiphong($maloai);
-               $select_phong5 = select_phong5($maks,$maloai);
-               $oneks = loadone_khachsan($maks);
-                include "views/chitiet_phong.php";
-                break; 
-                case 'delks':
-                    $maks =  $_GET['maks'];
-                    if (isset($_GET['khachsan'])) {
-                        array_splice($_SESSION['khachsan'], $maks, 1);
-                    } else {
-                        $_SESSION['khachsan'] = [];
-                    }
-                    echo "<script> window.location.href='index.php?act=giohang'</script>";
-                    break; 
+        case 'chitietphong':
+            $maloai = $_GET['maloai'];
+            $maks = $_GET['maks'];
+            $select_phong = select_phong($maks);
+            $onelp =  loadone_loaiphong($maloai);
+            $select_phong5 = select_phong5($maks, $maloai);
+            $oneks = loadone_khachsan($maks);
+            include "views/chitiet_phong.php";
+            break;
+        case 'delks':
+            $maks =  $_GET['maks'];
+            if (isset($_GET['khachsan'])) {
+                array_splice($_SESSION['khachsan'], $maks, 1);
+            } else {
+                $_SESSION['khachsan'] = [];
+            }
+            echo "<script> window.location.href='index.php?act=giohang'</script>";
+            break;
         default:
             include "views/home.php";
             break;
