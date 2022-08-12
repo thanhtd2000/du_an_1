@@ -30,13 +30,13 @@
 
                         </form>
 
-                                          
-                  </div> 
+
+                  </div>
             </div>
       </div>
       <?php
-      if(isset($_SESSION['email'])){
-            echo'
+      if (isset($_SESSION['email'])) {
+            echo '
             <div class="cart__shopping d-block">
             <!-- Button trigger modal -->
             <a href="index.php?act=giohang"><button type="button" style="outline: none; line-height: 70px; background-color: #DCE0EE;" data-toggle="modal" data-target="#exampleModa">
@@ -46,19 +46,18 @@
       
       </div>
             ';
-      }else{
-
+      } else {
       }
-                              ?>
-      
+      ?>
+
 </div>
-      
+
 </div>
 </div>
 <div class="tour container">
       <div class="tour__content">
             <div class="row">
-                  <div class="col-3">
+                  <div class="col-xl-3 col-lg-3 col-md-12 col-dm-12 col-12 none">
                         <div class="tour__left">
                               <div class="tour__left_top d-flex">
                                     <h4 style="margin-bottom: 0; font-weight: 700;">Lọc kết quả</h4>
@@ -120,7 +119,7 @@
                                           </li>
                                     </ul>
                               </div>
-                             
+
                               <div class="tour__room">
                                     <h5>Độ dài kì nghỉ</h5>
                                     <ul>
@@ -144,7 +143,7 @@
 
                         </div>
                   </div>
-                  <div class="col-9">
+                  <div class="col-xl-9 col-lg-9 col-md-12 col-dm-12 col-12">
                         <div class="tour__right">
 
 
@@ -156,7 +155,7 @@
                                     echo '
                                                 <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
                                                 <div class="row">
-                                                <div class="col-5">
+                                                <div class="col-xl-5 col-lg-5 col-md-6 col-dm-6 col-6">
                                                 <div class="tour__rightIMG">
                                                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                                             <div class="carousel-inner">
@@ -176,8 +175,8 @@
                                                             </a>
                                                       </div>
                                                 </div>
-                                          </div>
-                                          <div class="col-7">
+                                                </div>
+                                          <div class="col-xl-7 col-lg-7 col-md-6 col-dm-6 col-6">
                                                 <div class="tour__right_detail">
                                                      <a href="' . $linkks . '"> <h3 style="font-size: 18px; font-weight: 600;">' . $tenks . '</h3></a>
                                                       <p style="font-size: 14px;"><!--' . $mota . '--></p>
@@ -199,11 +198,11 @@
                                                 ';
                               }
                               ?>
-                                    </div>
                         </div>
                   </div>
             </div>
       </div>
+</div>
 </div>
 <div class="products container">
       <h2>Sản phẩm tương tự</h2>
@@ -244,22 +243,22 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_hotel_resort_1647925026.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vinoasis_1647925040.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_luxury_1647925062.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/condotel_1647925071.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/discovery_1647925078.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/holidays_1647925088.webp" alt="" />
                               </div>
                         </div>
@@ -271,13 +270,13 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/convention_1647925137.webp" alt="" />
                               </div>
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/almaz_1647925645.webp" alt="" />
                               </div>
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/imperia_1647925662.webp" alt="" />
                               </div>
                         </div>
@@ -289,22 +288,22 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vw_1647925754.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_golf_1647925676.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/safari_1647925690.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/grand_world_1647925701.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/pquc_1647925710.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/holidays_1647925088.webp" alt="" />
                               </div>
                         </div>
