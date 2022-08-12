@@ -1096,16 +1096,7 @@ form .mail {
       height: 100%;
 }
 
-.slide__img__content::after {
-      content: "";
-      position: absolute;
-      background-color: rgba(12, 36, 28, 0.2);
-      top: 223px;
-      left: 0;
-      height: 650px;
-      width: 100%;
-      z-index: 1;
-}
+
 
 .slide__img .slide__img__content .slide__bottom {
       bottom: -24%;
