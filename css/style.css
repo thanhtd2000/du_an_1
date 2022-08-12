@@ -1232,6 +1232,7 @@ form .mail {
       border: 1px solid #ca811d;
       padding: 20px;
       border-radius: 5px;
+      margin-bottom: 20px;
 }
 
 .view__main__text__right span {
@@ -1405,10 +1406,13 @@ form .mail {
       font-weight: 300;
       padding: 10px 30px;
 }
+.describe__title{
+      border-bottom: 1px solid #bfbfbf;
+}
 
 .describe__title .item.active {
-      border-bottom: 3px solid #e29a38;
       font-weight: 500;
+      color: #e29a38;
 }
 
 .describe {
@@ -2041,7 +2045,28 @@ iframe {
       .tour__right_detail div button{
             width: 100px;
       }
-
+      .view__content ul li a{
+            font-size: 17px;
+            padding: 5px 15px;
+      }
+      .view__new{
+            display: block !important;
+      }
+      .view__new__right{
+            margin-top: 50px;
+      }
+      .infor__tour__detail{
+            margin: 30px 0;
+      }
+      .slide__input2>div{
+            display: block !important;
+      }
+      .slide__location,.slide__time{
+            width: 450px !important;
+      }
+      .slide__input2 button{
+            width: 333px !important;
+      }
 }
 
 @media screen and (max-width: 630px) {
