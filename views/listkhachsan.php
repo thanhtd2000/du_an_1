@@ -30,65 +30,8 @@
 
                         </form>
 
-<<<<<<< Updated upstream
                                           
                   </div> 
-=======
-                                          <div class="dropdown">
-                                                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Số người
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                      <div class="dropdown__content" style="display: flex; width: 100%;">
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Người lớn</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Trẻ em</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                            <div class="dropdown__item">
-                                                                  <div class="dropdown__left">
-                                                                        <h5>Em bé</h5>
-                                                                  </div>
-                                                                  <div class="dropdown__right">
-                                                                        <div class="buttons_added">
-                                                                              <input class="minus is-form" type="button" value="-">
-                                                                              <input aria-label="quantity" class="input-qty" max="10" min="0" name="" type="number" value="">
-                                                                              <input class="plus is-form" type="button" value="+">
-                                                                        </div>
-      
-                                                                  </div>
-
-                                                            </div>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                  </div>
->>>>>>> Stashed changes
             </div>
       </div>
       <?php
