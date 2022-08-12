@@ -1870,6 +1870,13 @@ iframe {
       .vip {
             padding: 20px 0;
       }
+      .slide__img__top{
+            top: 345px;
+            line-height: 40px;
+      }
+      .slide__img__top ul{
+            display: block !important;
+      }
 
 }
 
