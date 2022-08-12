@@ -4,7 +4,7 @@
       <h4><?= $onetour['tourname'] ?></h4>
       <div class="infor__tour__content">
             <div class="row">
-                  <div class="col-8">
+                  <div class="col-xl-8 col-lg-7 col-md-6 col-dm-12 col-12">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -27,7 +27,7 @@
                               </button>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-xl-4 col-lg-5 col-md-6 col-dm-12 col-12">
                         <div class="infor__tour__detail">
                               <p>Mã SP: <span>CB<?= $onetour['tourid'] ?></span></p>
                               <div class="infor__tour__price">
@@ -216,22 +216,22 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_hotel_resort_1647925026.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vinoasis_1647925040.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_luxury_1647925062.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/condotel_1647925071.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/discovery_1647925078.webp" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/holidays_1647925088.webp" alt="" />
                               </div>
                         </div>
@@ -243,13 +243,13 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/convention_1647925137.webp" alt="" />
                               </div>
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/almaz_1647925645.webp" alt="" />
                               </div>
-                              <div class="col-4">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/imperia_1647925662.webp" alt="" />
                               </div>
                         </div>
@@ -261,22 +261,22 @@
                   </div>
                   <div class="partner__right">
                         <div class="row">
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vw_1647925754.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/vp_golf_1647925676.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/safari_1647925690.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/grand_world_1647925701.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/pquc_1647925710.svg" alt="" />
                               </div>
-                              <div class="col-2">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="./img/holidays_1647925088.webp" alt="" />
                               </div>
                         </div>

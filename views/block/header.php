@@ -63,7 +63,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.php?act=uudai">ƯU ĐÃI KHUYẾN MÃI</a>
+                                            <a class="nav-link" style="line-height: 54px;" href="index.php?act=uudai">ƯU ĐÃI KHUYẾN MÃI</a>
                                         </li>
                                         
                                     </ul>

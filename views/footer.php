@@ -2,7 +2,7 @@
         <div class="footer__content container">
             <div class="footer__top">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <img src="./img/logo.png" alt="">
                         <ul>
                             <li><a href=""><i class="fa-solid fa-location-dot"></i>Đảo Hòn Tre,
@@ -16,7 +16,7 @@
                         </ul>
                         <img class="img-fluid" src="./img/logo-da-thong-bao-website-voi-bo-cong-thuong.webp" alt="">
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h5>GIỚI THIỆU</h5>
                         <ul>
                             <li><a href="">Về chúng tôi</a></li>
@@ -27,7 +27,7 @@
                             <li><a href="">Bản đồ trang</a></li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h5>TIN TỨC & SỰ KIỆN</h5>
                         <ul>
                             <li><a href="">Tin công ty</a></li>
@@ -35,7 +35,7 @@
                         </ul>
                         <h5>THƯ VIỆN ẢNH</h5>
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h5>ĐIỀU KHOẢN & QUY ĐỊNH</h5>
                         <ul>
                             <li><a href="">Điều khoản chung</a></li>
@@ -58,12 +58,12 @@
             </div>
             <div class="footer__bottom">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h6>Số ĐKKD:</h6>
                         <p style="width: 80%;">4200456848. ĐK lần đầu 26/7/2006.</p>
                         <p>ĐK thay đổi lần thứ 50: 3/3/2020</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h6>Nơi cấp:</h6>
                         <p>Sở kế hoạch và đầu tư tỉnh Khánh Hòa</p>
                         <h6>Lĩnh vực kinh doanh:</h6>
@@ -71,7 +71,7 @@
                         </p>
 
                     </div>
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-dm-12 col-12">
                         <h6>Chủ tài khoản:</h6>
                         <p> Công ty cổ phần Vinpearl Tài khoản ngân hàng số: 9124412488166 (VND) Ngân hàng thương mại cổ phần Kỹ Thương Việt Nam (Techcombank) – Hội sở</p>
                     </div>
@@ -96,7 +96,10 @@
                 0: {
                     items: 1
                 },
-                600: {
+                769: {
+                    items: 2
+                },
+                1000: {
                     items: 3
                 },
             }
