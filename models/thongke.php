@@ -31,7 +31,7 @@ $dataTotal2 = array();
 function totalVisit()
 {
 
-    $sql = "SELECT khuvuc.tenkv as tenkv,count(bill.makv) as solan  from khuvuc  join bill on khuvuc.makv = bill.makv group by khuvuc.tenkv ";
+    $sql = "SELECT khuvuc.tenkv as tenkv,count(donhang.makv) as solan  from khuvuc  join donhang on khuvuc.makv = donhang.makv group by khuvuc.tenkv ";
     $data2 = pdo_query($sql);
     return $data2;
 };
