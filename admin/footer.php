@@ -14,6 +14,7 @@
         xkey: 'ngaydathang',
         ykeys: ['ngaydathang', 'donhang', 'doanhthu'],
         labels: ['Ngày đặt hàng', 'Đơn hàng', 'Doanh thu'],
+        hideHover: false,
 
     });
     Morris.Bar({
@@ -22,13 +23,16 @@
         xkey: 'tenkv',
         ykeys: ['solan'],
         labels: ['Số lần đặt'],
+        barColors: ["#6ddb24"],
+        hideHover: false,
     });
-
     Morris.Bar({
         element: 'chart3',
         data: <?= $chart_data3 ?>,
         xkey: 'tourname',
         ykeys: ['sold'],
         labels: ['Số lần đặt'],
+        barColors: ["#ff00ae"],
+        hideHover: false,
     });
 </script>
