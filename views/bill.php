@@ -63,12 +63,12 @@
                                 ';
                     }
                     $i = 0;
-                    if(isset($_SESSION['tour'])){
+                    
                     foreach ($billct as $bct) {
                         extract($bct);
                         $hinh1 = $img_path . $bct['anh'];
-                        
-                         
+                        $hinh2 = $img_path2. $bct['anh']; 
+                        if($bct['ldh']==0) {
                             
                         echo '
                                                       <div class="cart__item">
@@ -115,12 +115,9 @@
                                                     
                                                     
                         
-                    }
-                    if(isset($_SESSION['khachsan'])){
-
-                        foreach ($billct as $bct) {
-                            extract($bct);                           
-                            $hinh2 = $img_path2. $bct['anh'];                          
+                                               
+                                            
+                          if($bct['ldh']==1)   {                    
                                                         
                         echo '
                                                       <div class="cart__item">
@@ -160,7 +157,7 @@
                                                       </div> 
                                                       ';
                                                     }
-                                                }
+                                                }   
                                                 $i += 1;
                     ?>
 
