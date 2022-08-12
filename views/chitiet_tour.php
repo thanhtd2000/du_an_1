@@ -65,7 +65,8 @@
       <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
       <input class="" type="hidden" name="maks" value="<?= $oneks['tenks'] ?>" placeholder="">
       <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
-      <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">                             
+      <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">  
+      <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">                           
             <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
       </form>
      

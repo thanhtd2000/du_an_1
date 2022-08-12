@@ -93,6 +93,7 @@
                         <input class="" type="hidden" name="giaphong" value="<?= $onelp['giaphong'] ?>" placeholder=""> 
                         <input class="" type="hidden" name="anh" value="<?= $onelp['anh'] ?>" placeholder="">   
                         <input class="" type="hidden" name="tenloai" value="<?= $onelp['tenloai'] ?>" placeholder="">
+                        <input class="" type="hidden" name="makv" value="<?= $oneks['makv'] ?>" placeholder=""> 
                         <br>
                     <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="datks" value="Đặt phòng ngay" placeholder="">
                     </form>

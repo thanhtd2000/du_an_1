@@ -1,4 +1,6 @@
-
+<?php
+var_dump($_SESSION['tour']);
+?>
 <div class="cart container">
       <div class="cart__content">
             <div class="row">
@@ -142,8 +144,11 @@
 </div>
 <?php
 if(isset($_SESSION['email'])){
+      
+     
       echo'
       <form action="index.php?act=bill" class="d-block" method="post">
+      
       <div class="client container">
       <div class="row">
             <div class="col-8">
@@ -218,7 +223,7 @@ if(isset($_SESSION['email'])){
       </div>
 </div>
 </form>
-      ';
+      '; 
 }else{
       echo'
 

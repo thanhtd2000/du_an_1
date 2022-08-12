@@ -112,12 +112,12 @@ function insert_bill($bill_name,$bill_address,$bill_tell,$bill_email,$bill_pttt,
    $sql="INSERT INTO bill(bill_name, bill_adress, bill_tell, bill_email,bill_pttt,total,ngaydathang) VALUES ('$bill_name','$bill_address','$bill_tell','$bill_email','$bill_pttt','$total','$ngaydathang')";
    return pdo_execute_return_lastInsertId($sql);
 } 
-function insert_cart($iduser,$tourid ,$songuoilon,$ttien,$maloai,$sotreem ,$gianguoilon,$giatreem,$anh,$name,$idbill,$start,$finish,$maks) {
-    $sql="INSERT INTO donhang(iduser, tourid, songuoilon, total,maloai,sotreem,gianguoilon,giatreem,anh,name,idbill,start,finish,maks,ldh) VALUES ('$iduser','$tourid' ,'$songuoilon','$ttien','$maloai','$sotreem' ,'$gianguoilon','$giatreem','$anh','$name','$idbill','$start','$finish','$maks',0)";
+function insert_cart($iduser,$tourid ,$songuoilon,$ttien,$maloai,$sotreem ,$gianguoilon,$giatreem,$anh,$name,$idbill,$start,$finish,$maks,$makv) {
+    $sql="INSERT INTO donhang(iduser, tourid, songuoilon, total,maloai,sotreem,gianguoilon,giatreem,anh,name,idbill,start,finish,maks,ldh,makv) VALUES ('$iduser','$tourid' ,'$songuoilon','$ttien','$maloai','$sotreem' ,'$gianguoilon','$giatreem','$anh','$name','$idbill','$start','$finish','$maks',0,'$makv')";
     return pdo_execute($sql);
  }  
- function insert_cart_ks($iduser,$tongtien,$maloai,$anh,$idbill,$maks,$tenphong,$giaphong) {
-    $sql="INSERT INTO donhang(iduser,total, maloai,anh,idbill,maks,tenphong,giaphong,ldh) VALUES ('$iduser','$tongtien','$maloai','$anh','$idbill','$maks','$tenphong','$giaphong',1)";
+ function insert_cart_ks($iduser,$tongtien,$maloai,$anh,$idbill,$maks,$tenphong,$giaphong,$makv) {
+    $sql="INSERT INTO donhang(iduser,total, maloai,anh,idbill,maks,tenphong,giaphong,ldh,makv) VALUES ('$iduser','$tongtien','$maloai','$anh','$idbill','$maks','$tenphong','$giaphong',1,$makv)";
     return pdo_execute($sql);
  } 
  function loadone_bill($idbill)

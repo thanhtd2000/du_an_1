@@ -260,10 +260,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maks = $_POST['maks'];
                 $anh = $_POST['anh'];
                 $maloai = $_POST['maloai'];
+                $makv=$_POST['makv'];
                 $ttien = $songuoilon * $gia_nl + $sotreem * $giatre_em;
 
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai, $ttien];
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai, $makv,$ttien];
 
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
@@ -279,10 +280,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $tenks = $_POST['tenks'];
                 $anh = $_POST['anh'];
                 $tenloai = $_POST['tenloai'];
+                $makv=$_POST['makv'];
                 $tongtien = $giaphong;
 
 
-                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh, $tongtien];
+                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh,$makv, $tongtien];
 
                 array_push($_SESSION['khachsan'], $khachsan);
             }
@@ -310,16 +312,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
                 $ngaydathang = date('Y/m/d h:i:sa');
                 $total = tongdonhang();
+               
 
 
                 $idbill = insert_bill($bill_name, $bill_address, $bill_tell, $bill_email, $bill_pttt, $total, $ngaydathang);
 
                 foreach ($_SESSION['tour'] as $tour) {
-                    insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8]);
+                    insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8],$tour[11]);
                 }
                 $_SESSION['tour'] = [];
                 foreach ($_SESSION['khachsan'] as $ks) {
-                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill, $ks[0], $ks[2], $ks[3]);
+                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill, $ks[0], $ks[2], $ks[3],$ks[5]);
                 }
                 $_SESSION['khachsan'] = [];
             }
