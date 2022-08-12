@@ -270,10 +270,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
             if (isset($_POST['datks']) && ($_POST['datks'])) {
-
-
-
-
+                $start=date_create($_POST['start']);
+                $starti=$start->format('Y/m/d');
+                $finish=date_create($_POST['finish']);
+                $finishi=$finish->format('Y/m/d');
                 $giaphong = $_POST['giaphong'];
                 $tenphong = $_POST['tenphong'];
 
@@ -281,10 +281,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $anh = $_POST['anh'];
                 $tenloai = $_POST['tenloai'];
                 $makv=$_POST['makv'];
-                $tongtien = $giaphong;
+                $songay=$start->diff($finish);
+                $songayi=$songay->format('%d');
+                $tongtien = $giaphong*$songayi;
 
 
-                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh,$makv, $tongtien];
+                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh,$makv,$starti,$finishi,$songayi, $tongtien];
 
                 array_push($_SESSION['khachsan'], $khachsan);
             }
@@ -322,7 +324,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 }
                 $_SESSION['tour'] = [];
                 foreach ($_SESSION['khachsan'] as $ks) {
-                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill, $ks[0], $ks[2], $ks[3],$ks[5]);
+                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill,$ks[6],$ks[7], $ks[0], $ks[2], $ks[3],$ks[5],$ks[8]);
                 }
                 $_SESSION['khachsan'] = [];
             }

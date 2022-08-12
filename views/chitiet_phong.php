@@ -81,7 +81,15 @@
                     <div class="choice__hotel">
                         <h4>Vui lòng chọn khách sạn</h4>
                         </div>
+
+                       
                         <form action="index.php?act=giohang" method="post">
+                        <label for="">Ngày bắt đầu</label>
+                        <input type="date" name="start" value="">
+                        <br>
+                        <label for="">Ngày kết thúc</label>
+                        <input type="date" name="finish" value="">
+                        <br>
                         <?php foreach ($select_phong5 as $phong) : ?>
                             <?php extract($phong)?>
                             <label for=""><?=$tenphong?></label>

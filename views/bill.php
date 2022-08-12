@@ -151,6 +151,10 @@
                                                                   <p>Tên phòng </p>
                                                                   <span>' . $bct['tenphong'] . ' </span>
                                                             </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                  <p>Số ngày </p>
+                                                                  <span>' . $bct['songay'] . ' ngày</span>
+                                                            </div>
                                                       </div>
                                                       </div>
                                                       </div>

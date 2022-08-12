@@ -96,14 +96,18 @@
                                                             
                                                             <div class="d-flex justify-content-between">
                                                                   <p>Giá phòng:</p>
-                                                                  <span>' . $ks[3] . ' đ/đêm</span>
+                                                                  <span>' . $ks[3] . ' đ/ngày</span>
                                                             </div>
                                                            
-                                                           
+                                                            <div class="d-flex justify-content-between">
+                                                            <p>Số ngày:</p>
+                                                            <span>' . $ks[8] . ' ngày</span>
+                                                      </div>
+                                                     
                                                             
                                                             
                                                             <div class="d-flex justify-content-between">
-                                                                  <p>loại phòng</p>
+                                                                  <p>Loại phòng</p>
                                                                   <span>' . $ks[1] . ' </span>
                                                             </div>
                                                             <div class="d-flex justify-content-between">

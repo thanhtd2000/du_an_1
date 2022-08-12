@@ -37,7 +37,7 @@ function viewcart(){
                               }
                               foreach ($_SESSION['khachsan'] as $ks) {
                                     
-                                $total1 = $ks[3] ;
+                                $total1 = $ks[3]*$ks[8] ;
                                 $tong2 += $total1;
                                
                                 echo '
@@ -54,9 +54,13 @@ function viewcart(){
                                                             </div>
                                 <div class=" d-flex justify-content-between">
                                       <p>Giá phòng : </p>
-                                      <span style="color: #f39f2d;font-size: 500;">' .  number_format($ks[3]) . ' đ/đêm </span>
+                                      <span style="color: #f39f2d;font-size: 500;">' .  number_format($ks[3]) . ' đ/ngày </span>
                                 </div>
-                               
+                                <div class="d-flex justify-content-between">
+                                <p>Số ngày:</p>
+                                <span>' . $ks[8] . ' ngày</span>
+                          </div>
+                         
                                
                           </div>
                           
@@ -86,7 +90,7 @@ function tongdonhang(){
     }
     foreach ($_SESSION['khachsan'] as $ks) {
         
-        $total2 = $ks[3];
+        $total2 = $ks[3]*$ks[8];
         $tong2 += $total2;
         
         
@@ -116,8 +120,8 @@ function insert_cart($iduser,$tourid ,$songuoilon,$ttien,$maloai,$sotreem ,$gian
     $sql="INSERT INTO donhang(iduser, tourid, songuoilon, total,maloai,sotreem,gianguoilon,giatreem,anh,name,idbill,start,finish,maks,ldh,makv) VALUES ('$iduser','$tourid' ,'$songuoilon','$ttien','$maloai','$sotreem' ,'$gianguoilon','$giatreem','$anh','$name','$idbill','$start','$finish','$maks',0,'$makv')";
     return pdo_execute($sql);
  }  
- function insert_cart_ks($iduser,$tongtien,$maloai,$anh,$idbill,$maks,$tenphong,$giaphong,$makv) {
-    $sql="INSERT INTO donhang(iduser,total, maloai,anh,idbill,maks,tenphong,giaphong,ldh,makv) VALUES ('$iduser','$tongtien','$maloai','$anh','$idbill','$maks','$tenphong','$giaphong',1,$makv)";
+ function insert_cart_ks($iduser,$tongtien,$maloai,$anh,$idbill,$start,$finish,$maks,$tenphong,$giaphong,$makv,$songayi) {
+    $sql="INSERT INTO donhang(iduser,total, maloai,anh,idbill,start,finish,maks,tenphong,giaphong,ldh,makv,songay) VALUES ('$iduser','$tongtien','$maloai','$anh','$idbill','$start','$finish','$maks','$tenphong','$giaphong',1,'$makv','$songayi')";
     return pdo_execute($sql);
  } 
  function loadone_bill($idbill)
