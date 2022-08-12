@@ -358,19 +358,19 @@
                               <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/vp_hotel_resort_1647925026.webp" alt="">
                               </div>
-                              <div class="col-2 col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/vinoasis_1647925040.webp" alt="">
                               </div>
-                              <div class="col-2 col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/vp_luxury_1647925062.webp" alt="">
                               </div>
-                              <div class="col-2 col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/condotel_1647925071.webp" alt="">
                               </div>
-                              <div class="col-2 col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/discovery_1647925078.webp" alt="">
                               </div>
-                              <div class="col-2 col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
                                     <img src="img/holidays_1647925088.webp" alt="">
                               </div>
                         </div>
