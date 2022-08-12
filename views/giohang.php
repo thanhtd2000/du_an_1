@@ -1,6 +1,4 @@
-<?php
-var_dump($_SESSION['tour']);
-?>
+
 <div class="cart container">
       <div class="cart__content">
             <div class="row">
