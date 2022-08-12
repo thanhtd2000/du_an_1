@@ -151,39 +151,78 @@
                     </div>
                     <div class="infor__history" id="dm-3">
                         <h3 style="border-bottom: 1px solid #B1B1B1;padding-bottom: 24px;">Lịch sử giao dịch</h3>
-                        <img style="text-align: center;
+                        <?php if ($listhd == []) : ?>
+                            <img style="text-align: center;
                                           padding: 50px 0;" src="./img/empty-page.6fb3601e.png" alt="">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Mã đơn</th>
-                                    <th>Khách sạn</th>
-                                    <th>Loại phòng</th>
-                                    <th>Tour</th>
-                                    <th>Ngày bắt đầu</th>
-                                    <th>Ngày kết thúc</th>
-                                    <th>Ngày đặt hàng</th>
-                                    <th>Tổng tiền</th>
-                                    <th>Trạng Thái</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($listhd as $dh) : ?>
-                                    <?php extract($dh) ?>
+                            <p style="text-align: center;
+                                          padding: 50px 0;">Hiện tại chưa có giá trị nào</p>
+                        <?php else : ?>
+
+                            <h6>ĐƠN HÀNG TOUR</h6>
+                            <table class="table">
+                                <thead>
                                     <tr>
-                                        <td><?= $madh ?></td>
-                                        <td><?= $maks ?></td>
-                                        <td><?= $maloai ?></td>
-                                        <td><?= $name ?></td>
-                                        <td><?= $start ?></td>
-                                        <td><?= $finish ?></td>
-                                        <td><?= $ngaydathang ?></td>
-                                        <td><?= number_format($total) ?> VNĐ</td>
-                                        <td style="color: green;"><?= $bill_status?></td>
+                                        <th>Mã đơn</th>
+                                        <th>Khách sạn</th>
+                                        <th>Loại phòng</th>
+                                        <th>Tour</th>
+                                        <th>Ngày bắt đầu</th>
+                                        <th>Ngày kết thúc</th>
+                                        <th>Ngày đặt hàng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
                                     </tr>
-                                <?php endforeach ?>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($listhd as $dh) : ?>
+                                        <?php extract($dh) ?>
+                                        <?php if ($ldh == 0) : ?>
+                                            <tr>
+                                                <td><?= $madh ?></td>
+                                                <td><?= $maks ?></td>
+                                                <td><?= $maloai ?></td>
+                                                <td><?= $name ?></td>
+                                                <td><?= $start ?></td>
+                                                <td><?= $finish ?></td>
+                                                <td><?= $ngaydathang ?></td>
+                                                <td><?= number_format($total) ?> VNĐ</td>
+                                                <td style="color: green;"><?= $bill_status ?></td>
+                                            </tr>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                </tbody>
+                            </table>
+                            <h6>ĐƠN HÀNG KHÁCH SẠN</h6>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã đơn</th>
+                                        <th>Khách sạn</th>
+                                        <th>Hạng Phòng</th>
+                                        <th>Tên phòng</th>
+                                        <th>Ngày đặt hàng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($listhd as $dh) : ?>
+                                        <?php extract($dh) ?>
+                                        <?php if ($ldh == 1) : ?>
+                                            <tr>
+                                                <td><?= $madh ?></td>
+                                                <td><?= $maks ?></td>
+                                                <td><?= $maloai ?></td>
+                                                <td><?= $tenphong ?></td>
+                                                <td><?= $ngaydathang ?></td>
+                                                <td><?= number_format($total) ?> VNĐ</td>
+                                                <td style="color: green;"><?= $bill_status ?></td>
+                                            </tr>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
+                                </tbody>
+                            </table>
+                        <?php endif ?>
                     </div>
                     <div class="infor__invite" id="dm-4">
                         <h3 style="border-bottom: 1px solid #B1B1B1;padding-bottom: 24px;">
