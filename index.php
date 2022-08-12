@@ -180,21 +180,29 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/chitiet_tour.php";
             break;
         case 'listtour':
-            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
-                $kyw = $_POST['kyw'];
-            } else {
-                $kyw = "";
-            }
-            // if (isset($_POST['kyw_kv']) && ($_POST['kyw_kv'] !="")) {
-            //     $kyw_kv = $_POST['kyw_kv'];
+            if (isset($_POST['timkiem'])&&($_POST['timkiem'])){
+                $kyw=$_POST['kyw'];
+                $makv=$_POST['makv'];
+            } 
+            else{
+                $kyw='';
+                $makv=0;
+            }  
+            // if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+            //     $kyw = $_POST['kyw'];
             // } else {
-            //     $kyw_kv = "";
+            //     $kyw = "";
             // }
-            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
-                $makv = $_GET['makv'];
-            } else {
-                $makv = 0;
-            }
+            // // if (isset($_POST['kyw_kv']) && ($_POST['kyw_kv'] !="")) {
+            // //     $kyw_kv = $_POST['kyw_kv'];
+            // // } else {
+            // //     $kyw_kv = "";
+            // // }
+            // if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+            //     $makv = $_GET['makv'];
+            // } else {
+            //     $makv = 0;
+            // }
 
             $listtours = loadall_tour_search($kyw, $makv);
 
@@ -204,16 +212,24 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
 
         case 'listks':
-            if (isset($_POST['kyw_ks']) && ($_POST['kyw_ks'] != "")) {
-                $kyw_ks = $_POST['kyw_ks'];
-            } else {
-                $kyw_ks = "";
-            }
-            if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
-                $makv = $_GET['makv'];
-            } else {
-                $makv = 0;
-            }
+            if (isset($_POST['timkiem'])&&($_POST['timkiem'])){
+                $kyw_ks=$_POST['kyw_ks'];
+                $makv=$_POST['makv'];
+            } 
+            else{
+                $kyw_ks='';
+                $makv=0;
+            } 
+            // if (isset($_POST['kyw_ks']) && ($_POST['kyw_ks'] != "")) {
+            //     $kyw_ks = $_POST['kyw_ks'];
+            // } else {
+            //     $kyw_ks = "";
+            // }
+            // if (isset($_GET['makv']) && ($_GET['makv'] > 0)) {
+            //     $makv = $_GET['makv'];
+            // } else {
+            //     $makv = 0;
+            // }
 
             $listks = loadall_ks_search($kyw_ks, $makv);
             $tenkv = load_ten_kv($makv);

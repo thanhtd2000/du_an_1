@@ -19,7 +19,14 @@
                                     width: 225px;
                                     height: 40px;
                                     padding-left: 17px;">
-                                    <input type="text" placeholder="Nhập khu du lịch" name="kyw_kv">
+                                     <select name="makv"  style="width: 100px;height:30px;border-radius:5px">
+                     <option value="0" selected>Chọn khu vực</option>
+                  <?php foreach($listkhuvuc as $khuvuc){
+                         extract($khuvuc);
+                        echo '<option value="'.$makv.'">'.$tenkv.'</option>';
+                        }
+                  ?>
+                </select>
                               </div>
 
                               <!-- <input class="form-control mr-sm-2" name="kyw" type="search" placeholder="Tìm kiếm tour" aria-label="Search"> -->
@@ -63,7 +70,7 @@
                                     <h4 style="margin-bottom: 0; font-weight: 700;">Lọc kết quả</h4>
                                     <button>Đặt lại</button>
                               </div>
-                              <div class="tour__service">
+                              <!-- <div class="tour__service">
                                     <h5>Khu vực</h5>
                                     <ul>
                                           <li>
@@ -84,7 +91,7 @@
                                           }
                                           ?>
                                     </ul>
-                              </div>
+                              </div> -->
                               <div class="tour__brand">
                                     <h5>Dịch vụ</h5>
                                     <ul>

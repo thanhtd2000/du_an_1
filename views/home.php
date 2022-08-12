@@ -73,7 +73,14 @@
                                           <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
                                     </div>
                                     <div class="slide__location">
-                                          <input type="text" placeholder="Nhập địa điểm">
+                                    <select name="makv"  style="width: 100px;height:30px;border-radius:5px">
+                     <option value="0" selected>Chọn khu vực</option>
+                  <?php foreach($listkhuvuc as $khuvuc){
+                         extract($khuvuc);
+                        echo '<option value="'.$makv.'">'.$tenkv.'</option>';
+                        }
+                  ?>
+                </select>
                                     </div>
                                     <!-- <div class="slide__room">
                                           <div class="dropdown">
@@ -110,7 +117,14 @@
                                           <input type="text" placeholder="Nhập tour" name="kyw">
                                     </div>
                                     <div class="slide__time">
-                                          <input type="text" placeholder="Nhập địa điểm">
+                                    <select name="makv"  style="width: 100px;height:30px;border-radius:5px">
+                     <option value="0" selected>Chọn khu vực</option>
+                  <?php foreach($listkhuvuc as $khuvuc){
+                         extract($khuvuc);
+                        echo '<option value="'.$makv.'">'.$tenkv.'</option>';
+                        }
+                  ?>
+                </select>
                                     </div>
                                    
                                     <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
