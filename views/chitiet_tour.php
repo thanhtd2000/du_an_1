@@ -34,7 +34,12 @@
                                     <div>Trẻ em : <?= number_format($onetour['giatre_em']) ?> VNĐ</div>
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
-                             
+                              <label for=""><b>Ngày bắt đầu:</b></label>
+                        <input type="date" name="start" value="<?= $onetour['start'] ?>" readonly>
+                        <br>
+                        <label for=""><b>Ngày kết thúc:</b></label>
+                        <input type="date" name="finish" value="<?= $onetour['finish'] ?>" readonly>
+                        <br>
       <form action="index.php?act=giohang" method="post">
                                     
       <div class="d-flex justify-content-between" style="padding-top: 30px;">

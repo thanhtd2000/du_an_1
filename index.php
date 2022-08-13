@@ -339,6 +339,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $onelp =  loadone_loaiphong($maloai);
             $select_phong5 = select_phong5($maks, $maloai);
             $oneks = loadone_khachsan($maks);
+           
             include "views/chitiet_phong.php";
             break;
         case 'delks':

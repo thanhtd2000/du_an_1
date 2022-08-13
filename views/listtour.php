@@ -159,6 +159,8 @@
                                     extract($lts);
                                     $linktour = "index.php?act=chitiettour&&tourid=$tourid&&makv=$makv&&maks=$maks&&maloai=$maloai";
                                     $hinh = $img_path . $anh;
+                                    $today = date("Y/m/d");
+                                    if (strtotime($today) < strtotime($finish)) {
                                     echo '
                                                 <div class="tour__right__item" style="border: 1px solid #ddedd5; padding: 10px;">
                                                 <div class="row">
@@ -203,6 +205,9 @@
                                           </div>
                                           </div>
                                                 ';
+                                    }else{
+
+                                    }
                               }
                               ?>
 

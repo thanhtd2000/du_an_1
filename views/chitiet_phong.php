@@ -92,8 +92,10 @@
                         <br>
                         <?php foreach ($select_phong5 as $phong) : ?>
                             <?php extract($phong)?>
+                           
                             <label for=""><?=$tenphong?></label>
                             <input type="radio" name="tenphong" value="<?=$tenphong?>">
+                            
                         <?php endforeach ?>
                           
                         
