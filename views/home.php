@@ -64,25 +64,25 @@
                         <span class="item" data-this="dm-2">Tour & Trải nghiệm</span>
                   </div>
                   <div class="body">
-                  
+
                         <div class="slide__input active" id="dm-1">
-                        <form action="index.php?act=listks" method="post">
-                              <div class="d-flex">
-                                    
-                                    <div class="slide__location">
-                                          <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
-                                    </div>
-                                    <div class="slide__location">
-                                    <select name="makv"  style="width: 100px;height:30px;border-radius:5px">
-                     <option value="0" selected>Chọn khu vực</option>
-                  <?php foreach($listkhuvuc as $khuvuc){
-                         extract($khuvuc);
-                        echo '<option value="'.$makv.'">'.$tenkv.'</option>';
-                        }
-                  ?>
-                </select>
-                                    </div>
-                                    <!-- <div class="slide__room">
+                              <form action="index.php?act=listks" method="post">
+                                    <div class="d-flex">
+
+                                          <div class="slide__location">
+                                                <input type="text" placeholder="Nhập khách sạn" name="kyw_ks">
+                                          </div>
+                                          <div class="slide__time">
+                                                <select id="IdSelect" name="makv" style="width: 150px;height:30px;border-radius:5px">
+                                                      <option style="padding: 10px 20px;" value="0" selected>Chọn khu vực</option>
+                                                      <?php foreach ($listkhuvuc as $khuvuc) {
+                                                            extract($khuvuc);
+                                                            echo '<option style="margin: 10px 20px;" value="' . $makv . '">' . $tenkv . '</option>';
+                                                      }
+                                                      ?>
+                                                </select>
+                                          </div>
+                                          <!-- <div class="slide__room">
                                           <div class="dropdown">
                                                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                       Số phòng
@@ -104,32 +104,38 @@
                                                 </div>
                                           </div>
                                     </div> -->
-                                    <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
-                                    height: 39px;">
-                                   
-                              </div>
+                                          <div style="display: flex;justify-content: center; align-items: center;border-radius: 5px;">
+                                                <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 200px;background-color: #e8952f;border-radius: 5px;color: #fff;
+                                    height: 63px;">
+
+                                          </div>
+
+                                    </div>
                               </form>
                         </div>
                         <div class="slide__input2" id="dm-2">
                               <form action="index.php?act=listtour" method="post">
-                              <div class="d-flex">
-                                    <div class="slide__location">
-                                          <input type="text" placeholder="Nhập tour" name="kyw">
+                                    <div class="d-flex">
+                                          <div class="slide__location">
+                                                <input type="text" placeholder="Nhập tour" name="kyw">
+                                          </div>
+                                          <div class="slide__time">
+                                                <select name="makv" style="width: 150px;height:30px;border-radius:5px">
+                                                      <option value="0" selected>Chọn khu vực</option>
+                                                      <?php foreach ($listkhuvuc as $khuvuc) {
+                                                            extract($khuvuc);
+                                                            echo '<option value="' . $makv . '">' . $tenkv . '</option>';
+                                                      }
+                                                      ?>
+                                                </select>
+                                          </div>
+
+                                          <div style="display: flex;justify-content: center; align-items: center;border-radius: 5px;">
+                                                <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 200px;background-color: #e8952f;border-radius: 5px;color: #fff;
+                                    height: 63px;">
+
+                                          </div>
                                     </div>
-                                    <div class="slide__time">
-                                    <select name="makv"  style="width: 100px;height:30px;border-radius:5px">
-                     <option value="0" selected>Chọn khu vực</option>
-                  <?php foreach($listkhuvuc as $khuvuc){
-                         extract($khuvuc);
-                        echo '<option value="'.$makv.'">'.$tenkv.'</option>';
-                        }
-                  ?>
-                </select>
-                                    </div>
-                                   
-                                    <input type="submit" name="timkiem" value="Tìm kiếm" style="    width: 150px;
-                                    height: 39px;">
-                              </div>
                               </form>
                         </div>
                   </div>
@@ -467,5 +473,3 @@
             })
       })
 </script>
-
-</style>

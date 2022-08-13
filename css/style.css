@@ -218,7 +218,7 @@
       margin-left: 50px;
       border: 1px solid #999;
       padding: 15px 0;
-      padding-right: 100px;
+      padding-right: 60px;
       border-radius: 5px;
       padding-left: 30px;
 }
@@ -1821,7 +1821,9 @@ iframe {
       color: #fff;
       border-radius: 3px;
 }
-
+.slide__time select option{
+      padding: 10px 20px;
+}
 
 
 
