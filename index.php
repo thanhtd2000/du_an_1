@@ -335,11 +335,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitietphong':
             $maloai = $_GET['maloai'];
             $maks = $_GET['maks'];
+            
             $select_phong = select_phong($maks);
             $onelp =  loadone_loaiphong($maloai);
             $select_phong5 = select_phong5($maks, $maloai);
             $oneks = loadone_khachsan($maks);
-           
+          
+            // $listdh=loadall_hd();
+            // $checktp=checktenphong($tenphong);
             include "views/chitiet_phong.php";
             break;
         case 'delks':

@@ -81,7 +81,7 @@
                   </div>
                   <div style="text-align: center;padding: 30px 0;">
                         <div style="text-align: center;padding: 30px 0;">
-                              <button type="button" class="btn" style="background-color: #f39f2d;"><a href="" style="color: #fff;text-decoration: none;">Nhấn vào loại phòng để đặt</a></button>
+                              <button type="button" class="btn" style="background-color: #f39f2d;" disabled>Nhấn vào loại phòng để đặt</button>
                         </div>
                   </div>
                   <div class="describe container">

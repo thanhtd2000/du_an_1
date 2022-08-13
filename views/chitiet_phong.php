@@ -92,10 +92,17 @@
                         <br>
                         <?php foreach ($select_phong5 as $phong) : ?>
                             <?php extract($phong)?>
+                          <?php 
+                          if(!is_array(checktenphong($tenphong))){
+                            echo '<label for="">'.$tenphong.'</label>
+                            <input type="radio" name="tenphong" value="'.$tenphong.'">';
+                          }else{
                            
-                            <label for=""><?=$tenphong?></label>
-                            <input type="radio" name="tenphong" value="<?=$tenphong?>">
+
+                          }
+                          ?>
                             
+                           
                         <?php endforeach ?>
                           
                         

@@ -27,3 +27,15 @@ function edit_bill($id, $bill_status)
     $sql = "UPDATE bill SET id='$id',bill_status='$bill_status' WHERE id = $id";
     pdo_execute($sql);
 }
+function checktenphong($tenphong)
+{
+    $sql = "SELECT*FROM donhang as a join bill as b on a.idbill = b.id  WHERE tenphong='$tenphong' and bill_status='Đã xác nhận'";
+    $checktp = pdo_query_one($sql); 
+    return $checktp;
+}
+// function checktt()
+// {
+//     $sql = "SELECT*FROM bill WHERE ";
+//     $checktt = pdo_query_one($sql); 
+//     return $checktt;
+// }
