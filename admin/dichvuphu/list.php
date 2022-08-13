@@ -27,7 +27,7 @@
                                         <td>' . $gia . '</td>
                                         <td>
                                               <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;" href="index.php?act=suadv&&madv=' . $madv . '">Sửa</a>
-                                              <a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="index.php?act=xoadv&&madv=' . $madv . '" onclick="return confirm("bạn có muốn xoá")">Xoá</a>
+                                              <a onclick="return confirm("bạn có muốn xoá")" style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500;"  href="index.php?act=xoadv&&madv=' . $madv . '" >Xoá</a>
                                         </td>
                                         
                                   </tr>';
