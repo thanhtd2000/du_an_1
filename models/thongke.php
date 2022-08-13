@@ -11,7 +11,7 @@ function totalPrice($date)
     $year = $date[0];
     $month = $date[1];
     $day = $date[2];
-    $sql = "SELECT SUM(total) as doanhthu ,COUNT(id) as donhang from bill where year(ngaydathang)=$year and month(ngaydathang) =$month and day(ngaydathang)=$day and bill_status='Đã xác nhận' ";
+    $sql = "SELECT SUM(total) as doanhthu ,COUNT(id) as donhang from bill where year(ngaydathang)=$year and month(ngaydathang) =$month and day(ngaydathang)=$day and (bill_status='Đã xác nhận' or bill_status='Hoàn thành' ) ";
     $data = pdo_query($sql);
     return $data;
 };

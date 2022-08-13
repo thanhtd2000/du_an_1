@@ -13,7 +13,7 @@ function load_allhd2($item_per_page, $offset)
 }
 function delete_dh($madh, $id)
 {
-    $sql = "DELETE FROM hoadon WHERE madh=$madh";
+    $sql = "DELETE FROM donhang WHERE madh=$madh";
     $sql = "DELETE FROM bill WHERE id=$id";
     pdo_execute($sql);
 }
@@ -29,13 +29,15 @@ function edit_bill($id, $bill_status)
 }
 function checktenphong($tenphong)
 {
-    $sql = "SELECT*FROM donhang as a join bill as b on a.idbill = b.id  WHERE tenphong='$tenphong' and bill_status='Đã xác nhận'";
-    $checktp = pdo_query_one($sql); 
+    $sql = "SELECT*FROM donhang as a join bill as b on a.idbill = b.id  WHERE tenphong='$tenphong' and (bill_status='Đã xác nhận' or bill_status='Đã đặt thành công')";
+    $checktp = pdo_query_one($sql);
     return $checktp;
 }
-// function checktt()
-// {
-//     $sql = "SELECT*FROM bill WHERE ";
-//     $checktt = pdo_query_one($sql); 
-//     return $checktt;
-// }
+
+
+
+function update_stt()
+{
+    $sql = "UPDATE bill SET bill_status='Hoàn thành'";
+    pdo_execute($sql);
+}
