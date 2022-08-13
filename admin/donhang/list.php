@@ -36,6 +36,7 @@
                                 <td><?= $finish ?></td>
                                 <td><?= $ngaydathang ?></td>
                                 <td><?= number_format($total) ?> VNĐ</td>
+                                
                                 <td style="color: green;"><?= $bill_status ?></td>
                                 <td>
                                     <a style="color: #FF7F50; border: 1px solid #59804e; border-radius: 3px;padding: 4px;display: contents;font-weight: 500;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã xác nhận">Xác nhận</a>
@@ -55,6 +56,8 @@
                         <th>Khách sạn</th>
                         <th>Hạng Phòng</th>
                         <th>Tên phòng</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
                         <th>Ngày đặt hàng</th>
                         <th>Tổng tiền</th>
                         <th>Trạng thái</th>
@@ -70,6 +73,12 @@
                                 <td><?= $maks ?></td>
                                 <td><?= $maloai ?></td>
                                 <td><?=$tenphong?></td>
+                                <td><?=$start?></td>
+                                <td><?=$finish?></td>
+                                <?php $today = date("Y/m/d");
+                                    if (strtotime($today) < strtotime($finish)) :?>
+                                    <?php update_stt($finish)?>
+                                    <?php endif ?>
                                 <td><?= $ngaydathang ?></td>
                                 <td><?= number_format($total) ?> VNĐ</td>
                                 <td style="color: green;"><?= $bill_status ?></td>
