@@ -78,6 +78,7 @@
 
                                 </td>
                                 <td><a style="color: red; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Đã huỷ">Huỷ bỏ</a></td>
+                                <td><a style="color: #59804e; border: 1px solid #59804e; border-radius: 3px;padding: 4px;font-weight: 500; display: contents;" href="index.php?act=suadh&&id=<?= $id ?>&&bill_status=Hoàn thành">Hoàn thành</a></td>
                             </tr>
                         <?php endif ?>
                     <?php endforeach ?>
