@@ -76,7 +76,7 @@
                                 <td><?=$start?></td>
                                 <td><?=$finish?></td>
                                 <?php $today = date("Y/m/d");
-                                    if (strtotime($today) < strtotime($finish)) :?>
+                                    if (strtotime($today) > strtotime($finish)) :?>
                                     <?php update_stt($finish)?>
                                     <?php endif ?>
                                 <td><?= $ngaydathang ?></td>

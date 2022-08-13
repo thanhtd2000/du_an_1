@@ -36,8 +36,15 @@ function checktenphong($tenphong)
 
 
 
-function update_stt()
-{
-    $sql = "UPDATE bill SET bill_status='Hoàn thành'";
+function update_stt($finish)
+{    $sql = "SELECT*FROM donhang where finish=$finish";
+    $today = date("Y/m/d");
+    if (strtotime($today) > strtotime($finish)){
+    $sql = "UPDATE bill SET bill_status='Hoàn thành' where bill_status='Đã xác nhận'";
+    pdo_execute($sql);
+} else{
+    $sql = "UPDATE bill SET bill_status='Đã xác nhận' where bill_status='Hoàn thành' ";
     pdo_execute($sql);
 }
+}
+
