@@ -29,7 +29,7 @@
                                                             <label class="form-check-label" for="exampleCheck1">Ghi nhớ
                                                                   mật khẩu</label>
                                                       </div>
-                                                      <div><a href="quenMatKhau.html" style="color:#000;">Quên mật khẩu</a></div>
+                                                      <div><a href="index.php?act=quenmk" style="color:#000;">Quên mật khẩu</a></div>
                                                 </div>
                                                 <input type="submit" name="dangnhap" class="btn btn-warning" value="ĐĂNG NHẬP/LOGIN">
                                                 <!-- <button type="submit" name="login" class="btn btn-warning">ĐĂNG NHẬP/LOGIN</button> -->
@@ -38,27 +38,7 @@
                                           <div style=" font-size: 14px;">Chưa có tài khoản?<a href="index.php?act=dangky" style="color: #81ABDD; font-weight: 700; font-size: 14px;">Đăng ký
                                                       ngay</a></div>
                                     </div>
-                                    <!-- <div class="register__input2" id="dm-2">
-                                          <form action="" method="post">
-                                                
-                                                <input type="email" name="email" class="d-block" placeholder="Email">
-                                                <input type="text" name="password" class="d-block" placeholder="Họ Và Tên">
-                                                <input type="text" name="sdt" class="d-block" placeholder="Số điện thoại">
-                                                <input type="text" name="diachi" class="d-block" placeholder="Địa chỉ">
-                                                <input type="password" name="password" class="d-block" placeholder="Mật khẩu/Password">
-
-                                                <input type="password" class="d-block" placeholder="Nhập lại mật khẩu/Re-Password">
-                                                <span>Ảnh đại diện</span>
-                                                <input type="file" class="d-block" name="anh" placeholder="Mã giới thiệu(nếu có)">
-
-                                          </form>
-                                          <button type="submit" name="dangky" class="btn btn-warning">ĐĂNG KÝ/SIGN UP</button>
-                                          <div class="register__rule">
-                                                <p>Bằng việc đăng ký, tôi đồng ý với Vinpearl về <a href="">Điều kiện điều khoản</a> và <a href="">Chính sách bảo mật</a>
-                                                </p>
-                                                <p>Đã có tài khoản? <a href="?page=dang-nhap">Đăng nhập</a></p>
-                                          </div>
-                                    </div> -->
+                                    
                               </div>
                         </div>
                   </div>

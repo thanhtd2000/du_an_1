@@ -180,14 +180,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "views/chitiet_tour.php";
             break;
         case 'listtour':
-            if (isset($_POST['timkiem'])&&($_POST['timkiem'])){
-                $kyw=$_POST['kyw'];
-                $makv=$_POST['makv'];
-            } 
-            else{
-                $kyw='';
-                $makv=0;
-            }  
+            if (isset($_POST['timkiem']) && ($_POST['timkiem'])) {
+                $kyw = $_POST['kyw'];
+                $makv = $_POST['makv'];
+            } else {
+                $kyw = '';
+                $makv = 0;
+            }
             // if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
             //     $kyw = $_POST['kyw'];
             // } else {
@@ -212,14 +211,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
 
         case 'listks':
-            if (isset($_POST['timkiem'])&&($_POST['timkiem'])){
-                $kyw_ks=$_POST['kyw_ks'];
-                $makv=$_POST['makv'];
-            } 
-            else{
-                $kyw_ks='';
-                $makv=0;
-            } 
+            if (isset($_POST['timkiem']) && ($_POST['timkiem'])) {
+                $kyw_ks = $_POST['kyw_ks'];
+                $makv = $_POST['makv'];
+            } else {
+                $kyw_ks = '';
+                $makv = 0;
+            }
             // if (isset($_POST['kyw_ks']) && ($_POST['kyw_ks'] != "")) {
             //     $kyw_ks = $_POST['kyw_ks'];
             // } else {
@@ -260,33 +258,33 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $maks = $_POST['maks'];
                 $anh = $_POST['anh'];
                 $maloai = $_POST['maloai'];
-                $makv=$_POST['makv'];
+                $makv = $_POST['makv'];
                 $ttien = $songuoilon * $gia_nl + $sotreem * $giatre_em;
 
 
-                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai, $makv,$ttien];
+                $tour = [$tourid, $tourname, $gia_nl, $giatre_em, $songuoilon, $sotreem, $start, $finish, $maks, $anh, $maloai, $makv, $ttien];
 
                 array_push($_SESSION['tour'], $tour);
                 echo "<script> window.location.href='index.php?act=chitiettour&&tourid='.$tourid.'&&maks='.$maks.'&&message=Sửa thành công'</script>";
             }
             if (isset($_POST['datks']) && ($_POST['datks'])) {
-                $start=date_create($_POST['start']);
-                $starti=$start->format('Y/m/d');
-                $finish=date_create($_POST['finish']);
-                $finishi=$finish->format('Y/m/d');
+                $start = date_create($_POST['start']);
+                $starti = $start->format('Y/m/d');
+                $finish = date_create($_POST['finish']);
+                $finishi = $finish->format('Y/m/d');
                 $giaphong = $_POST['giaphong'];
                 $tenphong = $_POST['tenphong'];
 
                 $tenks = $_POST['tenks'];
                 $anh = $_POST['anh'];
                 $tenloai = $_POST['tenloai'];
-                $makv=$_POST['makv'];
-                $songay=$start->diff($finish);
-                $songayi=$songay->format('%d');
-                $tongtien = $giaphong*$songayi;
+                $makv = $_POST['makv'];
+                $songay = $start->diff($finish);
+                $songayi = $songay->format('%d');
+                $tongtien = $giaphong * $songayi;
 
 
-                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh,$makv,$starti,$finishi,$songayi, $tongtien];
+                $khachsan = [$tenks, $tenloai, $tenphong, $giaphong, $anh, $makv, $starti, $finishi, $songayi, $tongtien];
 
                 array_push($_SESSION['khachsan'], $khachsan);
             }
@@ -314,17 +312,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $ngaydathang->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'));
                 $ngaydathang = date('Y/m/d h:i:sa');
                 $total = tongdonhang();
-               
+
 
 
                 $idbill = insert_bill($bill_name, $bill_address, $bill_tell, $bill_email, $bill_pttt, $total, $ngaydathang);
 
                 foreach ($_SESSION['tour'] as $tour) {
-                    insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8],$tour[11]);
+                    insert_cart($_SESSION['email']['iduser'], $tour[0], $tour[4], $total, $tour[10], $tour[5], $tour[2], $tour[3], $tour[9], $tour[1], $idbill, $tour[6], $tour[7], $tour[8], $tour[11]);
                 }
                 $_SESSION['tour'] = [];
                 foreach ($_SESSION['khachsan'] as $ks) {
-                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill,$ks[6],$ks[7], $ks[0], $ks[2], $ks[3],$ks[5],$ks[8]);
+                    insert_cart_ks($_SESSION['email']['iduser'], $total, $ks[1], $ks[4], $idbill, $ks[6], $ks[7], $ks[0], $ks[2], $ks[3], $ks[5], $ks[8]);
                 }
                 $_SESSION['khachsan'] = [];
             }
@@ -335,12 +333,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitietphong':
             $maloai = $_GET['maloai'];
             $maks = $_GET['maks'];
-            
+
             $select_phong = select_phong($maks);
             $onelp =  loadone_loaiphong($maloai);
             $select_phong5 = select_phong5($maks, $maloai);
             $oneks = loadone_khachsan($maks);
-          
+
             // $listdh=loadall_hd();
             // $checktp=checktenphong($tenphong);
             include "views/chitiet_phong.php";
@@ -353,6 +351,24 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $_SESSION['khachsan'] = [];
             }
             echo "<script> window.location.href='index.php?act=giohang'</script>";
+            break;
+        case 'quenmk':
+
+            if (isset($_POST['forgot']) == true) {
+                $email = $_POST['email'];
+                $checksignin = checksignin($email);
+                
+
+                if (is_array($checksignin)) {
+                    $matkhau = $checksignin['password'];
+                    $ten = $checksignin['hoten'];
+                    guimk($email, $matkhau, $ten);
+                    $message = "Gửi thành công! .Vui lòng kiểm tra hộp thư để lấy lại mật khẩu";
+                } else {
+                    $message = "Email không tồn tại";
+                }
+            }
+            include "views/taikhoan/forgot.php";
             break;
         default:
             include "views/home.php";
