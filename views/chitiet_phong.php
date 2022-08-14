@@ -1,4 +1,3 @@
-
 <div class="slide" style="background-color: #DCE0EE;">
     <div class="slide__bot container d-flex justify-content-between">
         <div class="body">
@@ -77,13 +76,13 @@
                         <div>Giá phòng : <?= number_format($onelp['giaphong']) ?> VNĐ</div>
 
                     </div>
-                   
+
                     <div class="choice__hotel">
                         <h4>Vui lòng chọn khách sạn</h4>
-                        </div>
+                    </div>
 
-                       
-                        <form action="index.php?act=giohang" method="post">
+
+                    <form action="index.php?act=giohang" method="post">
                         <label for="">Ngày bắt đầu</label>
                         <input type="date" name="start" value="">
                         <br>
@@ -91,28 +90,32 @@
                         <input type="date" name="finish" value="">
                         <br>
                         <?php foreach ($select_phong5 as $phong) : ?>
-                            <?php extract($phong)?>
-                          <?php 
-                          if(!is_array(checktenphong($tenphong))){
-                            echo '<label for="">'.$tenphong.'</label>
-                            <input type="radio" name="tenphong" value="'.$tenphong.'">';
-                          }else{
-                           
+                            <?php extract($phong) ?>
+                            <?php
+                            if (!is_array(checktenphong($tenphong))) {
+                                echo '<label for="">' . $tenphong . '</label>
+                            <input type="radio" name="tenphong" value="' . $tenphong . '">';
+                            } else {
+                            }
+                            ?>
 
-                          }
-                          ?>
-                            
-                           
+
                         <?php endforeach ?>
-                          
-                        
-                        <input class="" type="hidden" name="tenks" value="<?= $oneks['tenks'] ?>" placeholder="">  
-                        <input class="" type="hidden" name="giaphong" value="<?= $onelp['giaphong'] ?>" placeholder=""> 
-                        <input class="" type="hidden" name="anh" value="<?= $onelp['anh'] ?>" placeholder="">   
+
+
+                        <input class="" type="hidden" name="tenks" value="<?= $oneks['tenks'] ?>" placeholder="">
+                        <input class="" type="hidden" name="giaphong" value="<?= $onelp['giaphong'] ?>" placeholder="">
+                        <input class="" type="hidden" name="anh" value="<?= $onelp['anh'] ?>" placeholder="">
                         <input class="" type="hidden" name="tenloai" value="<?= $onelp['tenloai'] ?>" placeholder="">
-                        <input class="" type="hidden" name="makv" value="<?= $oneks['makv'] ?>" placeholder=""> 
+                        <input class="" type="hidden" name="makv" value="<?= $oneks['makv'] ?>" placeholder="">
                         <br>
-                    <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="datks" value="Đặt phòng ngay" placeholder="">
+                        <?php if (isset($_SESSION['email'])) : ?>
+                            <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="datks" value="Đặt phòng ngay" placeholder="">
+                        <?php else : ?>
+                            <h6>Đăng nhập để đặt tour</h6>
+                            <a href="index.php?act=dangnhap" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="" placeholder="">Nhấn để chuyển tới trang đăng nhập</a>
+                        <?php endif ?>
+
                     </form>
                     <ul>
                         <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
@@ -211,107 +214,107 @@
 <div class="products container">
     <h2>Các hạng phòng khác</h2>
     <div class="products__content">
-                    <div class="owl-carousel owl-theme">
-                        <?php foreach ($select_phong as $phong) : ?>
-                            <?php extract($phong) ?>
-                            <div class="item">
-                                <div class="card" style="width: 22rem;">
-                                  <a href="index.php?act=chitietphong&&maks=<?= $maks ?>&&maloai=<?= $maloai ?>">  <img src="./img/loaiphong/<?= $anh ?>" class="card-img-top" alt="..."></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?= $tenloai ?></h5>
-                                        <div class="products__room__detail">
-                                            <div class="products__top">
-                                                <span><i class="fa-solid fa-maximize"></i> 37
-                                                    m2</span>
-                                                <span><i class="fa-solid fa-user-group"></i> 2
-                                                    người lớn và 2 trẻ em</span>
-                                            </div>
-                                            <div class="products__bottom">
-                                                <p>Chỉ từ <span><?= number_format($giaphong) ?> đ</span>/đêm</p>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="owl-carousel owl-theme">
+            <?php foreach ($select_phong as $phong) : ?>
+                <?php extract($phong) ?>
+                <div class="item">
+                    <div class="card" style="width: 22rem;">
+                        <a href="index.php?act=chitietphong&&maks=<?= $maks ?>&&maloai=<?= $maloai ?>"> <img src="./img/loaiphong/<?= $anh ?>" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $tenloai ?></h5>
+                            <div class="products__room__detail">
+                                <div class="products__top">
+                                    <span><i class="fa-solid fa-maximize"></i> 37
+                                        m2</span>
+                                    <span><i class="fa-solid fa-user-group"></i> 2
+                                        người lớn và 2 trẻ em</span>
+                                </div>
+                                <div class="products__bottom">
+                                    <p>Chỉ từ <span><?= number_format($giaphong) ?> đ</span>/đêm</p>
                                 </div>
                             </div>
-                        <?php endforeach ?>
+                        </div>
                     </div>
                 </div>
+            <?php endforeach ?>
+        </div>
+    </div>
 </div>
 <div class="partner container">
-      <div class="partner__content">
-            <div class="partner__item d-flex">
-                  <div class="partner__left">
-                        <h5>KHÁCH SẠN & NGHỈ DƯỠNG</h5>
-                  </div>
-                  <div class="partner__right">
-                        <div class="row">
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/vp_hotel_resort_1647925026.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/vinoasis_1647925040.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/vp_luxury_1647925062.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/condotel_1647925071.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/discovery_1647925078.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/holidays_1647925088.webp" alt="" />
-                              </div>
-                        </div>
-                  </div>
+    <div class="partner__content">
+        <div class="partner__item d-flex">
+            <div class="partner__left">
+                <h5>KHÁCH SẠN & NGHỈ DƯỠNG</h5>
             </div>
-            <div class="partner__item d-flex">
-                  <div class="partner__left" style="padding-right: 65px;">
-                        <h5>HỘI HỌP & SỰ KIỆN</h5>
-                  </div>
-                  <div class="partner__right">
-                        <div class="row">
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/convention_1647925137.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/almaz_1647925645.webp" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/imperia_1647925662.webp" alt="" />
-                              </div>
-                        </div>
-                  </div>
+            <div class="partner__right">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/vp_hotel_resort_1647925026.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/vinoasis_1647925040.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/vp_luxury_1647925062.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/condotel_1647925071.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/discovery_1647925078.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/holidays_1647925088.webp" alt="" />
+                    </div>
+                </div>
             </div>
-            <div class="partner__item d-flex">
-                  <div class="partner__left" style="padding-top: 20px; padding-right: 60px;">
-                        <h5>VUI CHƠI & GIẢI TRÍ</h5>
-                  </div>
-                  <div class="partner__right">
-                        <div class="row">
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/vw_1647925754.svg" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/vp_golf_1647925676.svg" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/safari_1647925690.svg" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/grand_world_1647925701.svg" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/pquc_1647925710.svg" alt="" />
-                              </div>
-                              <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
-                                    <img src="./img/holidays_1647925088.webp" alt="" />
-                              </div>
-                        </div>
-                  </div>
+        </div>
+        <div class="partner__item d-flex">
+            <div class="partner__left" style="padding-right: 65px;">
+                <h5>HỘI HỌP & SỰ KIỆN</h5>
             </div>
-      </div>
+            <div class="partner__right">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/convention_1647925137.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/almaz_1647925645.webp" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/imperia_1647925662.webp" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partner__item d-flex">
+            <div class="partner__left" style="padding-top: 20px; padding-right: 60px;">
+                <h5>VUI CHƠI & GIẢI TRÍ</h5>
+            </div>
+            <div class="partner__right">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/vw_1647925754.svg" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/vp_golf_1647925676.svg" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/safari_1647925690.svg" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/grand_world_1647925701.svg" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/pquc_1647925710.svg" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-dm-6 col-6">
+                        <img src="./img/holidays_1647925088.webp" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- back to top -->

@@ -20,7 +20,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case 'uudai':
-            include "views/uudai.php";
+            include "views/uu_dai.php";
             break;
         case 'dangky':
             $error = [
@@ -357,8 +357,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             if (isset($_POST['forgot']) == true) {
                 $email = $_POST['email'];
                 $checksignin = checksignin($email);
-                
-
                 if (is_array($checksignin)) {
                     $matkhau = $checksignin['password'];
                     $ten = $checksignin['hoten'];

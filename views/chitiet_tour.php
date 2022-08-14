@@ -1,5 +1,3 @@
-
-
 <div class="infor__tour container">
       <h4><?= $onetour['tourname'] ?></h4>
       <div class="infor__tour__content">
@@ -35,50 +33,60 @@
                                     <div>Người lớn: <?= number_format($onetour['gia_nl']) ?> VNĐ</div>
                               </div>
                               <label for=""><b>Ngày bắt đầu:</b></label>
-                        <input type="date" name="start" value="<?= $onetour['start'] ?>" readonly>
-                        <br>
-                        <label for=""><b>Ngày kết thúc:</b></label>
-                        <input type="date" name="finish" value="<?= $onetour['finish'] ?>" readonly>
-                        <br>
-      <form action="index.php?act=giohang" method="post">
-                                    
-      <div class="d-flex justify-content-between" style="padding-top: 30px;">
-            <p>Số người lớn</p>
-            <div class="buttons_added">
-                  <input style="    width: 30px;
-                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="2">
-                  <input style="    width: 30px;
-                  height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
-            </div>
-      </div>
-      <div class="d-flex justify-content-between">
-            <p>Số trẻ em</p>
-            <div class="buttons_added">
-                  <input style="    width: 30px;
-                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
-                  <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="0">
-                  <input style="    width: 30px;
-                  height: 30px; background-color: #f39f2d;"  class="plus is-form" type="button" value="+">
-            </div>
-      </div>
-      <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">   
-      <input class="" type="hidden" name="tourname" value="<?=$onetour['tourname'] ?>" placeholder=""> 
-      <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">  
-      <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder=""> 
-      <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">    
-      <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder=""> 
-      <input class="" type="hidden" name="maks" value="<?= $oneks['tenks'] ?>" placeholder="">
-      <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">   
-      <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">  
-      <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">                           
-            <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
-      </form>
-     
+                              <input type="date" name="start" value="<?= $onetour['start'] ?>" readonly>
+                              <br>
+                              <label for=""><b>Ngày kết thúc:</b></label>
+                              <input type="date" name="finish" value="<?= $onetour['finish'] ?>" readonly>
+                              <br>
+                              <form action="index.php?act=giohang" method="post">
 
-                           
+                                    <div class="d-flex justify-content-between" style="padding-top: 30px;">
+                                          <p>Số người lớn</p>
+                                          <div class="buttons_added">
+                                                <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                                                <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="songuoilon" type="number" value="2">
+                                                <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="plus is-form" type="button" value="+">
+                                          </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                          <p>Số trẻ em</p>
+                                          <div class="buttons_added">
+                                                <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="minus is-form" type="button" value="-">
+                                                <input aria-label="quantity" class="input-qty text-center" max="10" min="0" name="sotreem" type="number" value="0">
+                                                <input style="    width: 30px;
+                  height: 30px; background-color: #f39f2d;" class="plus is-form" type="button" value="+">
+                                          </div>
+                                    </div>
+                                    <input class="" type="hidden" name="tourid" value="<?= $onetour['tourid'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="tourname" value="<?= $onetour['tourname'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="gia_nl" value="<?= $onetour['gia_nl'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="giatre_em" value="<?= $onetour['giatre_em'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="start" value="<?= $onetour['start'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="finish" value="<?= $onetour['finish'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="maks" value="<?= $oneks['tenks'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="anh" value="<?= $onetour['anh'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="maloai" value="<?= $onelp['tenloai'] ?>" placeholder="">
+                                    <input class="" type="hidden" name="makv" value="<?= $onetour['makv'] ?>" placeholder="">
+                                    <?php if (isset($_SESSION['email'])) : ?>
+                                          <?php $today = date("Y/m/d");
+                                          if (strtotime($today) > strtotime($onetour['finish'])) : ?>
+                                                <h6>Tour không còn khả dụng</h6>
+                                          <?php else : ?>
+                                                <input class="" type="submit" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="Đặt combo ngay" placeholder="">
+                                          <?php endif ?>
+                                    <?php else : ?>
+                                          <h6>Đăng nhập để đặt tour</h6>
+                                          <a href="index.php?act=dangnhap" class="btn" style="background-color: #f39f2d;color: #fff;text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 18px;" name="dattour" value="" placeholder="">Nhấn để chuyển tới trang đăng nhập</a>
+                                    <?php endif ?>
+                              </form>
 
-                             
+
+
+
+
                               <ul>
                                     <li><i class="fa-solid fa-check"></i>Giá luôn tốt nhất</li>
                                     <li><i class="fa-solid fa-check"></i>Không phí thanh toán</li>
@@ -112,7 +120,7 @@
                   <span>• Lên tàu bay bằng lối đi ưu tiên và xe buýt ưu tiên trong trường hợp ra tàu bay bằng xe
                         buýt</span>
                   <span>- 02 đêm nghỉ cho 01 khách (Áp dụng cho 02 người lớn/phòng) :</span>
-                  <span><strong><?= $onelp['mota']?></strong></span>
+                  <span><strong><?= $onelp['mota'] ?></strong></span>
                   <p>- Ưu đãi dành riêng cho khách mua trên App MyVinpearl: Nhập mã THU200 giảm 200.000đ/đơn hàng
                         từ 02 voucher trở lên</p>
                   <span>Vui lòng tải App MyVinpearl tại đây và đăng nhập để nhận ưu đãi. Ưu đãi mã giảm giá không
@@ -324,7 +332,7 @@
       $('input.input-qty').each(function() {
             var $this = $(this),
                   qty = $this.parent().find('.is-form'),
-            
+
                   min = Number($this.attr('min')),
                   max = Number($this.attr('max'))
             if (min == 0) {
