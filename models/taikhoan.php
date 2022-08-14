@@ -81,7 +81,7 @@ function guimk($email, $matkhau, $ten)
         $mail->Host = 'smtp.gmail.com';  //SMTP servers
         $mail->SMTPAuth = true; // Enable authentication
         $mail->Username = 'vietnametp@gmail.com'; // SMTP username
-        $mail->Password = 'tucusmlfgckvyvjv';   // SMTP password
+        $mail->Password = 'kkdjsztjhxmbiusb';   // SMTP password
         $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
         $mail->Port = 465;  // port to connect to                
         $mail->setFrom('vietnametp@gmail.com', 'Viet Nam Exploration Trips');
