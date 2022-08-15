@@ -2084,3 +2084,9 @@ iframe {
       }
 
 }
+@media screen and (max-width: 500px) {
+      .location__item::after {
+            left: 61px;
+        }
+
+}
